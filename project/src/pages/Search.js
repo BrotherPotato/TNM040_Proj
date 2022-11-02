@@ -1,3 +1,4 @@
+import searchComponent from '../components/searchComponent'
 
 function Search(){
     return(
