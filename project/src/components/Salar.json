@@ -1,0 +1,236 @@
+[
+  {
+    "RoomCode": "K3",
+    "RoomName": "Önnesjösalen",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K23",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K25",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K1",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K21",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K24",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K22",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K2",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K4",
+    "RoomName": "Turbinen",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K26",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 2
+  },
+  {
+    "RoomCode": "K6305",
+    "RoomName": "Alfvén",
+    "House": "Kåkenhus",
+    "Floor": 3
+  },
+  {
+    "RoomCode": "K6305b",
+    "RoomName": "Moberg",
+    "House": "Kåkenhus",
+    "Floor": 3
+  },
+  {
+    "RoomCode": "K6304",
+    "RoomName": "Moa",
+    "House": "Kåkenhus",
+    "Floor": 3
+  },
+  {
+    "RoomCode": "K5309",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 3
+  },
+  {
+    "RoomCode": "K5310",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 3
+  },
+  {
+    "RoomCode": "K5420",
+    "RoomName": "Digimaker (Flexsal)",
+    "House": "Kåkenhus",
+    "Floor": 4
+  },
+  {
+    "RoomCode": "K5421",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4
+  },
+  {
+    "RoomCode": "K4402",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4
+  },
+  {
+    "RoomCode": "K4404",
+    "RoomName": "K42",
+    "House": "Kåkenhus",
+    "Floor": 4
+  },
+  {
+    "RoomCode": "K4403",
+    "RoomName": "K42",
+    "House": "Kåkenhus",
+    "Floor": 4
+  },
+  {
+    "RoomCode": "K505",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K4507",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K4521",
+    "RoomName": "Liu Donation",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K501",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K502",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K4504",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K4502",
+    "RoomName": "K52",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2523",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2510",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2509",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2511",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2515",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2516",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2517",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2524",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2525",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2526",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2527",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  },
+  {
+    "RoomCode": "K2528",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 5
+  }
+]
