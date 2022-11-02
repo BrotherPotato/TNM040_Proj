@@ -1,8 +1,22 @@
 import { useNavigate } from 'react-router-dom'
-import searchComponent from '../components/searchComponent'
+import { useState } from 'react'
+import SearchComponent from '../components/SearchComponent.js'
+import Salar from '../components/Salar.json'
 
 function Search(){
     const navigate = useNavigate();
+    const [searchString, setSearchString] = useState('')
+
+    const matchSearch = sName => {
+        const lowerCaseName = sName.RoomCode.toLowerCase()
+        const lowerCaseSearch = searchString.toLowerCase()
+        return lowerCaseName.indexOf(lowerCaseSearch) >= 0
+    }
+
+    const filteredSalar = Salar.filter(matchSearch)
+    const inputSearchString = (e) => {
+        setSearchString(e.target.value)
+    }
 
     return(
         <div className='parent'>
@@ -11,15 +25,18 @@ function Search(){
                 <button onClick={() => navigate(-1)}>(placeholder kryss)</button>
             </div>
             <div className='searchResults'>
-                <table>
-                    {/*rendrera sökresultaten enligt prototyp*/}
-                </table>
+                <ul>
+                    {filteredSalar.map((s) => (
+                        <SearchComponent data={s} key={s.RoomCode}/>
+                    ))}
+                </ul>
             </div>
             <div className='SearchBar'>
                 <input
                     type='text'
                     label='Sök efter lokal: '
                     placeholder='Sök efter lokal...'
+                    onInput={inputSearchString}
                 />
             </div>
         </div>
