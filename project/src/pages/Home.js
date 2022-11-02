@@ -1,3 +1,5 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Home(){
  return(
@@ -9,11 +11,13 @@ function Home(){
 
         </div>
         <div className='SearchBar'>
-            <input
-                type='text'
-                label='Sök efter lokal: '
-                placeholder='Sök efter lokal...'
-            />
+            <Link className='SearchLink' to={'/Search'}>
+                <input
+                    type='text'
+                    label='Sök efter lokal: '
+                    placeholder='Sök efter lokal...'
+                />
+            </Link>
         </div>
     </div>
  )
