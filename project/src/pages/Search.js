@@ -24,7 +24,7 @@ function Search(){
                 <p>Sökresultat: </p>
                 <button onClick={() => navigate(-1)}>(placeholder kryss)</button>
             </div>
-            <div className='searchResults'>
+            <div className='searchResults' >
                 <ul>
                     {filteredSalar.map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
@@ -33,6 +33,7 @@ function Search(){
             </div>
             <div className='SearchBar'>
                 <input
+                    autoFocus
                     type='text'
                     label='Sök efter lokal: '
                     placeholder='Sök efter lokal...'

@@ -7,3 +7,8 @@ Body {
   margin-top: 25%;
   text-align: center;
 }
+
+.searchResults {
+  overflow-y: scroll;
+  height: 35em;
+}
