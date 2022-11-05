@@ -12,3 +12,21 @@ Body {
   overflow-y: scroll;
   height: 35em;
 }
+
+.topBar{
+  display: flex;
+}
+
+.searchResults{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.singleSearchResult{
+  list-style-type: none;
+  background: #C7E9F2;
+  padding: 1vw;
+}
+.singleSearchResult:nth-child(odd){
+  background: #CCF0FA; 
+}

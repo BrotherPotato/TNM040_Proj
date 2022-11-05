@@ -20,12 +20,12 @@ function Search(){
 
     return(
         <div className='parent'>
-            <div className='TopBar'>
-                <p>Sökresultat: </p>
-                <button onClick={() => navigate(-1)}>(placeholder kryss)</button>
+            <div className='topBar'>
+                <h2 style={{color: '#FFFFFF'}}>Sökresultat: </h2>
+                <button style={{marginLeft:'10em'}} onClick={() => navigate(-1)}>(placeholder kryss)</button>
             </div>
-            <div className='searchResults' >
-                <ul>
+            <div>
+                <ul className='searchResults'>
                     {filteredSalar.map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
