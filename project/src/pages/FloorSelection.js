@@ -16,22 +16,10 @@ function FloorSelection({floor}){
                 <Link to='/Search'>
                     <button className='floorButton'>Våning 1</button>
                 </Link>
-                <Link to='/Search'>
 
-                    <button className='floorButton'>Våning 2</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 3</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 4</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 5</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 6</button>
-                </Link>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="5" value="1" class="slider" id="myRange" />
+                </div>
             </div>
         </div>
     )
