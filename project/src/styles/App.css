@@ -56,7 +56,10 @@ Body {
 .houseTwo{
   margin:auto;
 }
-
+.HouseLink:link, .HouseLink:visited{
+  text-decoration: none;
+  color:#FFFFFF;
+}
 .searchResults {
   overflow-y: scroll;
   height: 35em;
