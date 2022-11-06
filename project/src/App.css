@@ -35,7 +35,10 @@ input{
 Body {
   background-color: #00B3E7;
 }
-
+.parent{
+  margin: -2%;
+  padding: -2%;
+}
 .LogoTextBox{
   color: #FFFFFF;
   margin-top: 25%;
@@ -49,6 +52,8 @@ Body {
 
 .topBar{
   display: flex;
+  margin: 1em;
+  vertical-align: auto;
 }
 
 .searchResults{
