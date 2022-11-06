@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
-
 function Home(){
  return(
     <div className='parent'>
@@ -11,7 +9,7 @@ function Home(){
         </div>
         <div className='houseChoice'>
             <div className='houseOne'>
-                <Link className='HouseLink' to='/Search'>
+                <Link className='HouseLink' to={'/FloorSelection/Kåken'}>
                     <h2>Kåkenhus</h2>
                     <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
                     <img className='mapImg' src={require('../images/TempButton.jpg')} alt='Image Button'/>
@@ -19,7 +17,7 @@ function Home(){
             </div>
              
             <div className='houseTwo'>
-                <Link className='HouseLink' to='/Search'>
+                <Link className='HouseLink' to={'/FloorSelection/Täppan'}>
                     <h2>Täppan</h2>
                     <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Täppan'/>
                     <img className='mapImg' src={require('../images/TempButton.jpg')} alt='Image Button'/>
