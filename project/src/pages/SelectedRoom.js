@@ -12,17 +12,25 @@ function getRoomData(roomCode){
 const SelectedRoom = () => {
     const roomCode = useParams().RoomCode;
     const roomData = getRoomData(roomCode);
-    console.log(roomData.RoomName != '');    const navigate = useNavigate();
+    //console.log(roomData.RoomName != '');    
+    const navigate = useNavigate();
+
+    /*
+    <Link to='/'>
+        <h3>Link to home page </h3>
+    </Link>
+    */
     return(
         <div>
             <div className='topBar'>
                 <h2 style={{color: '#FFFFFF'}}>Selected Room</h2>
                 <button style={{marginLeft:'10em'}} onClick={() => navigate(-1)}>(placeholder kryss)</button>
+                
+                
             </div>
+
             
-            <Link to='/'>
-                    <h3>Link to home page </h3>
-            </Link>
+
             <h1>SelectedRoom: {roomData.RoomCode}</h1>
             {(roomData.RoomName != '') && <h2>{'RoomName: ' + roomData.RoomName}</h2>}
 
