@@ -48,6 +48,7 @@ Body {
 .houseChoice{
   display: flex;
   color: #FFFFFF;
+  text-align: center;
 }
 .houseOne{
   margin:auto;
