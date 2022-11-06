@@ -61,7 +61,13 @@ Body {
   margin: 0;
   width: 100%;
 }
-
+.resultLink:link, .resultLink:visited{
+  text-decoration: none;
+  color:black;
+}
+.resultLink:hover, .resultLink:active{
+  color: #ababab;
+}
 .singleSearchResult{
   list-style-type: none;
   background: #C7E9F2;
