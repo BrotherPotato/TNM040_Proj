@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import Salar from '../components/Salar.json'
 
@@ -12,7 +12,7 @@ function getRoomData(roomCode){
 const SelectedRoom = () => {
     const roomCode = useParams().RoomCode;
     const roomData = getRoomData(roomCode);
-    console.log(roomData.RoomName != '');
+    console.log(roomData.RoomName != '');    const navigate = useNavigate();
     return(
         <div>
             <Link to='/'>
