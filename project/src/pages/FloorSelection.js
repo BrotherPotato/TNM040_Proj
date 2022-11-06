@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 
 
-function FloorSelection({floor}){
+
+function FloorSelection(){
+    const House = useParams().House;
+    console.log(House);
+
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -15,19 +20,19 @@ function FloorSelection({floor}){
                 <h2>Välj våning</h2>
                 <div>
                     <div>
-                        <Link to={'/Search/'+ floor + '1'}>
+                        <Link to={'/Map/'+ House + '/1'}>
                             <button className='floorButton'>1</button>
                         </Link>
-                        <Link to={'/Search/'+ floor + '2'}>
+                        <Link to={'/Map/'+ House + '/2'}>
                             <button className='floorButton'>2</button>
                         </Link>
-                        <Link to={'/Search/'+ floor + '3'}>
+                        <Link to={'/Map/'+ House + '/3'}>
                             <button className='floorButton'>3</button>
                         </Link>
-                        <Link to={'/Search/'+ floor + '4'}>
+                        <Link to={'/Map/'+ House + '/4'}>
                             <button className='floorButton'>4</button>
                         </Link>
-                        <Link to={'/Search/'+ floor + '5'}>
+                        <Link to={'/Map/'+ House + '/5'}>
                             <button className='floorButton'>5</button>
                         </Link>
                     </div>

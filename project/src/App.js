@@ -14,6 +14,7 @@ function App() {
           <Route path='Search' element={<Search />} />
           <Route path='Search/:RoomCode' element={<SelectedRoom />} />
           <Route path='FloorSelection/:House' element={<FloorSelection />} />
+          <Route path='Map/:House/:Floor' element={<FloorSelection />} />
         </Route>
       </Routes>
     </BrowserRouter>
