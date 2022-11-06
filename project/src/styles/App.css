@@ -47,6 +47,7 @@ Body {
 }
 .houseChoice{
   display: flex;
+  color: #FFFFFF;
 }
 .houseOne{
   margin:auto;
