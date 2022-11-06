@@ -1,4 +1,4 @@
-import 'sty'
+import './styles/App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.js'
 import Search from './pages/Search.js'

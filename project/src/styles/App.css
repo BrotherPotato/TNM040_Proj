@@ -1,19 +1,19 @@
 @font-face{
   font-family: liu-thin;
-  src: url(./fonts/KorolevLiU-Thin.woff);
+  src: url(../fonts/KorolevLiU-Thin.woff);
 }
 
 @font-face {
   font-family: liu-light;
-  src: url(./fonts/KorolevLiU-Light.woff);
+  src: url(../fonts/KorolevLiU-Light.woff);
 }
 @font-face{
   font-family: liu-medium;
-  src: url(./fonts/KorolevLiU-Medium.woff);
+  src: url(../fonts/KorolevLiU-Medium.woff);
 }
 @font-face{
   font-family: liu-bold;
-  src: url(./fonts/KorolevLiU-Bold.woff);
+  src: url(../fonts/KorolevLiU-Bold.woff);
 }
 
 h1,h2{
