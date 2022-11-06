@@ -45,23 +45,28 @@ Body {
   margin-top: 25%;
   text-align: center;
 }
+
 .houseChoice{
   display: flex;
   color: #FFFFFF;
   text-align: center;
 }
+
 .houseOne{
   margin:auto;
 }
+
 .houseTwo{
   margin:auto;
 }
+
 .houseImg{
   margin:auto;
   width: 50%;
   height: auto;
   display: table-row;
 }
+
 .mapImg{
   margin: auto;
   margin-top: 2em; 
@@ -70,10 +75,16 @@ Body {
   height: auto;
   display: table-row;
 }
+
+.mapImg:hover{
+  width: 30%;
+}
+
 .HouseLink:link, .HouseLink:visited{
   text-decoration: none;
   color:#FFFFFF;
 }
+
 .searchResults {
   overflow-y: scroll;
   height: 35em;
