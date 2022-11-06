@@ -15,6 +15,11 @@ const SelectedRoom = () => {
     console.log(roomData.RoomName != '');    const navigate = useNavigate();
     return(
         <div>
+            <div className='topBar'>
+                <h2 style={{color: '#FFFFFF'}}>Selected Room</h2>
+                <button style={{marginLeft:'10em'}} onClick={() => navigate(-1)}>(placeholder kryss)</button>
+            </div>
+            
             <Link to='/'>
                     <h3>Link to home page </h3>
             </Link>
@@ -28,5 +33,7 @@ const SelectedRoom = () => {
         </div>
     )
 }
+
+
 
 export default SelectedRoom
