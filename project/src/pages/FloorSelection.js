@@ -13,24 +13,28 @@ function FloorSelection({floor}){
             </div>
             <div className='floorSelection'>
                 <h2>Välj våning</h2>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 1</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 2</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 3</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 4</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 5</button>
-                </Link>
-                <Link to='/Search'>
-                    <button className='floorButton'>Våning 6</button>
-                </Link>
+                <div>
+                    <div>
+                        <Link to={'/Search/'+ floor + '1'}>
+                            <button className='floorButton'>1</button>
+                        </Link>
+                        <Link to={'/Search/'+ floor + '2'}>
+                            <button className='floorButton'>2</button>
+                        </Link>
+                        <Link to={'/Search/'+ floor + '3'}>
+                            <button className='floorButton'>3</button>
+                        </Link>
+                        <Link to={'/Search/'+ floor + '4'}>
+                            <button className='floorButton'>4</button>
+                        </Link>
+                        <Link to={'/Search/'+ floor + '5'}>
+                            <button className='floorButton'>5</button>
+                        </Link>
+                    </div>
+                    <div>
+                        <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Täppan'/>
+                    </div>
+                </div>
             </div>
         </div>
     )
