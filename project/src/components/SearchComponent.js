@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom'
 
 const SearchComponent = ({data}) =>{
     return(
-        <Link className='resultLink' to={'/Search/'+ data.RoomCode}>
+        <div>
             <li className='singleSearchResult'>
-                <h3>{data.RoomCode} {data.RoomName} </h3>
+                <Link className='resultLink' to={'/Search/'+ data.RoomCode}>
+                    <h3>{data.RoomCode} {data.RoomName} </h3>
+                </Link>
+
                 <p>{data.House} våning: {data.Floor}</p>
             </li>
-        </Link>
+        </div>
+        
     )
 }
 
