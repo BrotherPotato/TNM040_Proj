@@ -10,6 +10,7 @@ function Home(){
         <div className='houseChoice'>
             <div className='houseOne'>
                 <h2>Kåkenhus</h2>
+                <img src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
             </div>
 
             <div className='houseTwo'>
