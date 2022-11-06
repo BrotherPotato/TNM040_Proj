@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Home(){
  return(
-    <div className='parent' style={{margin: 'auto'}}>
+    <div className='parent'>
         <div className='LogoTextBox'>
             <h1>LiTHe Vilse (trademark pending)</h1> 
         </div>
