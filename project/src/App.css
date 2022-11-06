@@ -1,3 +1,37 @@
+@font-face{
+  font-family: liu-thin;
+  src: url(./fonts/KorolevLiU-Thin.woff);
+}
+
+@font-face {
+  font-family: liu-light;
+  src: url(./fonts/KorolevLiU-Light.woff);
+}
+@font-face{
+  font-family: liu-medium;
+  src: url(./fonts/KorolevLiU-Medium.woff);
+}
+@font-face{
+  font-family: liu-bold;
+  src: url(./fonts/KorolevLiU-Bold.woff);
+}
+
+h1,h2{
+  font-family: liu-bold;
+}
+
+h3{
+  font-family: liu-medium;
+}
+
+p{
+  font-family: liu-light;
+}
+
+input{
+  font-family: liu-light;
+}
+
 Body {
   background-color: #00B3E7;
 }
@@ -22,11 +56,13 @@ Body {
   margin: 0;
   width: 100%;
 }
+
 .singleSearchResult{
   list-style-type: none;
   background: #C7E9F2;
   padding: 1vw;
 }
+
 .singleSearchResult:nth-child(odd){
   background: #CCF0FA; 
 }

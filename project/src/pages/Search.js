@@ -31,7 +31,7 @@ function Search(){
                     ))}
                 </ul>
             </div>
-            <div className='SearchBar'>
+            <div className='SearchBar' style={{marginTop: '1em'}}>
                 <input
                     autoFocus
                     type='text'
