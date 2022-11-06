@@ -30,7 +30,7 @@ p{
 
 input{
   font-family: liu-light;
-  width: 100%;
+  width: 50%;
 }
 
 Body {
@@ -50,6 +50,7 @@ Body {
   display: flex;
   color: #FFFFFF;
   text-align: center;
+  margin-bottom: 5em;
 }
 
 .houseOne{
@@ -70,7 +71,6 @@ Body {
 .mapImg{
   margin: auto;
   margin-top: 2em; 
-  margin-bottom: 5em;
   width: 25%;
   height: auto;
   display: table-row;
@@ -84,7 +84,9 @@ Body {
   text-decoration: none;
   color:#FFFFFF;
 }
-
+.SearchBar{
+  
+}
 .searchResults {
   overflow-y: scroll;
   height: 35em;
