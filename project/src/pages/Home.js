@@ -14,6 +14,7 @@ function Home(){
                 <Link className='HouseLink' to='/Search'>
                     <h2>Kåkenhus</h2>
                     <img src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
+                    <img src={require('../images/TempButton.jpg')} alt='Image Button'/>
                 </Link>
             </div>
              
@@ -21,6 +22,7 @@ function Home(){
                 <Link className='HouseLink' to='/Search'>
                     <h2>Täppan</h2>
                     <img src={require('../images/TempHouse.jpg')} alt='Täppan'/>
+                    <img src={require('../images/TempButton.jpg')} alt='Image Button'/>
                 </Link>
             </div> 
         </div>
