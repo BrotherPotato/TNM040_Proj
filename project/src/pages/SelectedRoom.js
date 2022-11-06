@@ -23,11 +23,11 @@ const SelectedRoom = () => {
     return(
         <div className='parent'>
             <div className='topBar'>
-                <h2 style={{color: '#FFFFFF'}}>Selected Room</h2>
+                <h1 style={{color: '#FFFFFF'}}>Selected Room</h1>
                 <button style={{marginLeft:'10em'}} onClick={() => navigate(-1)}>(placeholder kryss)</button>
             </div>
             <div className='selectedRoom'>
-                <h1>{roomData.RoomCode} {(roomData.RoomName != '') && roomData.RoomName} </h1>
+                <h2>{roomData.RoomCode} {(roomData.RoomName != '') && roomData.RoomName} </h2>
                 <p>{(roomData.House != '') && roomData.House} {(roomData.Floor != '') && 'våning ' + roomData.Floor}</p>
             </div>
 
