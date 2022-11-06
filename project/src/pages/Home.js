@@ -14,7 +14,7 @@ function Home(){
 
             <div className='houseTwo'>
                 <h2>Täppan</h2>
-                <img src='../images/TempHouse.jpg' alt='Täppan'/>
+                <img src={require('../images/TempHouse.jpg')} alt='Täppan'/>
             </div>
         </div>
         <div className='SearchBar'>
