@@ -11,7 +11,7 @@ function Home(){
             <div className='houseOne'>
                 <Link className='HouseLink' to={'/FloorSelection/Kåken'}>
                     <h2>Kåkenhus</h2>
-                    <img src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
+                    <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
                     <img src={require('../images/TempButton.jpg')} alt='Image Button'/>
                 </Link>
             </div>
@@ -19,7 +19,7 @@ function Home(){
             <div className='houseTwo'>
                 <Link className='HouseLink' to={'/FloorSelection/Täppan'}>
                     <h2>Täppan</h2>
-                    <img src={require('../images/TempHouse.jpg')} alt='Täppan'/>
+                    <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Täppan'/>
                     <img src={require('../images/TempButton.jpg')} alt='Image Button'/>
                 </Link>
             </div> 
