@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
+
 function Home(){
  return(
     <div className='parent'>
@@ -9,14 +11,18 @@ function Home(){
         </div>
         <div className='houseChoice'>
             <div className='houseOne'>
-                <h2>Kåkenhus</h2>
-                <img src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
+                <Link className='HouseLink' to='/Search'>
+                    <h2>Kåkenhus</h2>
+                    <img src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
+                </Link>
             </div>
-
+             
             <div className='houseTwo'>
-                <h2>Täppan</h2>
-                <img src={require('../images/TempHouse.jpg')} alt='Täppan'/>
-            </div>
+                <Link className='HouseLink' to='/Search'>
+                    <h2>Täppan</h2>
+                    <img src={require('../images/TempHouse.jpg')} alt='Täppan'/>
+                </Link>
+            </div> 
         </div>
         <div className='SearchBar'>
             <Link className='SearchLink' to={'/Search'}>
