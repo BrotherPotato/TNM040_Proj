@@ -77,3 +77,8 @@ Body {
 .singleSearchResult:nth-child(odd){
   background: #CCF0FA; 
 }
+
+.selectedRoom{
+  background: #C7E9F2;
+  padding: 1vw;
+}

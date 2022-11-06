@@ -21,18 +21,15 @@ const SelectedRoom = () => {
     </Link>
     */
     return(
-        <div>
+        <div className='parent'>
             <div className='topBar'>
                 <h2 style={{color: '#FFFFFF'}}>Selected Room</h2>
                 <button style={{marginLeft:'10em'}} onClick={() => navigate(-1)}>(placeholder kryss)</button>
             </div>
-
-            <h1>SelectedRoom: {roomData.RoomCode}</h1>
-            {(roomData.RoomName != '') && <h2>{'RoomName: ' + roomData.RoomName}</h2>}
-
-            {(roomData.Floor != '') && <h2>{'Floor: ' + roomData.Floor}</h2>}
-
-            {(roomData.House != '') && <h2>{'House: ' + roomData.House}</h2>}
+            <div className='selectedRoom'>
+                <h1>{roomData.RoomCode} {(roomData.RoomName != '') && roomData.RoomName} </h1>
+                <h2>{(roomData.House != '') && roomData.House} {(roomData.Floor != '') && 'våning ' + roomData.Floor}</h2>
+            </div>
 
         </div>
     )
