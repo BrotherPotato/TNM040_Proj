@@ -7,8 +7,14 @@ function Home(){
         <div className='LogoTextBox'>
             <h1>LiTHe Vilse (trademark pending)</h1> 
         </div>
-        <div className='HouseChoice'>
+        <div className='houseChoice'>
+            <div className='houseOne'>
+                <h2>Kåkenhus</h2>
+            </div>
 
+            <div className='houseTwo'>
+                <h2>Täppan</h2>
+            </div>
         </div>
         <div className='SearchBar'>
             <Link className='SearchLink' to={'/Search'}>

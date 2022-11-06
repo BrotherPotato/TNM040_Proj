@@ -45,6 +45,15 @@ Body {
   margin-top: 25%;
   text-align: center;
 }
+.houseChoice{
+  display: flex;
+}
+.houseOne{
+  margin:auto;
+}
+.houseTwo{
+  margin:auto;
+}
 
 .searchResults {
   overflow-y: scroll;
