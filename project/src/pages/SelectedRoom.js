@@ -25,11 +25,7 @@ const SelectedRoom = () => {
             <div className='topBar'>
                 <h2 style={{color: '#FFFFFF'}}>Selected Room</h2>
                 <button style={{marginLeft:'10em'}} onClick={() => navigate(-1)}>(placeholder kryss)</button>
-                
-                
             </div>
-
-            
 
             <h1>SelectedRoom: {roomData.RoomCode}</h1>
             {(roomData.RoomName != '') && <h2>{'RoomName: ' + roomData.RoomName}</h2>}
