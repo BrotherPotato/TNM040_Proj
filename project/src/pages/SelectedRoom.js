@@ -28,7 +28,7 @@ const SelectedRoom = () => {
             </div>
             <div className='selectedRoom'>
                 <h2>{roomData.RoomCode} {(roomData.RoomName != '') && roomData.RoomName} </h2>
-                <p>{(roomData.House != '') && roomData.House} {(roomData.Floor != '') && 'våning ' + roomData.Floor}</p>
+                <p>{(roomData.House != '') && roomData.House} {(roomData.Floor != '') && 'våning: ' + roomData.Floor}</p>
             </div>
 
         </div>
