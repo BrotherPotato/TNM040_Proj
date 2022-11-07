@@ -90,6 +90,33 @@ Body {
   text-decoration: none;
   color:#FFFFFF;
 }
+
+.floorSelection{
+  display: inline-flex;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 5em;
+  width: 100%
+}
+.floors{
+  flex-direction: column;
+  width: 25%;
+  margin-left: 2em;
+  margin-top: -6em;
+}
+.floorButton{
+  flex-direction: column;
+  width: 100%;
+  height: 10%;
+  margin-top: 2em;
+  font-family: liu-bold;
+  box-sizing: border-box;
+  line-height: 3em;
+}
+.houseFloor{
+  margin:auto;
+  width: 20em;
+}
 .SearchBar{
   margin: auto;
 }
