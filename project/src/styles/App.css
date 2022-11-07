@@ -146,7 +146,7 @@ Body {
 .singleSearchResult{
   list-style-type: none;
   background: #C7E9F2;
-  padding: 1vw;
+  padding: 0.5em;
 }
 
 .singleSearchResult:nth-child(odd){
@@ -155,5 +155,5 @@ Body {
 
 .selectedRoom{
   background: #C7E9F2;
-  padding: 3vw;
+  padding: 1em;
 }
