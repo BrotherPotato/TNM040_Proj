@@ -3,234 +3,441 @@
     "RoomCode": "K3",
     "RoomName": "Önnesjösalen",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "Föreläsningssal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K23",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "Föreläsningssal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K25",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K1",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "Föreläsningssal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K21",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K24",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K22",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K2",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K4",
     "RoomName": "Turbinen",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "Föreläsningssal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K26",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 2
+    "Floor": 2,
+    "Purpose": "Personalrum Trappan",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K6305",
     "RoomName": "Alfvén",
     "House": "Kåkenhus",
-    "Floor": 3
+    "Floor": 3,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K6305b",
     "RoomName": "Moberg",
     "House": "Kåkenhus",
-    "Floor": 3
+    "Floor": 3,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K6304",
     "RoomName": "Moa",
     "House": "Kåkenhus",
-    "Floor": 3
+    "Floor": 3,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K5309",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 3
+    "Floor": 3,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K5310",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 3
+    "Floor": 3,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K5420",
-    "RoomName": "Digimaker (Flexsal)",
+    "RoomName": "Digimaker",
     "House": "Kåkenhus",
-    "Floor": 4
+    "Floor": 4,
+    "Purpose": "Flexsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K5421",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 4
+    "Floor": 4,
+    "Purpose": "Tyst datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K4402",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 4
+    "Floor": 4,
+    "Purpose": "Mötesrum",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K4404",
     "RoomName": "K42",
     "House": "Kåkenhus",
-    "Floor": 4
+    "Floor": 4,
+    "Purpose": "Dramasal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K4403",
     "RoomName": "K42",
     "House": "Kåkenhus",
-    "Floor": 4
+    "Floor": 4,
+    "Purpose": "Dramasal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K505",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K4507",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K4521",
     "RoomName": "Liu Donation",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Liu Donation",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K501",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K502",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K4504",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K4502",
     "RoomName": "K52",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Bildsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K2523",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "",
+    "Restricted": "y",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K2510",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "ITN",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K2509",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "ITN",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K2511",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Musiksal",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K2515",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K2516",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K2517",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K2524",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K2525",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K2526",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K2527",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
   },
   {
     "RoomCode": "K2528",
     "RoomName": "",
     "House": "Kåkenhus",
-    "Floor": 5
+    "Floor": 5,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "K2430",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "SP-rum",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2429",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Metodrum 4",
+    "Restricted": "y",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "K2427",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Metodrum 3",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2426",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Kommunikationsrum",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2425",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Drop-in",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2424",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Sköljrum",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2411",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Träningslägenhet",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2415",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Metodrum 2",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2414",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Metodrum 1",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "K2409",
+    "RoomName": "",
+    "House": "Kåkenhus",
+    "Floor": 4,
+    "Purpose": "Förråd/Tvätt",
+    "Restricted": "y",
+    "Bokningsbar": "n"
   }
 ]
