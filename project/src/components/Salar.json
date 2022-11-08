@@ -22,7 +22,7 @@
     "RoomName": "",
     "House": "Kåkenhus",
     "Floor": 2,
-    "Purpose": "",
+    "Purpose": "Lärosal",
     "Restricted": "",
     "Bokningsbar": "y"
   },
@@ -40,7 +40,7 @@
     "RoomName": "",
     "House": "Kåkenhus",
     "Floor": 2,
-    "Purpose": "",
+    "Purpose": "Lärosal",
     "Restricted": "",
     "Bokningsbar": "y"
   },
@@ -49,7 +49,7 @@
     "RoomName": "",
     "House": "Kåkenhus",
     "Floor": 2,
-    "Purpose": "",
+    "Purpose": "Lärosal",
     "Restricted": "",
     "Bokningsbar": "y"
   },
@@ -58,7 +58,7 @@
     "RoomName": "",
     "House": "Kåkenhus",
     "Floor": 2,
-    "Purpose": "",
+    "Purpose": "Lärosal",
     "Restricted": "",
     "Bokningsbar": "y"
   },
@@ -67,7 +67,7 @@
     "RoomName": "",
     "House": "Kåkenhus",
     "Floor": 2,
-    "Purpose": "",
+    "Purpose": "Föreläsningssal",
     "Restricted": "",
     "Bokningsbar": "n"
   },
@@ -366,7 +366,7 @@
     "Floor": 4,
     "Purpose": "Metodrum 4",
     "Restricted": "y",
-    "Bokningsbar": "y"
+    "Bokningsbar": "n"
   },
   {
     "RoomCode": "K2427",
