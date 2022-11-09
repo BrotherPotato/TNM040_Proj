@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.js'
 import Search from './pages/Search.js'
 import SelectedRoom from './pages/SelectedRoom.js'
-import FloorSelection from './pages/FloorSelection'
+import FloorSelection from './pages/FloorSelection.js'
+import FloorSelection from './pages/Map.js'
 
 function App() {
   return (
