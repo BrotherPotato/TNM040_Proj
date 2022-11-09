@@ -9,7 +9,7 @@ function Home(){
         </div>
         <div className='houseChoice'>
             <div className='houseOne'>
-                <Link className='HouseLink' to={'/FloorSelection/Kåken'}>
+                <Link className='HouseLink' to={'/FloorSelection/Kåkenhus'}>
                     <h2>Kåkenhus</h2>
                     <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
                     <img className='mapImg' src={require('../images/TempButton.jpg')} alt='Image Button'/>

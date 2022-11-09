@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 
 function FloorSelection(){
     const House = useParams().House;
-    console.log(House);
 
     return(
         <div className='parent'>
