@@ -22,6 +22,15 @@ function Search(){
         setSearchString(e.target.value)
     }
 
+    function setFilterVisible(){
+        console.log("setFilterVisible")
+        if(document.getElementById("filterSettings").style.display === "none"){
+            document.getElementById("filterSettings").style.display = "block"
+        } else {
+            document.getElementById("filterSettings").style.display = "none"
+        }
+    }
+
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -43,7 +52,42 @@ function Search(){
                     placeholder='Sök efter lokal...'
                     onInput={inputSearchString}
                 />
+                <img alt="filterButton" src="https://img.icons8.com/ios/50/000000/filter.png" onClick={() => setFilterVisible()} style={{width: '2em', height: '2em', marginLeft: '1em'}} />
             </div>
+            <div id='filterSettings' style={{display: 'none'}}>
+                <h3>Filterinställningar</h3>
+                <div className='filterSettingsContent'>
+                    <div className='filterSettingsRow'>
+                        <p>Antal platser: </p>
+                        <input type='number' placeholder='Min' />
+                        <input type='number' placeholder='Max' />
+                    </div>
+                    <div className='filterSettingsRow'>
+                        <p>Projektor: </p>
+                        <input type='checkbox' />
+                    </div>
+                    <div className='filterSettingsRow'>
+                        <p>Whiteboard: </p>
+                        <input type='checkbox' />
+                    </div>
+                    <div className='filterSettingsRow'>
+                        <p>TV: </p>
+                        <input type='checkbox' />
+                    </div>
+                    <div className='filterSettingsRow'>
+                        <p>Skärm: </p>
+                        <input type='checkbox' />
+                    </div>
+                    <div className='filterSettingsRow'>
+                        <p>Telefon: </p>
+                        <input type='checkbox' />
+                    </div>
+                    
+
+                </div>
+            </div>
+
+
         </div>
     )
 }

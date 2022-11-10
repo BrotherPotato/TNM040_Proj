@@ -157,3 +157,19 @@ Body {
   background: #C7E9F2;
   padding: 1em;
 }
+
+#filterSettings{
+  display: none;
+
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
+  border: #0f1010 solid 1px;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+
+
+}
