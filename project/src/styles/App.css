@@ -157,10 +157,17 @@ Body {
   background: #C7E9F2;
   padding: 1em;
 }
-
+.filterButton{
+  width: 2em; 
+  height: 2em; 
+  margin-left: 0.5em; 
+  vertical-align: middle;
+  background-color: #CCF0FA;
+  padding: 0.3em;
+  border-radius: 0.5em;
+}
 #filterSettings{
   display: none;
-
   position: absolute;
   top: 60%;
   left: 50%;
@@ -170,4 +177,14 @@ Body {
   border: #0f1010 solid 1px;
   border-radius: 25px;
   background-color: #FFFFFF;
+}
+.filterSettingsRow *{
+  display: inline;
+  margin: 4%;
+}
+.filterSettingsRow input{
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  margin-left: 50%;
 }

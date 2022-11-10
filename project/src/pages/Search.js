@@ -57,13 +57,13 @@ function Search(){
                     placeholder='Sök efter lokal...'
                     onInput={inputSearchString}
                 />
-                <img alt="filterButton" src="https://img.icons8.com/ios/50/000000/filter.png" onClick={() => setFilterVisible()} style={{width: '2em', height: '2em', marginLeft: '1em'}} />
+                <img className='filterButton' alt="filterButton" src="https://img.icons8.com/ios/50/000000/filter-filled.png" onClick={() => setFilterVisible()}/>
             </div>
             <div id='filterSettings' style={{display: 'none'}}>
                 <h3>Filterinställningar</h3>
                 <div className='filterSettingsContent'>
                     <div className='filterSettingsRow'>
-                        <p>Hus</p>
+                        <p>Hus: </p>
                         <select>
                             <option value="all">Alla</option>
                             <option value="Kåkenhus">Kåkenhus</option>
@@ -74,23 +74,23 @@ function Search(){
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Projektor: </p>
-                        <input type='checkbox' />
+                        <input type='checkbox'/>
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Whiteboard: </p>
-                        <input type='checkbox' />
+                        <input type='checkbox'/>
                     </div>
                     <div className='filterSettingsRow'>
                         <p>TV: </p>
-                        <input type='checkbox' />
+                        <input type='checkbox'/>
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Skärm: </p>
-                        <input type='checkbox' />
+                        <input type='checkbox'/>
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Telefon: </p>
-                        <input type='checkbox' />
+                        <input type='checkbox'/>
                     </div>
                     
 
