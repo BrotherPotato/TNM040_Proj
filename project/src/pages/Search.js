@@ -13,6 +13,10 @@ function Search(){
         return lowerCaseName.indexOf(lowerCaseSearch) >= 0
     }
 
+    Salar.sort((a, b) => {
+        return a.RoomCode.localeCompare(b.RoomCode)
+      })
+
     const filteredSalar = Salar.filter(matchSearch)
     const inputSearchString = (e) => {
         setSearchString(e.target.value)
