@@ -166,10 +166,8 @@ Body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-
+  padding: 1em;
   border: #0f1010 solid 1px;
   border-radius: 25px;
   background-color: #FFFFFF;
-
-
 }
