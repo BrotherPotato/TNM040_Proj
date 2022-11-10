@@ -23,12 +23,17 @@ function Search(){
     }
 
     function setFilterVisible(){
-        console.log("setFilterVisible")
+        //console.log("setFilterVisible")
         if(document.getElementById("filterSettings").style.display === "none"){
             document.getElementById("filterSettings").style.display = "block"
         } else {
             document.getElementById("filterSettings").style.display = "none"
         }
+    }
+
+    function uppdateSort(){
+        console.log("uppdateSort")
+
     }
 
     return(
@@ -58,9 +63,14 @@ function Search(){
                 <h3>Filterinställningar</h3>
                 <div className='filterSettingsContent'>
                     <div className='filterSettingsRow'>
-                        <p>Antal platser: </p>
-                        <input type='number' placeholder='Min' />
-                        <input type='number' placeholder='Max' />
+                        <p>Hus</p>
+                        <select>
+                            <option value="all">Alla</option>
+                            <option value="Kåkenhus">Kåkenhus</option>
+                            <option value="Täppan">Täppan</option>
+                            <option value="Spetsen">Spetsen</option>
+                            <option value="Kopparhammaren">Kopparhammaren</option>
+                        </select>
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Projektor: </p>
