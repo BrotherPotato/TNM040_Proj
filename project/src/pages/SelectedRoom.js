@@ -29,7 +29,7 @@ const SelectedRoom = () => {
             <div className='selectedRoom'>
                 <h2 style={{display:'inline'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
                 <h3 style={{display:'inline'}}>{roomData.Purpose}</h3>
-                <p>{(roomData.House != '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
+                <p>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
                 <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
                 <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
             </div>
