@@ -439,5 +439,545 @@
     "Purpose": "Förråd/Tvätt",
     "Restricted": "y",
     "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP1",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 3,
+    "Purpose": "Föreläsningssal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP2",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 3,
+    "Purpose": "Föreläsningssal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP31",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 3,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP32",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 3,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP301",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 3,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP40",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP41",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP42",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP43",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP44",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP45",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP401",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP402",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP403",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP404",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP4002",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4003",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4004",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4005",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4006",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4008",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Verkstad/Förråd",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4009",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "LiTHeEl",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4018",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4035",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4027",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Laborationssal Elektroteknik",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4028",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Laborationssal Elektroteknik",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4029",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Projektlabb",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4030",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "KTS Lab",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4031",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4032",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4033",
+    "RoomName": "Gruvan",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4034",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Lab för organisk elektronik",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4040",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Fysiklab",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4041",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "Fysiklab",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP4042",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 4,
+    "Purpose": "",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP51",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP52",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP53",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP54",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP55",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP56",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Lärosal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP501",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Bokab/Grupprum",
+    "Restricted": "",
+    "Bokningsbar": "y"
+  },
+  {
+    "RoomCode": "TP5086",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Studentkök",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5002",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Personalrum",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5003",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Mönsterkortslabb",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5004",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "RF/EMC-lab",
+    "Restricted": "y",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5050",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Sjukrum",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5015",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5016",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5021",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5022",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5023",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Datorsal",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5024",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TPM51",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Mötesrum",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TPM52",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Mötesrum",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TPM53",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Mötesrum",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TPM54",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Mötesrum",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TPM55",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "Mötesrum",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP502",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "",
+    "Restricted": "",
+    "Bokningsbar": "n"
+  },
+  {
+    "RoomCode": "TP5034",
+    "RoomName": "",
+    "House": "Täppan",
+    "Floor": 5,
+    "Purpose": "",
+    "Restricted": "y",
+    "Bokningsbar": "n"
   }
 ]
