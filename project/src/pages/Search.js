@@ -12,7 +12,6 @@ function Search(){
         const lowerCaseSearch = searchString.toLowerCase()
         return lowerCaseName.indexOf(lowerCaseSearch) >= 0
     }
-
     Salar.sort((a, b) => {
         return a.RoomCode.localeCompare(b.RoomCode)
       })
@@ -23,7 +22,7 @@ function Search(){
     }
 
     function setFilterVisible(){
-        //console.log("setFilterVisible")
+        //console.log(document.getElementById("selectHouse").value)
         if(document.getElementById("filterSettings").style.display === "none"){
             document.getElementById("filterSettings").style.display = "block"
         } else {
@@ -64,7 +63,7 @@ function Search(){
                 <div className='filterSettingsContent'>
                     <div className='filterSettingsRow'>
                         <p>Hus: </p>
-                        <select>
+                        <select id='selectHouse'>
                             <option value="all">Alla</option>
                             <option value="Kåkenhus">Kåkenhus</option>
                             <option value="Täppan">Täppan</option>
