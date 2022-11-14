@@ -6,7 +6,7 @@ import Salar from '../components/Salar.json'
 function Search(){
     const navigate = useNavigate();
     const [searchString, setSearchString] = useState('')
-    const [filterHouse, setFilterHouse] = useState('')
+    const [filterHouse, setFilterHouse] = useState('all')
 
     const matchSearch = sName => {
         const lowerCaseName = sName.RoomCode.toLowerCase()
