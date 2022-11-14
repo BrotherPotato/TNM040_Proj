@@ -6,6 +6,7 @@ import Salar from '../components/Salar.json'
 function Search(){
     const navigate = useNavigate();
     const [searchString, setSearchString] = useState('')
+    const [filterHouse, setFilterHouse] = useState('')
 
     const matchSearch = sName => {
         const lowerCaseName = sName.RoomCode.toLowerCase()
@@ -30,6 +31,8 @@ function Search(){
     }
     function updateFilter(){
         console.log(document.getElementById("selectHouse").value)
+        setFilterHouse(document.getElementById("selectHouse").value)
+        console.log(filterHouse)
     }
     function uppdateSort(){
         console.log("uppdateSort")
