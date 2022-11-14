@@ -47,7 +47,11 @@ function Search(){
             </div>
             <div>
                 <ul className='searchResults'>
-                    {filteredSalar.filter(function (filteredSalar){if(filterHouse === 'all'){return true}return filteredSalar.House === filterHouse}).map((s) => (
+                    {filteredSalar.filter(function (filteredSalar){
+                        if(filterHouse === 'all'){
+                            return true
+                        } return filteredSalar.House === filterHouse})
+                        .map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
                 </ul>
