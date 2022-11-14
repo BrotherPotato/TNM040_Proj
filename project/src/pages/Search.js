@@ -30,9 +30,9 @@ function Search(){
         }
     }
     function updateFilter(){
-        console.log(document.getElementById("selectHouse").value)
+        //console.log(document.getElementById("selectHouse").value)
         setFilterHouse(document.getElementById("selectHouse").value)
-        console.log(filterHouse)
+        //console.log(filterHouse)
     }
     function uppdateSort(){
         console.log("uppdateSort")
@@ -47,7 +47,7 @@ function Search(){
             </div>
             <div>
                 <ul className='searchResults'>
-                    {filteredSalar.map((s) => (
+                    {filteredSalar.filter(function (filteredSalar){if(filterHouse === 'all'){return true}return filteredSalar.House === filterHouse}).map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
                 </ul>
