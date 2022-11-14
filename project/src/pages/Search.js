@@ -22,14 +22,15 @@ function Search(){
     }
 
     function setFilterVisible(){
-        //console.log(document.getElementById("selectHouse").value)
         if(document.getElementById("filterSettings").style.display === "none"){
             document.getElementById("filterSettings").style.display = "block"
         } else {
             document.getElementById("filterSettings").style.display = "none"
         }
     }
-
+    function updateFilter(){
+        console.log(document.getElementById("selectHouse").value)
+    }
     function uppdateSort(){
         console.log("uppdateSort")
 
@@ -63,7 +64,7 @@ function Search(){
                 <div className='filterSettingsContent'>
                     <div className='filterSettingsRow'>
                         <p>Hus: </p>
-                        <select id='selectHouse'>
+                        <select id='selectHouse' onChange={updateFilter}>
                             <option value="all">Alla</option>
                             <option value="Kåkenhus">Kåkenhus</option>
                             <option value="Täppan">Täppan</option>
