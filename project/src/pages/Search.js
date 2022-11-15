@@ -8,6 +8,12 @@ function Search(){
     const [searchString, setSearchString] = useState('')
     const [filterHouse, setFilterHouse] = useState('all')
     const [filterFloor, setFilterFloor] = useState('all')
+    const [filterBookable, setFilterBookable] = useState('all')
+    const [filterRestricted, setFilterRestricted] = useState('all')
+    const [filterPurpose, setFilterPurpose] = useState('all')
+    
+
+
 
     const matchSearch = sName => {
         const lowerCaseName = sName.RoomCode.toLowerCase()
@@ -33,6 +39,10 @@ function Search(){
     function updateFilter(){
         //console.log(document.getElementById("selectHouse").value)
         setFilterHouse(document.getElementById("selectHouse").value)
+        setFilterFloor(document.getElementById("selectFloor").value)
+        setFilterBookable(document.getElementById("selectBookable").value)
+        console.log(document.getElementById("selectRestricted").value)
+        setFilterRestricted(document.getElementById("selectRestricted").value)
         //console.log(filterHouse)
     }
     function uppdateSort(){
@@ -78,9 +88,11 @@ function Search(){
                             <option value="Kopparhammaren">Kopparhammaren</option>
                         </select>
                     </div>
-                    <div className='filterSettingsRow'>
+                    <div className='filterSettingsRow'> 
+                    {// TODO: Fixa så att det är dynamiskt
+                    }
                         <p>Våning: </p>
-                        <select id='selectFloor' onChange={updateFilter}>
+                        <select id='selectFloor' onChange={updateFilter}> 
                             <option value="all">Alla</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -90,12 +102,12 @@ function Search(){
                         </select>
                     </div>
                     <div className='filterSettingsRow'>
-                        <p>Whiteboard: </p>
-                        <input type='checkbox'/>
+                        <p>Bokningsbar: </p>
+                        <input id='selectBookable' type='checkbox' onChange={updateFilter}/>
                     </div>
                     <div className='filterSettingsRow'>
-                        <p>TV: </p>
-                        <input type='checkbox'/>
+                        <p>Visa begränsade områden: </p>
+                        <input id='selectRestricted' type='checkbox' onChange={updateFilter}/>
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Skärm: </p>
