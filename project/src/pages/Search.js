@@ -7,6 +7,7 @@ function Search(){
     const navigate = useNavigate();
     const [searchString, setSearchString] = useState('')
     const [filterHouse, setFilterHouse] = useState('all')
+    const [filterFloor, setFilterFloor] = useState('all')
 
     const matchSearch = sName => {
         const lowerCaseName = sName.RoomCode.toLowerCase()
@@ -38,7 +39,7 @@ function Search(){
         console.log("uppdateSort")
 
     }
-
+    
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -78,8 +79,15 @@ function Search(){
                         </select>
                     </div>
                     <div className='filterSettingsRow'>
-                        <p>Projektor: </p>
-                        <input type='checkbox'/>
+                        <p>Våning: </p>
+                        <select id='selectFloor' onChange={updateFilter}>
+                            <option value="all">Alla</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Whiteboard: </p>
