@@ -40,6 +40,7 @@ function Search(){
         //console.log(document.getElementById("selectHouse").value)
         setFilterHouse(document.getElementById("selectHouse").value) // Klar
         setFilterFloor(document.getElementById("selectFloor").value) // Klar
+        setFilterPurpose(document.getElementById("selectPurpose").value)
         setFilterBookable(e.target.checked) //Klar
         //setFilterRestricted(document.getElementById("selectRestricted").value)
     }
@@ -60,6 +61,8 @@ function Search(){
                         return (filterHouse === 'all' || filteredSalar.House === filterHouse)})
                         .filter(function (filteredSalar){
                         return(filterFloor === 'all' || filteredSalar.Floor == parseInt(filterFloor, 10))})
+                        .filter(function(filteredSalar){
+                        return(filterPurpose === 'all' || filteredSalar.Purpose === filterPurpose)})
                         .filter(function (filteredSalar){
                         if(filteredSalar.Bokningsbar === 'y' && filterBookable){return true}
                         else if(!filterBookable){return true}})
@@ -101,6 +104,16 @@ function Search(){
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div className='filterSettingsRow'>
+                        <p>Användning: </p>
+                        <select id='selectPurpose' onChange={updateFilter}> 
+                            <option value="all">Alla</option>
+                            <option value="Föreläsningssal">Föreläsningssal</option>
+                            <option value="Lärosal">Lärosal</option>
+                            <option value="Grupprum">Grupprum</option>
+                            <option value="Datorsal">Datorsal</option>
                         </select>
                     </div>
                     <div className='filterSettingsRow'>
