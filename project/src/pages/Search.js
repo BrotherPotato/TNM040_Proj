@@ -38,6 +38,14 @@ function Search(){
     }
     function updateFilter(){
         //console.log(document.getElementById("selectHouse").value)
+
+        // PHILIP FIXA DETTA
+        //
+        //
+        //
+        //
+
+
         setFilterHouse(document.getElementById("selectHouse").value)
         setFilterFloor(document.getElementById("selectFloor").value)
         setFilterBookable(document.getElementById("selectBookable").value)
