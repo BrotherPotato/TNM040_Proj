@@ -247,7 +247,7 @@
     "RoomName": "",
     "House": "Kåkenhus",
     "Floor": 5,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "y",
     "Bokningsbar": "n"
   },
@@ -463,7 +463,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 3,
-    "Purpose": "",
+    "Purpose": "Lärosal",
     "Restricted": "",
     "Bokningsbar": "y"
   },
@@ -472,7 +472,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 3,
-    "Purpose": "",
+    "Purpose": "Lärosal",
     "Restricted": "",
     "Bokningsbar": "y"
   },
@@ -580,7 +580,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 4,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "y",
     "Bokningsbar": "n"
   },
@@ -616,7 +616,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 4,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "y",
     "Bokningsbar": "n"
   },
@@ -643,7 +643,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 4,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "y",
     "Bokningsbar": "n"
   },
@@ -652,7 +652,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 4,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "y",
     "Bokningsbar": "n"
   },
@@ -697,7 +697,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 4,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "",
     "Bokningsbar": "n"
   },
@@ -706,7 +706,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 4,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "",
     "Bokningsbar": "n"
   },
@@ -751,7 +751,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 4,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "y",
     "Bokningsbar": "n"
   },
@@ -913,7 +913,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 5,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "",
     "Bokningsbar": "n"
   },
@@ -967,7 +967,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 5,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "",
     "Bokningsbar": "n"
   },
@@ -976,7 +976,7 @@
     "RoomName": "",
     "House": "Täppan",
     "Floor": 5,
-    "Purpose": "",
+    "Purpose": "Sal",
     "Restricted": "y",
     "Bokningsbar": "n"
   }
