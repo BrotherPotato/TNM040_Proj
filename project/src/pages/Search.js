@@ -8,7 +8,7 @@ function Search(){
     const [searchString, setSearchString] = useState('')
     const [filterHouse, setFilterHouse] = useState('all')
     const [filterFloor, setFilterFloor] = useState('all')
-    const [filterBookable, setFilterBookable] = useState('all')
+    const [filterBookable, setFilterBookable] = useState('')
     const [filterRestricted, setFilterRestricted] = useState('all')
     const [filterPurpose, setFilterPurpose] = useState('all')
     
@@ -36,12 +36,12 @@ function Search(){
             document.getElementById("filterSettings").style.display = "none"
         }
     }
-    function updateFilter(){
+    function updateFilter(e){
         //console.log(document.getElementById("selectHouse").value)
-        setFilterHouse(document.getElementById("selectHouse").value)
-        setFilterFloor(document.getElementById("selectFloor").value)
-        setFilterBookable(document.getElementById("selectBookable").value)
-        setFilterRestricted(document.getElementById("selectRestricted").value)
+        setFilterHouse(document.getElementById("selectHouse").value) // Klar
+        setFilterFloor(document.getElementById("selectFloor").value) // Klar
+        setFilterBookable(e.target.checked) //Klar
+        //setFilterRestricted(document.getElementById("selectRestricted").value)
     }
     function uppdateSort(){
         console.log("uppdateSort")
@@ -60,6 +60,9 @@ function Search(){
                         return (filterHouse === 'all' || filteredSalar.House === filterHouse)})
                         .filter(function (filteredSalar){
                         return(filterFloor === 'all' || filteredSalar.Floor == parseInt(filterFloor, 10))})
+                        .filter(function (filteredSalar){
+                        if(filteredSalar.Bokningsbar === 'y' && filterBookable){return true}
+                        else if(!filterBookable){return true}})
                         .map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
@@ -104,10 +107,12 @@ function Search(){
                         <p>Bokningsbar: </p>
                         <input id='selectBookable' type='checkbox' onChange={updateFilter}/>
                     </div>
+                    {/*
                     <div className='filterSettingsRow'>
                         <p>Visa begränsade områden: </p>
                         <input id='selectRestricted' type='checkbox' onChange={updateFilter}/>
                     </div>
+                    */}
                     <div className='filterSettingsRow'>
                         <p>Skärm: </p>
                         <input type='checkbox'/>
