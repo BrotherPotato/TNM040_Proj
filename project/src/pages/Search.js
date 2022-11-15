@@ -38,20 +38,10 @@ function Search(){
     }
     function updateFilter(){
         //console.log(document.getElementById("selectHouse").value)
-
-        // PHILIP FIXA DETTA
-        //
-        //
-        //
-        //
-
-
         setFilterHouse(document.getElementById("selectHouse").value)
         setFilterFloor(document.getElementById("selectFloor").value)
         setFilterBookable(document.getElementById("selectBookable").value)
-        console.log(document.getElementById("selectRestricted").value)
         setFilterRestricted(document.getElementById("selectRestricted").value)
-        //console.log(filterHouse)
     }
     function uppdateSort(){
         console.log("uppdateSort")
@@ -68,6 +58,8 @@ function Search(){
                 <ul className='searchResults'>
                     {filteredSalar.filter(function (filteredSalar){
                         return (filterHouse === 'all' || filteredSalar.House === filterHouse)})
+                        .filter(function (filteredSalar){
+                        return(filterFloor === 'all' || filteredSalar.Floor == parseInt(filterFloor, 10))})
                         .map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
@@ -102,7 +94,6 @@ function Search(){
                         <p>Våning: </p>
                         <select id='selectFloor' onChange={updateFilter}> 
                             <option value="all">Alla</option>
-                            <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
