@@ -1,17 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link ,useNavigate} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 
 function FloorSelection(){
     const House = useParams().House;
+    const navigate = useNavigate();
 
     return(
         <div className='parent'>
             <div className='topBar'>
-                <h1 style={{color: '#FFFFFF'}}>Floor Selection</h1>
-                <Link to='/'>
-                    <button style={{marginLeft:'10em'}}>(placeholder kryss)</button>
-                </Link>
+                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>Floor Selection</h1>
+                <img className='CloseImg' alt="Close Button" src="https://img.icons8.com/ios/50/FFFFFF/delete-sign-filled.png" onClick={() => navigate(-1)}/>
             </div>
             <div className='floorSelection'>
                 <div className='floors'>

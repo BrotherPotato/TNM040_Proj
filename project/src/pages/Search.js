@@ -40,7 +40,7 @@ function Search(){
         //console.log(document.getElementById("selectHouse").value)
         setFilterHouse(document.getElementById("selectHouse").value) // Klar
         setFilterFloor(document.getElementById("selectFloor").value) // Klar
-        setFilterPurpose(document.getElementById("selectPurpose").value)
+        setFilterPurpose(document.getElementById("selectPurpose").value)// Typ klart behövs dock ett alternativ för att filtrera efter 'övriga' t.ex salar med unika funktioner
         setFilterBookable(e.target.checked) //Klar
         //setFilterRestricted(document.getElementById("selectRestricted").value)
     }
@@ -52,8 +52,8 @@ function Search(){
     return(
         <div className='parent'>
             <div className='topBar'>
-                <h2 style={{color: '#FFFFFF'}}>Sökresultat: </h2>
-                <button style={{marginLeft:'10em'}} onClick={() => navigate(-1)}>(placeholder kryss)</button>
+                <h2 style={{color: '#FFFFFF', display: 'inline-block'}}>Sökresultat: </h2>
+                <img className='CloseImg' alt="Close Button" src="https://img.icons8.com/ios/50/FFFFFF/delete-sign-filled.png" onClick={() => navigate(-1)}/>
             </div>
             <div>
                 <ul className='searchResults'>

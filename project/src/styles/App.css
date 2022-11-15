@@ -130,7 +130,12 @@ Body {
   margin: 1em;
   vertical-align: auto;
 }
-
+.CloseImg{
+  display: inline-block;
+  margin-left: 10em;
+  height: 100%;
+  vertical-align: middle;
+}
 .searchResults{
   padding: 0;
   margin: 0;
