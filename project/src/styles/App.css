@@ -133,7 +133,8 @@ Body {
 .CloseImg{
   display: inline-block;
   margin-left: 10em;
-  height: 100%;
+  margin-top: 2em;
+  height: 2.5em;
   vertical-align: middle;
 }
 .searchResults{
