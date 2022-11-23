@@ -265,3 +265,14 @@ Body {
   vertical-align: middle;
   margin-left: 0.5em;
 }
+.mapButton{
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 0.5em;
+}
+.mapButtonCol1{
+  float: left;
+}
+.mapButtonCol2{
+  float: right;
+}

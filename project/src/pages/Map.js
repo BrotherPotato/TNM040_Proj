@@ -30,21 +30,23 @@ function Map(){
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
             <div className='map'>   
-
+            <div className='mapButtonCol1'>
+                <div className='mapButton' onClick={() => navigate(-1)}> 
+                    <img className='centerMapImg' alt="Center Map" src={require('../images/TempCenterMap.png')}/>
+                </div>
+                <div className='mapButton' onClick={() => setMapFilterVisible()}>
+                    <img className='mapOptions' alt="Map Filter" src={require('../images/TempEye.png')}/>
+                </div>
             </div>
-            <div className='mapButton' onClick={() => navigate(-1)}> 
-                <img className='centerMapImg' alt="Center Map" src={require('../images/TempCenterMap.png')}/>
+            <div className='mapButtonCol2'>
+                <div className='mapButton' onClick={() => setMapFloorVisible()}>
+                    <img className='mapLayer' alt="Map Layer" src={require('../images/TempLayer.png')}/>
+                </div>
+                <div className='mapButton' onClick={() => navigate('/Search')}>
+                    <img className='mapSearch' alt="Map Search" src={require('../images/TempSearch.png')}/>
+                </div>
             </div>
-            <div className='mapButton' onClick={() => setMapFilterVisible()}>
-                <img className='mapOptions' alt="Map Filter" src={require('../images/TempEye.png')}/>
             </div>
-            <div className='mapButton' onClick={() => setMapFloorVisible()}>
-                <img className='mapLayer' alt="Map Layer" src={require('../images/TempLayer.png')}/>
-            </div>
-            <div className='mapButton' onClick={() => navigate('/Search')}>
-                <img className='mapSearch' alt="Map Search" src={require('../images/TempSearch.png')}/>
-            </div>
-
             <div id='mapFilterOptions' style={{display: 'none'}}>
                 <p>Visa:</p>
                 <img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/>
@@ -55,22 +57,22 @@ function Map(){
             </div>
 
             <div id='mapFloorSelection' style={{display: 'none'}}> 
-                <Link to={'/Map/'+ House + '/' + Floor + '/1'}>
+                <Link to={'/Map/'+ House + '/1'}>
                     <button className='mapButton'>1</button>
                 </Link>
-                <Link to={'/Map/'+ House + '/' + Floor + '/2'}>
+                <Link to={'/Map/'+ House + '/2'}>
                     <button className='mapButton'>2</button>
                 </Link>
-                <Link to={'/Map/'+ House + '/' + Floor + '/3'}>
+                <Link to={'/Map/'+ House + '/3'}>
                     <button className='mapButton'>3</button>
                 </Link>
-                <Link to={'/Map/'+ House + '/' + Floor + '/4'}>
+                <Link to={'/Map/'+ House + '/4'}>
                     <button className='mapButton'>4</button>
                 </Link>
-                <Link to={'/Map/'+ House + '/' + Floor + '/5'}>
+                <Link to={'/Map/'+ House + '/5'}>
                     <button className='mapButton'>5</button>
                 </Link>
-                <Link to={'/Map/'+ House + '/' + Floor + '/6'}>
+                <Link to={'/Map/'+ House + '/6'}>
                     <button className='mapButton'>6</button>
                 </Link>
             </div>
