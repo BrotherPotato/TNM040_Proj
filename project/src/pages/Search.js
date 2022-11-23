@@ -40,7 +40,7 @@ function Search(){
         //console.log(document.getElementById("selectHouse").value)
         setFilterHouse(document.getElementById("selectHouse").value) // Klar
         setFilterFloor(document.getElementById("selectFloor").value) // Klar
-        setFilterPurpose(document.getElementById("selectPurpose").value)// Typ klart behövs dock ett alternativ för att filtrera efter 'övriga' t.ex salar med unika funktioner
+        setFilterPurpose(document.getElementById("selectPurpose").value)// Klar
         setFilterBookable(e.target.checked) //Klar
         //setFilterRestricted(document.getElementById("selectRestricted").value)
     }
