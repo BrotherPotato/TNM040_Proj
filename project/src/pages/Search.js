@@ -57,13 +57,13 @@ function Search(){
             </div>
             <div>
                 <ul className='searchResults'>
-                    {filteredSalar.filter(function (filteredSalar){
-                        return (filterHouse === 'all' || filteredSalar.House === filterHouse)})
-                        .filter(function (filteredSalar){
+                    {filteredSalar.filter(function (filteredSalar){// Filter by house
+                        return (filterHouse === 'all' || filteredSalar.House === filterHouse)}) 
+                        .filter(function (filteredSalar){ // Filter by Floor
                         return(filterFloor === 'all' || filteredSalar.Floor == parseInt(filterFloor, 10))})
-                        .filter(function(filteredSalar){
+                        .filter(function(filteredSalar){ // Filter by Purpose
                         return(filterPurpose === 'all' || filteredSalar.Purpose === filterPurpose)})
-                        .filter(function (filteredSalar){
+                        .filter(function (filteredSalar){ // Filter if bookable
                         if(filteredSalar.Bokningsbar === 'y' && filterBookable){return true}
                         else if(!filterBookable){return true}})
                         .map((s) => (
