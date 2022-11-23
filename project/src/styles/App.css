@@ -261,7 +261,6 @@ Body {
 
 .mapButton img {
   width: 5em;
-  height: 5em;
   vertical-align: middle;
   margin-left: 0.5em;
 }
@@ -269,6 +268,11 @@ Body {
   border: 1px solid black;
   border-radius: 100px;
   padding: 0.5em;
+}
+.map{
+  position: fixed;
+  bottom: 0%;
+  width:100%;
 }
 .mapButtonCol1{
   float: left;
