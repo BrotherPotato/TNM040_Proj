@@ -30,9 +30,11 @@ function Search(){
     }
 
     function setFilterVisible(){
-        if(document.getElementById("filterSettings").style.display === "none"){
+        if(document.getElementById("grayOverlay").style.display === "none"){
+            document.getElementById("grayOverlay").style.display = "block"
             document.getElementById("filterSettings").style.display = "block"
         } else {
+            document.getElementById("grayOverlay").style.display = "none"
             document.getElementById("filterSettings").style.display = "none"
         }
     }
@@ -92,6 +94,7 @@ function Search(){
                 />
                 <img className='filterButton' alt="filterButton" src={require('../images/TempFilter.png')} onClick={() => setFilterVisible()}/>
             </div>
+            <div id="grayOverlay" style={{display: 'none'}} onClick={() => setFilterVisible()}></div>
             <div id='filterSettings' style={{display: 'none'}}>
                 <h3>Filterinställningar</h3>
                 <div className='filterSettingsContent'>
@@ -135,23 +138,8 @@ function Search(){
                         <span className="slider round"></span>
                         </label>
                     </div>
-                    {/*
-                    <div className='filterSettingsRow'>
-                        <p>Visa begränsade områden: </p>
-                        <input id='selectRestricted' type='checkbox' onChange={updateFilter}/>
-                    </div>
-                    */}
-                    <div className='filterSettingsRow'>
-                        <p>Skärm: </p>
-                        <label className="switch">
-                            <input type='checkbox'/>
-                            <span className="slider round"></span>
-                        </label>
-                    </div>
                 </div>
             </div>
-
-
         </div>
     )
 }

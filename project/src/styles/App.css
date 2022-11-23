@@ -230,16 +230,27 @@ Body {
   border-radius: 0.5em;
 }
 #filterSettings{
-  display: none;
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   width: 80%;
   padding: 1em;
   border: #0f1010 solid 1px;
   border-radius: 25px;
   background-color: #FFFFFF;
+}
+#grayOverlay{
+  display: none;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  background-color: gray;
+  opacity: 0.5;
 }
 .filterSettingsRow select{
   padding: 0.8em;
@@ -260,12 +271,12 @@ Body {
 }
 
 .mapButton img {
-  width: 4em;
+  width: 3em;
   vertical-align: middle;
 }
 .mapButton{
   border-radius: 100px;
-  padding: 0.5em;
+  padding: 1em;
   margin: 1em;
   box-shadow: 1px 2px 5px black;
 }
