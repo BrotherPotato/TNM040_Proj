@@ -37,7 +37,7 @@ function Map(){
                 <img className='mapSearch' alt="Map Search" src={require('../images/TempSearch.png')}/>
             </div>
 
-            <div id='mapFilterOptions'  style={{display: 'none'}}>
+            <div id='mapFilterOptions' style={{display: 'none'}}>
                 <p>Visa:</p>
                 <img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/>
                 <img className='optionImage' src={require('../images/TempKitchen.png')} alt='Kök bild'/>
