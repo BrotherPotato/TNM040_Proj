@@ -41,7 +41,7 @@ function Map(){
             <div className='mapButton' onClick={() => setMapFloorVisible()}>
                 <img className='mapLayer' alt="Map Layer" src={require('../images/TempLayer.png')}/>
             </div>
-            <div className='mapButton' onClick={() => navigate(-1)}>
+            <div className='mapButton' onClick={() => navigate('/Search')}>
                 <img className='mapSearch' alt="Map Search" src={require('../images/TempSearch.png')}/>
             </div>
 
