@@ -120,10 +120,7 @@ Body {
 .SearchBar{
   margin: auto;
 }
-.searchResults {
-  overflow-y: scroll;
-  height: 46em;
-}
+
 
 .topBar{
   display: flex;
@@ -132,12 +129,14 @@ Body {
 }
 .CloseImg{
   display: inline-block;
-  margin-left: 50%;
-  margin-top: 1em;
-  height: 2.5em;
+  margin-left: 55%;
+  margin-top: 1.20em;
+  height: 2em;
   vertical-align: middle;
 }
 .searchResults{
+  overflow-y: scroll;
+  height: 46em;
   padding: 0;
   margin: 0;
   width: 100%;
