@@ -7,6 +7,14 @@ function Map(){
     const Floor = useParams().Floor
     const navigate = useNavigate();
 
+    function setMapFilterVisible(){
+        if(document.getElementById('mapFilterOptions').style.display === 'none'){
+            document.getElementById('mapFilterOptions').style.display = 'block'
+        } else {
+            document.getElementById('mapFilterOptions').style.display = 'none'
+        }
+    }
+
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -19,7 +27,7 @@ function Map(){
             <div className='mapButton' onClick={() => navigate(-1)}> 
                 <img className='centerMapImg' alt="Center Map" src={require('../images/TempCenterMap.png')}/>
             </div>
-            <div className='mapButton' onClick={() => navigate(-1)}>
+            <div className='mapButton' onClick={() => setMapFilterVisible()}>
                 <img className='mapOptions' alt="Map Filter" src={require('../images/TempEye.png')}/>
             </div>
             <div className='mapButton' onClick={() => navigate(-1)}>
@@ -29,7 +37,7 @@ function Map(){
                 <img className='mapSearch' alt="Map Search" src={require('../images/TempSearch.png')}/>
             </div>
 
-            <div className='mapButton' style={{display: 'none'}}>
+            <div id='mapFilterOptions'  style={{display: 'none'}}>
                 <p>Visa:</p>
                 <img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/>
                 <img className='optionImage' src={require('../images/TempKitchen.png')} alt='Kök bild'/>
@@ -38,7 +46,7 @@ function Map(){
                 <img className='optionImage' src={require('../images/TempElevator.png')} alt='Hiss bild'/>
             </div>
 
-            <div className='mapButton' style={{display: 'none'}}> 
+            <div id='mapFloorSelection' style={{display: 'none'}}> 
                 <Link to={'/Map/'+ House + '/' + Floor + '/1'}>
                     <button className='mapButton'>1</button>
                 </Link>
