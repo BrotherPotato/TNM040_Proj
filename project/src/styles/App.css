@@ -268,11 +268,12 @@ Body {
   border: 1px solid black;
   border-radius: 100px;
   padding: 0.5em;
+  margin: 1em;
 }
 .map{
   position: fixed;
   bottom: 0%;
-  width:100%;
+  width: 100%;
 }
 .mapButtonCol1{
   float: left;
