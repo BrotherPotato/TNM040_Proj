@@ -118,7 +118,10 @@ function Search(){
                     </div>
                     <div className='filterSettingsRow'>
                         <p>Bokningsbar: </p>
-                        <input id='selectBookable' type='checkbox' onChange={updateFilter}/>
+                        <label className="switch">
+                            <input id='selectBookable' type='checkbox' onChange={updateFilter}/>
+                        <span className="slider round"></span>
+                        </label>
                     </div>
                     {/*
                     <div className='filterSettingsRow'>
@@ -128,14 +131,11 @@ function Search(){
                     */}
                     <div className='filterSettingsRow'>
                         <p>Skärm: </p>
-                        <input type='checkbox'/>
+                        <label className="switch">
+                            <input type='checkbox'/>
+                            <span className="slider round"></span>
+                        </label>
                     </div>
-                    <div className='filterSettingsRow'>
-                        <p>Telefon: </p>
-                        <input type='checkbox'/>
-                    </div>
-                    
-
                 </div>
             </div>
 
