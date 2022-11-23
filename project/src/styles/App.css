@@ -258,3 +258,10 @@ Body {
   vertical-align: middle;
   margin-left: 0.5em;
 }
+
+.mapButton img {
+  width: 5em;
+  height: 5em;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}

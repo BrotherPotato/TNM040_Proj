@@ -15,6 +15,14 @@ function Map(){
         }
     }
 
+    function setMapFloorVisible(){
+        if(document.getElementById('mapFloorSelection').style.display === 'none'){
+            document.getElementById('mapFloorSelection').style.display = 'block'
+        } else {
+            document.getElementById('mapFloorSelection').style.display = 'none'
+        }
+    }
+
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -30,7 +38,7 @@ function Map(){
             <div className='mapButton' onClick={() => setMapFilterVisible()}>
                 <img className='mapOptions' alt="Map Filter" src={require('../images/TempEye.png')}/>
             </div>
-            <div className='mapButton' onClick={() => navigate(-1)}>
+            <div className='mapButton' onClick={() => setMapFloorVisible()}>
                 <img className='mapLayer' alt="Map Layer" src={require('../images/TempLayer.png')}/>
             </div>
             <div className='mapButton' onClick={() => navigate(-1)}>
