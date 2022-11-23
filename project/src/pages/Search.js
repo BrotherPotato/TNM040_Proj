@@ -45,9 +45,9 @@ function Search(){
         //setFilterRestricted(document.getElementById("selectRestricted").value)
     }
     function filteredResults(){
-        // Filter by house, if filterHouse is set to 'all' every room in the capus will be rendered.
-        // If filterHouse is set to a specific house only the rooms in that house will be rendered.
        return  filteredSalar.filter(function (filteredSalar){
+            // Filter by house, if filterHouse is set to 'all' every room in the capus will be rendered.
+            // If filterHouse is set to a specific house only the rooms in that house will be rendered.
             return (filterHouse === 'all' || filteredSalar.House === filterHouse)}) 
             // Filter by Floor, if filterFloor is set to 'all' every room on every floor will be rendered.
             // If filterFloor is set to a specific floor only the rooms on that floor will be rendered.
