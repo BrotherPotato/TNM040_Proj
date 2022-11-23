@@ -70,17 +70,17 @@ input[type=text] {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #00B3E7;
+  background-color: #FFFFFF;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #CCF0FA;
+  background-color: #3DD2DC;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #00B3E7;
+  box-shadow: 0 0 1px #FFFFFF;
 }
 
 input:checked + .slider:before {
