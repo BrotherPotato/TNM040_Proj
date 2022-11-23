@@ -79,7 +79,7 @@ function Search(){
                     placeholder='Sök efter lokal...'
                     onInput={inputSearchString}
                 />
-                <img className='filterButton' alt="filterButton" src="https://img.icons8.com/ios/50/000000/filter-filled.png" onClick={() => setFilterVisible()}/>
+                <img className='filterButton' alt="filterButton" src={require('../images/TempFilter.png')} onClick={() => setFilterVisible()}/>
             </div>
             <div id='filterSettings' style={{display: 'none'}}>
                 <h3>Filterinställningar</h3>
