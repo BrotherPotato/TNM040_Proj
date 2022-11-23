@@ -251,6 +251,17 @@ Body {
   vertical-align: middle;
   margin-left: 50%;
 }
-.mapButton{
-  
+
+.optionImage{
+  width: 2.5em;
+  height: 2.5em;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+
+.mapButton img {
+  width: 5em;
+  height: 5em;
+  vertical-align: middle;
+  margin-left: 0.5em;
 }
