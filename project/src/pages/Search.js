@@ -44,8 +44,24 @@ function Search(){
         setFilterBookable(e.target.checked) //Klar
         //setFilterRestricted(document.getElementById("selectRestricted").value)
     }
-    function uppdateSort(){
-        console.log("uppdateSort")
+    function filteredResults(){
+        // Filter by house, if filterHouse is set to 'all' every room in the capus will be rendered.
+        // If filterHouse is set to a specific house only the rooms in that house will be rendered.
+       return  filteredSalar.filter(function (filteredSalar){
+            return (filterHouse === 'all' || filteredSalar.House === filterHouse)}) 
+            // Filter by Floor, if filterFloor is set to 'all' every room on every floor will be rendered.
+            // If filterFloor is set to a specific floor only the rooms on that floor will be rendered.
+            .filter(function (filteredSalar){
+            return(filterFloor === 'all' || filteredSalar.Floor == parseInt(filterFloor, 10))})
+           // Filter by Purpose
+            .filter(function(filteredSalar){ 
+            return(filterPurpose === 'all' || filteredSalar.Purpose === filterPurpose ||
+             (filterPurpose==='Other' && !( filteredSalar.Purpose == 'Föreläsningssal' || filteredSalar.Purpose == 'Lärosal' 
+             || filteredSalar.Purpose == 'Grupprum' || filteredSalar.Purpose == 'Datorsal')) )})
+           // Filter if bookable
+            .filter(function (filteredSalar){ 
+            if(filteredSalar.Bokningsbar === 'y' && filterBookable){return true}
+            else if(!filterBookable){return true}})
 
     }
     
@@ -57,16 +73,8 @@ function Search(){
             </div>
             <div>
                 <ul className='searchResults'>
-                    {filteredSalar.filter(function (filteredSalar){// Filter by house
-                        return (filterHouse === 'all' || filteredSalar.House === filterHouse)}) 
-                        .filter(function (filteredSalar){ // Filter by Floor
-                        return(filterFloor === 'all' || filteredSalar.Floor == parseInt(filterFloor, 10))})
-                        .filter(function(filteredSalar){ // Filter by Purpose
-                        return(filterPurpose === 'all' || filteredSalar.Purpose === filterPurpose)})
-                        .filter(function (filteredSalar){ // Filter if bookable
-                        if(filteredSalar.Bokningsbar === 'y' && filterBookable){return true}
-                        else if(!filterBookable){return true}})
-                        .map((s) => (
+                    {
+                       filteredResults() .map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
                 </ul>
@@ -114,6 +122,7 @@ function Search(){
                             <option value="Lärosal">Lärosal</option>
                             <option value="Grupprum">Grupprum</option>
                             <option value="Datorsal">Datorsal</option>
+                            <option value="Other">Övriga</option>
                         </select>
                     </div>
                     <div className='filterSettingsRow'>
