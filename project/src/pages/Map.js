@@ -26,6 +26,14 @@ function Map(){
             document.getElementById('mapFloorSelection').style.display = 'none'
         }
     }
+    function availableFloors(House){
+        if(House === 'Täppan'){
+
+        }
+        else if(House === 'Kåkenhus'){
+
+        }
+    }
 
     return(
         <div className='parent'>
