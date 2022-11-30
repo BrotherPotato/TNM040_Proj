@@ -41,14 +41,14 @@ const SelectedRoom = () => {
 
                 <div style={{width: '90%', height: '1px', backgroundColor: 'black', margin: '15px 0'}}></div>
 
-                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 500}}>Nuvarande position:</p>
+                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 700}}>Nuvarande position:</p>
                     <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px', marginTop: '10px'}}>
                         <img style={{width: '10vw', height: '10vw', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
                         <div style={{border: '1px solid black', borderRadius: '15px', width: '80vw'}}>
                             <p style={{margin: '5%'}}>{roomData.RoomCode}</p>
                         </div>
                     </div>
-                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 500}}>Destination:</p>
+                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 700}}>Destination:</p>
                     <div style={{display: 'flex', flexDirection: 'row', alignSelf:'center', marginTop: '10px'}}>
                         <img style={{width: '10vw', height: '10vw'}} alt='Center map icon' src={require('../images/TempLocation.png')}/>
                         <div style={{border: '1px solid black', borderRadius: '20px', width: '80vw'}}>
