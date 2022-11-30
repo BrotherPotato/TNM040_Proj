@@ -31,8 +31,9 @@ const SelectedRoom = () => {
             </div>
             <div className='selectedRoom' style={{backgroundColor: '#FFFFFF'}}>
                 <div style={{display: 'flex', flexDirection: 'row'}}>
-                    <img style={{width: '10vw'}} className='' alt='' src={require('../images/TempSlider.png')}/>
+                    <img style={{width: '10vw', height: '10vw'}} className='' alt='' src={require('../images/TempSlider.png')}/>
                     <p>Anpassa rutt</p>
+                    <p style={{marginLeft: '40vw',marginTop: '0px', fontSize: '2em' }}>v</p>
                 </div>
                 <div>
                     <h2 style={{display:'inline'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
