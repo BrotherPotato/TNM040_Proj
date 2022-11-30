@@ -8,17 +8,21 @@ function Map(){
     const navigate = useNavigate();
 
     function setMapFilterVisible(){
-        if(document.getElementById('mapFilterOptions').style.display === 'none'){
-            document.getElementById('mapFilterOptions').style.display = 'block'
+        if(document.getElementById("grayOverlay").style.display === "none"){
+            document.getElementById("grayOverlay").style.display = "block"
+            document.getElementById("mapFilterOptions").style.display = "block"
         } else {
-            document.getElementById('mapFilterOptions').style.display = 'none'
+            document.getElementById("grayOverlay").style.display = "none"
+            document.getElementById("mapFilterOptions").style.display = "none"
         }
     }
 
     function setMapFloorVisible(){
-        if(document.getElementById('mapFloorSelection').style.display === 'none'){
+        if(document.getElementById("grayOverlay").style.display === "none"){
+            document.getElementById("grayOverlay").style.display = "block"
             document.getElementById('mapFloorSelection').style.display = 'block'
         } else {
+            document.getElementById("grayOverlay").style.display = "none"
             document.getElementById('mapFloorSelection').style.display = 'none'
         }
     }
@@ -47,15 +51,63 @@ function Map(){
                 </div>
             </div>
             </div>
+            <div id="grayOverlay" style={{display: 'none'}} onClick={() => setMapFilterVisible()}></div>
             <div id='mapFilterOptions' style={{display: 'none'}}>
-                <p>Visa:</p>
-                <img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/>
-                <img className='optionImage' src={require('../images/TempKitchen.png')} alt='Kök bild'/>
-                <img className='optionImage' src={require('../images/TempPrinter.png')} alt='Skrivare bild'/>
-                <img className='optionImage' src={require('../images/TempStairs.png')} alt='Trappa bild'/>
-                <img className='optionImage' src={require('../images/TempElevator.png')} alt='Hiss bild'/>
+                <h3>Visa:</h3>
+                <table>
+                    <tr>
+                        <td><img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/></td>
+                        <td><p style={{display: 'inline', margin:'1em'}}>Caféer &emsp;</p></td>
+                        <td>
+                            <label className="switch">
+                                    <input type='checkbox'/>
+                            <span className="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img className='optionImage' src={require('../images/TempKitchen.png')} alt='Kök bild'/></td>
+                        <td><p style={{display: 'inline', margin:'1em'}}>Studentkök &emsp;</p></td>
+                        <td>
+                            <label className="switch">
+                                    <input type='checkbox'/>
+                            <span className="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img className='optionImage' src={require('../images/TempPrinter.png')} alt='Skrivare bild'/></td>
+                        <td><p style={{display: 'inline', margin:'1em'}}>Skrivare &emsp;</p></td>
+                        <td>
+                            <label className="switch">
+                                    <input type='checkbox'/>
+                            <span className="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img className='optionImage' src={require('../images/TempStairs.png')} alt='Trappa bild'/></td>
+                        <td><p style={{display: 'inline', margin:'1em'}}>Trappor &emsp;</p></td>
+                        <td>
+                            <label className="switch">
+                                    <input type='checkbox'/>
+                            <span className="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img className='optionImage' src={require('../images/TempElevator.png')} alt='Hiss bild'/></td>
+                        <td><p style={{display: 'inline', margin:'1em'}}>Hissar &emsp;</p></td>
+                        <td>
+                            <label className="switch">
+                                    <input type='checkbox'/>
+                            <span className="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                </table>
             </div>
-
+            <div id="grayOverlay" style={{display: 'none'}} onClick={() => setMapFloorVisible()}></div>
             <div id='mapFloorSelection' style={{display: 'none'}}> 
                 <Link to={'/Map/'+ House + '/1'}>
                     <button className='mapButton'>1</button>
