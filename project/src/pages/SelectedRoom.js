@@ -23,10 +23,13 @@ const SelectedRoom = () => {
     return(
         <div className='parent'>
             <div className='topBar'>
-                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>Selected Room</h1>
+                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName}</h1>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
-            <div className='selectedRoom'>
+            <div>
+                <img style={{width: '85%', margin: '5%', border: '5px solid #3DD2DC', borderRadius: '2px'}} className='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
+            </div>
+            <div className='selectedRoom' style={{backgroundColor: '#FFFFFF'}}>
                 <h2 style={{display:'inline'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
                 <h3 style={{display:'inline'}}>{roomData.Purpose}</h3>
                 <p>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>

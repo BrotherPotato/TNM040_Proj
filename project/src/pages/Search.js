@@ -61,8 +61,8 @@ function Search(){
            // These rooms are rooms which have very specifik purposes.
             .filter(function(filteredSalar){ 
             return(filterPurpose === 'all' || filteredSalar.Purpose === filterPurpose ||
-             (filterPurpose==='Other' && !( filteredSalar.Purpose == 'Föreläsningssal' || filteredSalar.Purpose == 'Lärosal' 
-             || filteredSalar.Purpose == 'Grupprum' || filteredSalar.Purpose == 'Datorsal')) )})
+             (filterPurpose==='Other' && !( filteredSalar.Purpose === 'Föreläsningssal' || filteredSalar.Purpose === 'Lärosal' 
+             || filteredSalar.Purpose === 'Grupprum' || filteredSalar.Purpose === 'Datorsal')) )})
            // Filter if bookable, if the slider is checked only rooms which are bookable to students will be rendered.
             .filter(function (filteredSalar){ 
             if(filteredSalar.Bokningsbar === 'y' && filterBookable){return true}
@@ -70,6 +70,7 @@ function Search(){
 
     }
     
+
     return(
         <div className='parent'>
             <div className='topBar'>
