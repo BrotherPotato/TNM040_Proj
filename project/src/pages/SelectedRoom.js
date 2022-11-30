@@ -24,6 +24,7 @@ const SelectedRoom = () => {
         <div className='parent'>
             <div className='topBar'>
                 <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName}</h1>
+                <p>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
                 
             </div>
@@ -32,32 +33,41 @@ const SelectedRoom = () => {
             </div>
             <div className='selectedRoom' style={{backgroundColor: '#FFFFFF'}}>
                 <div style={{display: 'flex', flexDirection: 'row'}}>
-                    <img style={{width: '10vw', height: '10vw'}} className='' alt='' src={require('../images/TempSlider.png')}/>
+                    <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
                     <p>Anpassa rutt</p>
                     
-                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw'}} className='' alt='' src={require('../images/TempArrow.png')}/>
+                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrow.png')}/>
                 </div>
-                <div>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <img style={{width: '10vw', height: '10vw'}} className='' alt='Location icon' src={require('../images/TempLocation.png')}/>
-                        <div style={{border: '1px solid black', borderRadius: '30px', width: '80vw'}}>
+
+                <div style={{width: '90%', height: '1px', backgroundColor: 'black', margin: '15px 0'}}></div>
+
+                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 500}}>Nuvarande position:</p>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px', marginTop: '10px'}}>
+                        <img style={{width: '10vw', height: '10vw', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
+                        <div style={{border: '1px solid black', borderRadius: '15px', width: '80vw'}}>
                             <p style={{margin: '5%'}}>{roomData.RoomCode}</p>
                         </div>
                     </div>
-
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <img style={{width: '10vw', height: '10vw', filter:'invert(1)'}} className='' alt='Center map icon' src={require('../images/TempCenterMap.png')}/>
-                        <div style={{border: '1px solid black', borderRadius: '30px', width: '80vw'}}>
+                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 500}}>Destination:</p>
+                    <div style={{display: 'flex', flexDirection: 'row', alignSelf:'center', marginTop: '10px'}}>
+                        <img style={{width: '10vw', height: '10vw'}} alt='Center map icon' src={require('../images/TempLocation.png')}/>
+                        <div style={{border: '1px solid black', borderRadius: '20px', width: '80vw'}}>
                             <p style={{margin: '5%'}}>{roomData.RoomCode}</p>
                         </div>
                     </div>
                     
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', margin: '10px', marginTop: '20px'}}>
+                        <button style={{backgroundColor: '#3DD2DC', borderRadius: '5px', padding: '5px'}}><img style={{width: '5vw', height: '5vw'}} src={require('../images/TempLocation.png')}></img> YOOOOOOOOoo</button>
+                        <button style={{backgroundColor: '#3DD2DC', borderRadius: '5px', padding: '5px'}}><img style={{width: '5vw', height: '5vw'}} src={require('../images/TempLocation.png')}></img> YOOOOOOOOoo</button>
+
+                    </div>
+
+
                     <h2 style={{display:'inline'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
                     <h3 style={{display:'inline'}}>{roomData.Purpose}</h3>
-                    <p>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
                     <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
                     <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
-                </div>
+                
             </div>
         </div>
     )
