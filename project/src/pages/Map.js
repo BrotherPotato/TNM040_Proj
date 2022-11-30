@@ -18,11 +18,11 @@ function Map(){
     }
 
     function setMapFloorVisible(){
-        if(document.getElementById("grayOverlay").style.display === "none"){
-            document.getElementById("grayOverlay").style.display = "block"
+        if(document.getElementById('grayMapOverlay').style.display === "none"){
+            document.getElementById('grayMapOverlay').style.display = "block"
             document.getElementById('mapFloorSelection').style.display = 'block'
         } else {
-            document.getElementById("grayOverlay").style.display = "none"
+            document.getElementById('grayMapOverlay').style.display = "none"
             document.getElementById('mapFloorSelection').style.display = 'none'
         }
     }
@@ -31,7 +31,7 @@ function Map(){
         <div className='parent'>
             <div className='topBar'>
                 <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{House} Våning: {Floor}</h1>
-                <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
+                <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate('../')}/>
             </div>
             <div className='map'>   
             <div className='mapButtonCol1'>
@@ -107,25 +107,26 @@ function Map(){
                     </tr>
                 </table>
             </div>
-            <div id="grayOverlay" style={{display: 'none'}} onClick={() => setMapFloorVisible()}></div>
+            <div id='grayMapOverlay' style={{display: 'none'}} onClick={() => setMapFloorVisible()}></div>
             <div id='mapFloorSelection' style={{display: 'none'}}> 
+                <h3>Välj våning:</h3>
                 <Link to={'/Map/'+ House + '/1'}>
-                    <button className='mapButton'>1</button>
+                    <button className='mapButton' onClick={() => setMapFloorVisible()}>1</button>
                 </Link>
                 <Link to={'/Map/'+ House + '/2'}>
-                    <button className='mapButton'>2</button>
+                    <button className='mapButton' onClick={() => setMapFloorVisible()}>2</button>
                 </Link>
                 <Link to={'/Map/'+ House + '/3'}>
-                    <button className='mapButton'>3</button>
+                    <button className='mapButton' onClick={() => setMapFloorVisible()}>3</button>
                 </Link>
                 <Link to={'/Map/'+ House + '/4'}>
-                    <button className='mapButton'>4</button>
+                    <button className='mapButton' onClick={() => setMapFloorVisible()}>4</button>
                 </Link>
                 <Link to={'/Map/'+ House + '/5'}>
-                    <button className='mapButton'>5</button>
+                    <button className='mapButton' onClick={() => setMapFloorVisible()}>5</button>
                 </Link>
                 <Link to={'/Map/'+ House + '/6'}>
-                    <button className='mapButton'>6</button>
+                    <button className='mapButton' onClick={() => setMapFloorVisible()}>6</button>
                 </Link>
             </div>
         </div>
