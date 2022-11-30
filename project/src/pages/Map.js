@@ -76,9 +76,6 @@ function Map(){
                     <button className='mapButton'>6</button>
                 </Link>
             </div>
-            
-        
-
         </div>
     )
 }
