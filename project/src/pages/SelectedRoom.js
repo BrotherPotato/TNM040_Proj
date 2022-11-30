@@ -30,11 +30,18 @@ const SelectedRoom = () => {
                 <img style={{width: '85%', margin: '5%', border: '5px solid #3DD2DC', borderRadius: '2px'}} className='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
             </div>
             <div className='selectedRoom' style={{backgroundColor: '#FFFFFF'}}>
-                <h2 style={{display:'inline'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
-                <h3 style={{display:'inline'}}>{roomData.Purpose}</h3>
-                <p>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
-                <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
-                <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
+                <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <img style={{width: '10vw', height: '10vw'}} className='' alt='' src={require('../images/TempSlider.png')}/>
+                    <p>Anpassa rutt</p>
+                    <p style={{marginLeft: '40vw',marginTop: '0px', fontSize: '2em' }}>v</p>
+                </div>
+                <div>
+                    <h2 style={{display:'inline'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
+                    <h3 style={{display:'inline'}}>{roomData.Purpose}</h3>
+                    <p>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
+                    <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
+                    <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
+                </div>
             </div>
         </div>
     )
