@@ -302,6 +302,7 @@ Body {
   border-radius: 25px;
   background-color: #FFFFFF;
 }
+/*
 #mapFloorSelection{
   position: absolute;
   top: 40%;
@@ -313,6 +314,7 @@ Body {
   border-radius: 25px;
   background-color: #FFFFFF;
 }
+*/
 #grayMapOverlay{
   display: none;
   position: absolute;
@@ -324,4 +326,37 @@ Body {
   height: 100vh;
   background-color: gray;
   opacity: 0.5;
+}
+.whitePart{
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  padding: 1em;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.floorNumber{
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-family: liu-bold;
+  align-self: center;
+}
+
+#bluePart {
+  position: absolute;
+  
+  background-color: #C7E9F2;
+  border-radius: 25px;
+  padding: 1em;
+  width: 30vw;
+  height: 2em;
+  text-align: center;
+  transform: translate(-40%, -10%);
 }

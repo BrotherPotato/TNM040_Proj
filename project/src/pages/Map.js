@@ -21,10 +21,14 @@ function Map(){
         if(document.getElementById('grayMapOverlay').style.display === "none"){
             document.getElementById('grayMapOverlay').style.display = "block"
             document.getElementById('mapFloorSelection').style.display = 'block'
+            document.getElementById('bluePart').style.display = 'block'
+            changeBluePart(Floor)
         } else {
             document.getElementById('grayMapOverlay').style.display = "none"
             document.getElementById('mapFloorSelection').style.display = 'none'
+            document.getElementById('bluePart').style.display = 'none'
         }
+        
     }
     function availableFloors(House){
         if(House === 'Täppan'){
@@ -33,6 +37,15 @@ function Map(){
         else if(House === 'Kåkenhus'){
 
         }
+    }
+
+    function changeBluePart(currentFloor){
+        let targetNumber = document.getElementById('floor' + currentFloor)
+        let bound = targetNumber.getBoundingClientRect()
+        console.log(bound.top)
+        document.getElementById('bluePart').style.top = bound.top + 'px'
+        document.getElementById('bluePart').style.left = bound.left + 'px'
+        document.getElementById('bluePart').innerText = 'Våning: ' + currentFloor
     }
 
     return(
@@ -116,6 +129,7 @@ function Map(){
                 </table>
             </div>
             <div id='grayMapOverlay' style={{display: 'none'}} onClick={() => setMapFloorVisible()}></div>
+            {/* 
             <div id='mapFloorSelection' style={{display: 'none'}}> 
                 <h3>Välj våning:</h3>
                 <Link to={'/Map/'+ House + '/1'}>
@@ -136,6 +150,31 @@ function Map(){
                 <Link to={'/Map/'+ House + '/6'}>
                     <button className='mapButton' onClick={() => setMapFloorVisible()}>6</button>
                 </Link>
+            </div>
+            */}
+            <div id='mapFloorSelection' className='whitePart' style={{display: 'none'}}>
+                
+                <Link to={'/Map/'+ House + '/1'}>
+                    <div className='floorNumber' id='floor1' onClick={() => setMapFloorVisible()}>1</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/2'}>
+                    <div className='floorNumber' id='floor2' onClick={() => setMapFloorVisible()}>2</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/3'}>
+                    <div className='floorNumber' id='floor3' onClick={() => setMapFloorVisible()}>3</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/4'}>
+                    <div className='floorNumber' id='floor4' onClick={() => setMapFloorVisible()}>4</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/5'}>
+                    <div className='floorNumber' id='floor5' onClick={() => setMapFloorVisible()}>5</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/6'}>
+                    <div className='floorNumber' id='floor6' onClick={() => setMapFloorVisible()}>6</div>
+                </Link>
+            </div>
+            <div id='bluePart' style={{display: 'none'}}>
+                Våning: 1
             </div>
         </div>
     )
