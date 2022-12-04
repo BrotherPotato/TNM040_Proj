@@ -54,7 +54,7 @@ function Search(){
             // Filter by Floor, if filterFloor is set to 'all' every room on every floor will be rendered.
             // If filterFloor is set to a specific floor only the rooms on that floor will be rendered.
             .filter(function (filteredSalar){
-            return(filterFloor === 'all' || filteredSalar.Floor == parseInt(filterFloor, 10))})
+            return(filterFloor === 'all' || filteredSalar.Floor === parseInt(filterFloor, 10))})
            // Filter by Purpose, if filterPurpose is set to 'all' every room despite purpose will be rendered.
            // If filterPurpose is set to one of the specific choices only rooms with that purpose will be rendered.
            // If filterPurpose is set to 'Other' only rooms which does not corralate with the specified options will be rendered.
