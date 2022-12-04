@@ -45,7 +45,7 @@ function Map(){
         let bound = targetNumber.getBoundingClientRect()
         console.log(bound.top)
         document.getElementById('bluePart').style.top = bound.top + 'px'
-        document.getElementById('bluePart').style.left = bound.left + 'px'
+        document.getElementById('bluePart').style.left = bound.left + 'px' // byt till whitePart lägg till bound 2
         document.getElementById('nrFloor').innerText = currentFloor
     }
 
