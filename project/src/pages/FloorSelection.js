@@ -20,7 +20,7 @@ function FloorSelection(){
                 <h1 style={{color: '#FFFFFF', display: 'inline'}}>Välj våning</h1>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
-            <h2 style={{color: '#FFFFFF', marginLeft: '9em', marginTop:'5em'}}>{House}</h2>
+            <h2 style={{color: '#FFFFFF', textAlign:'center',marginLeft:'4em', marginTop:'5em'}}>{House}</h2>
             <div className='Selection'>
                 <div id='mapFloorSelection' className='whitePartFloorSelect'>
                     <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
