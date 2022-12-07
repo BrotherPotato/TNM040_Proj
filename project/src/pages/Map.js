@@ -171,9 +171,6 @@ function Map(){
                 <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
                     <div className='floorNumber' id='floor5' onClick={() => setMapFloorVisible()}>5</div>
                 </Link>
-                <Link to={'/Map/'+ House + '/6'} className='linkCSS'>
-                    <div className='floorNumber' id='floor6' onClick={() => setMapFloorVisible()}>6</div>
-                </Link>
             </div>
             <div id='bluePart' style={{display: 'none'}}>
                 <p style={{margin: '0px', marginRight: '12vw'}}>Våning: </p>

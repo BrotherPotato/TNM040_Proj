@@ -6,34 +6,37 @@ function FloorSelection(){
     const House = useParams().House;
     const navigate = useNavigate();
 
+    function availableFloors(currentHouse){
+        if(currentHouse === 'Täppan'){
+            document.getElementById('floor2').style.display = 'none';
+        }
+        else if(currentHouse === 'Kåkenhus'){
+            // show all floors :)
+        }
+    }
     return(
-        <div className='parent'>
+        <div className='parent' onLoad={() => availableFloors(House)}>
             <div className='topBar'>
-                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>Floor Selection</h1>
+                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{House}</h1>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
-            <div className='floorSelection'>
-                <div className='floors'>
-                    <h2>Välj våning:</h2>
-                    <Link to={'/Map/'+ House + '/2'}>
-                        <button className='floorButton'>2</button>
-                    </Link>
-                    <Link to={'/Map/'+ House + '/3'}>
-                        <button className='floorButton'>3</button>
-                    </Link>
-                    <Link to={'/Map/'+ House + '/4'}>
-                        <button className='floorButton'>4</button>
-                    </Link>
-                    <Link to={'/Map/'+ House + '/5'}>
-                        <button className='floorButton'>5</button>
-                    </Link>
-                    <Link to={'/Map/'+ House + '/6'}>
-                        <button className='floorButton'>6</button>
-                    </Link>
-                </div>
-                <div className='houseFloor'>
-                    <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Täppan'/>
-                </div>
+            <h2 style={{color: '#FFFFFF', marginLeft: '2em'}}>Välj våning: </h2>
+            <div id='mapFloorSelection' className='whitePartFloorSelect'>
+                <Link to={'/Map/'+ House + '/2'} className='linkCSS'>
+                    <div className='floorNumber' id='floor2'>2</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/3'} className='linkCSS'>
+                    <div className='floorNumber' id='floor3'>3</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/4'} className='linkCSS'>
+                    <div className='floorNumber' id='floor4'>4</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
+                    <div className='floorNumber' id='floor5'>5</div>
+                </Link>
+            </div>
+            <div className='houseFloorFloorSelect'>
+                    <img src={require('../images/TempHouse.jpg')} alt='Täppan'/>
             </div>
         </div>
     )
