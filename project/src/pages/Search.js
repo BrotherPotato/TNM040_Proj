@@ -74,7 +74,7 @@ function Search(){
     return(
         <div className='parent'>
             <div className='topBar'>
-                <h2 style={{color: '#FFFFFF', display: 'inline-block'}}>Sökresultat: </h2>
+                <h2 style={{color: '#FFFFFF', display: 'inline-block'}}>Sökresultat</h2>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
             <div>
@@ -88,6 +88,7 @@ function Search(){
             <div className='SearchBar' style={{marginTop: '1em'}}>
                 <input
                     autoFocus
+                    id='homeInput'
                     type='text'
                     label='Sök efter lokal: '
                     placeholder='Sök efter lokal...'

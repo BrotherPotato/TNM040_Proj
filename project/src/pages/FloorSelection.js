@@ -17,10 +17,10 @@ function FloorSelection(){
     return(
         <div className='parent' onLoad={() => availableFloors(House)}>
             <div className='topBar'>
-                <h1 style={{color: '#FFFFFF', display: 'inline'}}>{House}</h1>
+                <h1 style={{color: '#FFFFFF', display: 'inline'}}>Välj våning</h1>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
-            <h2 style={{color: '#FFFFFF', marginLeft: '2em', marginTop:'5em'}}>Välj våning: </h2>
+            <h2 style={{color: '#FFFFFF', marginLeft: '9em', marginTop:'5em'}}>{House}</h2>
             <div className='Selection'>
                 <div id='mapFloorSelection' className='whitePartFloorSelect'>
                     <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
@@ -37,7 +37,7 @@ function FloorSelection(){
                     </Link>
                 </div>
                 <div className='houseFloorFloorSelect'>
-                        <img src={require('../images/TempHouse.jpg')} alt='Täppan'/>
+                        <img style={{height:'50vh', width:'50vw'}}src={require('../images/TempHouse.jpg')} alt='Täppan'/>
                 </div>
             </div>
         </div>

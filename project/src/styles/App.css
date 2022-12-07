@@ -37,7 +37,7 @@ input{
 
 input[type=text] {
   width: 70%;
-  padding: 12px 30px;
+  padding: 12px 40px;
   box-sizing: border-box;
 }
 /*Slider CSS*/
@@ -140,7 +140,7 @@ Body {
 .mapImg{
   margin: auto;
   margin-top: 2em; 
-  width: 25%;
+  width: 30%;
   height: auto;
   display: table-row;
 }
@@ -186,24 +186,23 @@ Body {
 #homeInput{
   background-image: url('../images/TempSearchDark.png');
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: 10px;
   background-size: 20px;
 }
 
 .houseFloorFloorSelect{
-  border: 6px solid white;
+  border: 8px solid white;
   border-radius: 0.5em;
 }
 
 .topBar{
   display: flex;
   margin: 1em;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 .CloseImg{
   display: inline;
-  margin-left: 55%;
   height: 2em;
 }
 .searchResults{
