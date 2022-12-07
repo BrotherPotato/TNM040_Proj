@@ -15,9 +15,6 @@ function FloorSelection(){
             <div className='floorSelection'>
                 <div className='floors'>
                     <h2>Välj våning:</h2>
-                    <Link to={'/Map/'+ House + '/1'}>
-                        <button className='floorButton'>1</button>
-                    </Link>
                     <Link to={'/Map/'+ House + '/2'}>
                         <button className='floorButton'>2</button>
                     </Link>
@@ -29,6 +26,9 @@ function FloorSelection(){
                     </Link>
                     <Link to={'/Map/'+ House + '/5'}>
                         <button className='floorButton'>5</button>
+                    </Link>
+                    <Link to={'/Map/'+ House + '/6'}>
+                        <button className='floorButton'>6</button>
                     </Link>
                 </div>
                 <div className='houseFloor'>
