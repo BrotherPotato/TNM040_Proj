@@ -31,11 +31,12 @@ p{
 input{
   font-family: liu-light;
   margin-left: 15%;
+  border-radius: 15px;
 }
 
 input[type=text] {
   width: 70%;
-  padding: 12px 20px;
+  padding: 12px 30px;
   box-sizing: border-box;
 }
 /*Slider CSS*/
@@ -107,7 +108,7 @@ Body {
 }
 .LogoTextBox{
   color: #FFFFFF;
-  margin-top: 25%;
+  margin-top: 40%;
   text-align: center;
 }
 
@@ -180,6 +181,15 @@ Body {
 .SearchBar{
   margin: auto;
 }
+
+#homeInput{
+  background-image: 
+    url('../images/TempSearch.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 30px;
+}
+
 .houseFloorFloorSelect{
   border: 6px solid white;
   border-radius: 0.5em;
