@@ -56,7 +56,7 @@ function Map(){
     return(
         <div className='parent'>
             <div className='topBar'>
-                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{House} Våning: {Floor}</h1>
+                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{House} våning {Floor}</h1>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate('../')}/>
             </div>
             <div className='map'>   
