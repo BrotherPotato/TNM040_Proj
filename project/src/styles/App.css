@@ -32,6 +32,7 @@ input{
   font-family: liu-light;
   margin-left: 15%;
   border-radius: 15px;
+  border: 2px solid gray;
 }
 
 input[type=text] {
@@ -183,11 +184,10 @@ Body {
 }
 
 #homeInput{
-  background-image: 
-    url('../images/TempSearch.png');
+  background-image: url('../images/TempSearchDark.png');
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 30px;
+  background-size: 20px;
 }
 
 .houseFloorFloorSelect{
