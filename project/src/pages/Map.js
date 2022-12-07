@@ -42,10 +42,14 @@ function Map(){
 
     function changeBluePart(currentFloor){
         let targetNumber = document.getElementById('floor' + currentFloor)
-        let bound = targetNumber.getBoundingClientRect()
-        console.log(bound.top)
-        document.getElementById('bluePart').style.top = bound.top + 'px'
-        document.getElementById('bluePart').style.left = bound.left + 'px' // byt till whitePart lägg till bound 2
+        let bound1 = targetNumber.getBoundingClientRect()
+        let whiteDiv = document.getElementById('mapFloorSelection');
+        let bound2 = whiteDiv.getBoundingClientRect()
+        console.log(bound1.top)
+        console.log(bound2.right)
+        console.log( (window.screen.width - bound2.right) )
+        document.getElementById('bluePart').style.top = bound1.top + 'px'
+        document.getElementById('bluePart').style.right = (window.screen.width - bound2.right) + 'px'
         document.getElementById('nrFloor').innerText = currentFloor
     }
 
@@ -159,22 +163,22 @@ function Map(){
                     <div className='floorNumber' id='floor1' onClick={() => setMapFloorVisible()}>1</div>
                 </Link>
                 */}
-                <Link to={'/Map/'+ House + '/2'} className='linkCSS'>
-                    <div className='floorNumber' id='floor2' onClick={() => setMapFloorVisible()}>2</div>
-                </Link>
-                <Link to={'/Map/'+ House + '/3'} className='linkCSS'>
-                    <div className='floorNumber' id='floor3' onClick={() => setMapFloorVisible()}>3</div>
+                <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
+                    <div className='floorNumber' id='floor5' onClick={() => setMapFloorVisible()}>5</div>
                 </Link>
                 <Link to={'/Map/'+ House + '/4'} className='linkCSS'>
                     <div className='floorNumber' id='floor4' onClick={() => setMapFloorVisible()}>4</div>
                 </Link>
-                <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
-                    <div className='floorNumber' id='floor5' onClick={() => setMapFloorVisible()}>5</div>
+                <Link to={'/Map/'+ House + '/3'} className='linkCSS'>
+                    <div className='floorNumber' id='floor3' onClick={() => setMapFloorVisible()}>3</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/2'} className='linkCSS'>
+                    <div className='floorNumber' id='floor2' onClick={() => setMapFloorVisible()}>2</div>
                 </Link>
             </div>
             <div id='bluePart' style={{display: 'none'}}>
-                <p style={{margin: '0px', marginRight: '12vw'}}>Våning: </p>
-                <p id='nrFloor' style={{margin: '0px', fontSize: '1em'}}> 1</p>
+                <h2 style={{margin: '0px', marginRight: '1em'}}>Våning: </h2>
+                <h2 id='nrFloor' style={{margin: '0px'}}> 1</h2>
             </div>
         </div>
     )

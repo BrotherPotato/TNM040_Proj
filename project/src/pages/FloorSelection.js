@@ -22,17 +22,17 @@ function FloorSelection(){
             </div>
             <h2 style={{color: '#FFFFFF', marginLeft: '2em'}}>Välj våning: </h2>
             <div id='mapFloorSelection' className='whitePartFloorSelect'>
-                <Link to={'/Map/'+ House + '/2'} className='linkCSS'>
-                    <div className='floorNumber' id='floor2'>2</div>
-                </Link>
-                <Link to={'/Map/'+ House + '/3'} className='linkCSS'>
-                    <div className='floorNumber' id='floor3'>3</div>
+                <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
+                    <div className='floorNumber' id='floor5'>5</div>
                 </Link>
                 <Link to={'/Map/'+ House + '/4'} className='linkCSS'>
                     <div className='floorNumber' id='floor4'>4</div>
                 </Link>
-                <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
-                    <div className='floorNumber' id='floor5'>5</div>
+                <Link to={'/Map/'+ House + '/3'} className='linkCSS'>
+                    <div className='floorNumber' id='floor3'>3</div>
+                </Link>
+                <Link to={'/Map/'+ House + '/2'} className='linkCSS'>
+                    <div className='floorNumber' id='floor2'>2</div>
                 </Link>
             </div>
             <div className='houseFloorFloorSelect'>
