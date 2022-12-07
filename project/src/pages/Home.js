@@ -27,6 +27,7 @@ function Home(){
         <div className='SearchBar'>
             <Link className='SearchLink' to={'/Search'}>
                 <input
+                    id='homeInput'
                     type='text'
                     label='Sök efter lokal: '
                     placeholder='Sök efter lokal...'
