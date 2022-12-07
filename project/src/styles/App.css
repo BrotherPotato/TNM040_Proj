@@ -127,10 +127,12 @@ Body {
 }
 
 .houseImg{
-  margin:auto;
-  width: 50%;
+  margin: auto;
+  width: 60%;
   height: auto;
   display: table-row;
+  border: 6px solid white;
+  border-radius: 0.5em;
 }
 
 .mapImg{
@@ -165,27 +167,34 @@ Body {
   box-sizing: border-box;
   line-height: 3em;
 }
-.houseFloorFloorSelect{
-  position: absolute;
-  top: 24%;
-  left: 40%;
-  width: 30em;
+.Selection *{
+  display: inline;
+  float: left;
+  margin: auto;
+  vertical-align: middle;
+}
+.Selection{
+  display: flex;
+  margin: 0em 2em 0em 2em;
 }
 .SearchBar{
   margin: auto;
+}
+.houseFloorFloorSelect{
+  border: 6px solid white;
+  border-radius: 0.5em;
 }
 
 .topBar{
   display: flex;
   margin: 1em;
-  vertical-align: auto;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .CloseImg{
-  display: inline-block;
+  display: inline;
   margin-left: 55%;
-  margin-top: 1.20em;
   height: 2em;
-  vertical-align: middle;
 }
 .searchResults{
   overflow-y: scroll;
@@ -336,9 +345,6 @@ Body {
   margin: 5px 0 5px 0;
 }
 .whitePartFloorSelect{
-  position: absolute;
-  top: 20%;
-  left: 20%;
   background-color: #FFFFFF;
   border-radius: 25px;
   padding: 1em;
@@ -346,7 +352,6 @@ Body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5px 0 5px 0;
 }
 
 .floorNumber{
