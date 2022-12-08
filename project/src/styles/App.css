@@ -225,13 +225,9 @@ Body {
   padding: 0.5em;
   padding-left: 1em;
 }
-/*
-.searchResults:nth-child(odd){
-  background: #CCF0FA; 
-}
-*/
+
 .searchResults > div:nth-child(odd) > li {
-  background: #4092a9;
+  background: #98E5EB
 }
 
 #showMenu{
