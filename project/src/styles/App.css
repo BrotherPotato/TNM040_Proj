@@ -223,6 +223,7 @@ Body {
   list-style-type: none;
   background: #C7E9F2;
   padding: 0.5em;
+  padding-left: 1em;
 }
 
 .singleSearchResult:nth-child(odd){
@@ -415,4 +416,9 @@ Body {
   display: flex;
   text-decoration: none;
   align-items: center;
+  color:black;
+}
+.linkCSS:visited{
+  text-decoration: none;
+  color:black;
 }
