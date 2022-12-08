@@ -50,7 +50,7 @@ function Map(){
         //console.log( (window.screen.width - bound2.right) )
         document.getElementById('bluePart').style.top = bound1.top + 'px'
         document.getElementById('bluePart').style.right = (window.screen.width - bound2.right) + 'px'
-        document.getElementById('nrFloor').innerText = currentFloor
+        document.getElementById('realNrFloor').innerText = currentFloor
     }
 
     return(
@@ -188,7 +188,8 @@ function Map(){
             </div>
             <div id='bluePart' style={{display: 'none'}}>
                 <h2 style={{margin: '0px', marginRight: '1em'}}>Våning: </h2>
-                <h2 id='nrFloor' style={{margin: '0px'}}> 1</h2>
+                <h2 id='nrFloor' style={{margin: '0px', color: '#00B3E7'}}> 1</h2>
+                <h2 id='realNrFloor'>1</h2>
             </div>
         </div>
     )
