@@ -207,11 +207,48 @@ Body {
 }
 .searchResults{
   overflow-y: scroll;
-  height: 46em;
+  height: 87vh;
   padding: 0;
   margin: 0;
   width: 100%;
 }
+@media only screen and (max-height: 1200px) {
+  .searchResults{
+    height: 85vh;
+  }
+}
+@media only screen and (max-height: 1100px) {
+  .searchResults{
+    height: 82vh;
+  }
+}
+@media only screen and (max-height: 1000px) {
+  .searchResults{
+    height: 80vh;
+  }
+}
+@media only screen and (max-height: 900px) {
+  .searchResults{
+    height: 77vh;
+  }
+}
+@media only screen and (max-height: 800px) {
+  .searchResults{
+    height: 76vh;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .searchResults{
+    height: 73vh;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .searchResults{
+    height: 69vh;
+  }
+}
+
+
 .resultLink:link, .resultLink:visited{
   text-decoration: none;
   color:black;
@@ -223,7 +260,7 @@ Body {
   list-style-type: none;
   background: #C7E9F2;
   padding: 0.5em;
-  padding-left: 1em;
+  padding-left: 2vw;
 }
 
 .searchResults > div:nth-child(odd) > li {
