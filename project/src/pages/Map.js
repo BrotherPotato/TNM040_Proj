@@ -45,9 +45,9 @@ function Map(){
         let bound1 = targetNumber.getBoundingClientRect()
         let whiteDiv = document.getElementById('mapFloorSelection');
         let bound2 = whiteDiv.getBoundingClientRect()
-        console.log(bound1.top)
-        console.log(bound2.right)
-        console.log( (window.screen.width - bound2.right) )
+        //console.log(bound1.top)
+        //console.log(bound2.right)
+        //console.log( (window.screen.width - bound2.right) )
         document.getElementById('bluePart').style.top = bound1.top + 'px'
         document.getElementById('bluePart').style.right = (window.screen.width - bound2.right) + 'px'
         document.getElementById('nrFloor').innerText = currentFloor
