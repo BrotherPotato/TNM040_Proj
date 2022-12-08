@@ -412,6 +412,7 @@ Body {
   border-radius: 25px;
   padding: 1em;
   width: 8vw;
+  max-width: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
