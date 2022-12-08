@@ -5,7 +5,7 @@ function Home(){
  return(
     <div className='parent'>
         <div className='LogoTextBox'>
-            <h1>eduVilse</h1> 
+            <h1>edu.Vilse</h1> 
         </div>
         <div className='houseChoice'>
             <div className='houseOne'>

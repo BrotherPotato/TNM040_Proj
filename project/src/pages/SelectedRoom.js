@@ -24,7 +24,7 @@ const SelectedRoom = () => {
         <div className='parent'>
             <div className='topBar'>
                 <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName}</h1>
-                <p>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
+                <p style={{color: '#FFFFFF', display: 'inline-block'}}>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
                 
             </div>
