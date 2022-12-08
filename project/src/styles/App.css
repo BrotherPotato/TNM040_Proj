@@ -225,10 +225,15 @@ Body {
   padding: 0.5em;
   padding-left: 1em;
 }
-
-.singleSearchResult:nth-child(odd){
+/*
+.searchResults:nth-child(odd){
   background: #CCF0FA; 
 }
+*/
+.searchResults > div:nth-child(odd) > li {
+  background: #4092a9;
+}
+
 #showMenu{
   position: absolute;
   bottom: 0%;
