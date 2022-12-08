@@ -1,5 +1,6 @@
 import './styles/App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from "./pages/Layout.js"
 import Home from './pages/Home.js'
 import Search from './pages/Search.js'
 import SelectedRoom from './pages/SelectedRoom.js'
@@ -10,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/'>
+        <Route path='/' element={<Layout/>}>
           <Route index element={<Home />} />
           <Route path='Search' element={<Search />} />
           <Route path='Search/:RoomCode' element={<SelectedRoom />} />
