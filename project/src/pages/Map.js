@@ -81,56 +81,66 @@ function Map(){
             <div id='mapFilterOptions' style={{display: 'none'}}>
                 <h3>Visa:</h3>
                 <table>
-                    <tr>
-                        <td><img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/></td>
-                        <td><p style={{display: 'inline', margin:'1em'}}>Caféer &emsp;</p></td>
-                        <td>
-                            <label className="switch">
-                                    <input type='checkbox'/>
-                            <span className="slider round"></span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img className='optionImage' src={require('../images/TempKitchen.png')} alt='Kök bild'/></td>
-                        <td><p style={{display: 'inline', margin:'1em'}}>Studentkök &emsp;</p></td>
-                        <td>
-                            <label className="switch">
-                                    <input type='checkbox'/>
-                            <span className="slider round"></span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img className='optionImage' src={require('../images/TempPrinter.png')} alt='Skrivare bild'/></td>
-                        <td><p style={{display: 'inline', margin:'1em'}}>Skrivare &emsp;</p></td>
-                        <td>
-                            <label className="switch">
-                                    <input type='checkbox'/>
-                            <span className="slider round"></span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img className='optionImage' src={require('../images/TempStairs.png')} alt='Trappa bild'/></td>
-                        <td><p style={{display: 'inline', margin:'1em'}}>Trappor &emsp;</p></td>
-                        <td>
-                            <label className="switch">
-                                    <input type='checkbox'/>
-                            <span className="slider round"></span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img className='optionImage' src={require('../images/TempElevator.png')} alt='Hiss bild'/></td>
-                        <td><p style={{display: 'inline', margin:'1em'}}>Hissar &emsp;</p></td>
-                        <td>
-                            <label className="switch">
-                                    <input type='checkbox'/>
-                            <span className="slider round"></span>
-                            </label>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td><img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/></td>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Caféer &emsp;</p></td>
+                            <td>
+                                <label className="switch">
+                                        <input type='checkbox'/>
+                                <span className="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td><img className='optionImage' src={require('../images/TempKitchen.png')} alt='Kök bild'/></td>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Studentkök &emsp;</p></td>
+                            <td>
+                                <label className="switch">
+                                        <input type='checkbox'/>
+                                <span className="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td><img className='optionImage' src={require('../images/TempPrinter.png')} alt='Skrivare bild'/></td>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Skrivare &emsp;</p></td>
+                            <td>
+                                <label className="switch">
+                                        <input type='checkbox'/>
+                                <span className="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td><img className='optionImage' src={require('../images/TempStairs.png')} alt='Trappa bild'/></td>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Trappor &emsp;</p></td>
+                            <td>
+                                <label className="switch">
+                                        <input type='checkbox'/>
+                                <span className="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td><img className='optionImage' src={require('../images/TempElevator.png')} alt='Hiss bild'/></td>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Hissar &emsp;</p></td>
+                            <td>
+                                <label className="switch">
+                                        <input type='checkbox'/>
+                                <span className="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div id='grayMapOverlay' style={{display: 'none'}} onClick={() => setMapFloorVisible()}></div>
