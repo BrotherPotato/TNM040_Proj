@@ -32,26 +32,25 @@ const SelectedRoom = () => {
                 <img style={{width: '85%', margin: '5%', border: '5px solid #3DD2DC', borderRadius: '2px'}} className='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
             </div>
             <div className='selectedRoom' style={{backgroundColor: '#FFFFFF'}}>
-                <div style={{display: 'flex', flexDirection: 'row'}}>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                     <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
-                    <p>Anpassa rutt</p>
-                    
+                    <p style={{marginLeft:"-4em"}}>Anpassa rutt</p>
                     <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrow.png')}/>
                 </div>
 
-                <div style={{width: '90%', height: '1px', backgroundColor: 'black', margin: '15px 0'}}></div>
+                <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
 
-                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 700}}>Nuvarande position:</p>
+                    <p style={{fontSize: '1.1em', marginLeft: '11vw', fontWeight: 700}}>Nuvarande position:</p>
                     <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px', marginTop: '10px'}}>
-                        <img style={{width: '10vw', height: '10vw', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
-                        <div style={{border: '1px solid black', borderRadius: '15px', width: '80vw'}}>
+                        <img style={{width: '8vw', height: '8vw', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
+                        <div style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em'}}>
                             <p style={{margin: '5%'}}>{roomData.RoomCode}</p>
                         </div>
                     </div>
-                    <p style={{fontSize: '1.1em', marginLeft: '16vw', fontWeight: 700}}>Destination:</p>
-                    <div style={{display: 'flex', flexDirection: 'row', alignSelf:'center', marginTop: '10px'}}>
-                        <img style={{width: '10vw', height: '10vw'}} alt='Center map icon' src={require('../images/TempLocation.png')}/>
-                        <div style={{border: '1px solid black', borderRadius: '20px', width: '80vw'}}>
+                    <p style={{fontSize: '1.1em', marginLeft: '11vw', fontWeight: 700}}>Destination:</p>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px',marginTop: '10px'}}>
+                        <img style={{width: '8vw', height: '8vw',alignSelf:'center'}} alt='Center map icon' src={require('../images/TempLocation.png')}/>
+                        <div style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em'}}>
                             <p style={{margin: '5%'}}>{roomData.RoomCode}</p>
                         </div>
                     </div>
@@ -62,11 +61,12 @@ const SelectedRoom = () => {
 
                     </div>
 
-
-                    <h2 style={{display:'inline'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
-                    <h3 style={{display:'inline'}}>{roomData.Purpose}</h3>
-                    <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
-                    <p style={{display:'inline'}}>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
+                    <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
+                        <h2>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
+                        <h3>{roomData.Purpose}</h3>
+                        <p>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
+                        <p>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
+                    </div>
                 
             </div>
         </div>
