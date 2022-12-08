@@ -85,7 +85,7 @@ function Search(){
                     ))}
                 </ul>
             </div>
-            <div className='SearchBar' style={{marginTop: '1em'}}>
+            <div className='SearchBar' style={{paddingTop: '1em', borderTop: '3px solid #3DD2DC'}}>
                 <input
                     autoFocus
                     id='homeInput'
