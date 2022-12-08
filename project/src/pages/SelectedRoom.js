@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import Salar from '../components/Salar.json'
@@ -9,6 +10,7 @@ function getRoomData(roomCode){
 }
 
 const SelectedRoom = () => {
+    const [currString, setCurrString] = useState('')
     const roomCode = useParams().RoomCode;
     const roomData = getRoomData(roomCode);
     //console.log(roomData.RoomName != '');    
@@ -22,6 +24,14 @@ const SelectedRoom = () => {
             document.getElementById('selectedRoom').style.display = "none"
             document.getElementById('showMenu').style.display = "block"
         }
+    }
+    const inputString = (e) => {
+        setCurrString(e.target.value)
+    }
+
+    function invertChoice(currString){
+        let curr = document.getElementById('dest').placeholder
+        document.getElementById('dest').placeholder = currString
     }
     /*
     <Link to='/'>
@@ -57,21 +67,21 @@ const SelectedRoom = () => {
 
                     <p style={{fontSize: '1.1em', marginLeft: '12vw', fontWeight: 700}}>Nuvarande position:</p>
                     <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px', marginTop: '10px'}}>
-                        <img style={{width: '8vw', height: '8vw', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
-                        <div style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em'}}>
-                            <p style={{margin: '5%'}}>{roomData.RoomCode}</p>
-                        </div>
+                        <img style={{width: '8vw', height: 'auto', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
+                        <input id='curr' type='text' placeholder='Skriv in närmaste lokal...' onInput={inputString}
+                        style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em', height: '5.5vh', padding: '10px'}}>
+                        </input>
                     </div>
                     <p style={{fontSize: '1.1em', marginLeft: '12vw', fontWeight: 700}}>Destination:</p>
                     <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px',marginTop: '10px'}}>
-                        <img style={{width: '8vw', height: 'auto',alignSelf:'center'}} alt='Center map icon' src={require('../images/TempLocation.png')}/>
-                        <div style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em'}}>
-                            <p style={{margin: '5%'}}>{roomData.RoomCode}</p>
-                        </div>
+                        <img style={{width: '8vw', height: 'auto', alignSelf:'center'}} alt='Center map icon' src={require('../images/TempLocation.png')}/>
+                        <input id='dest' type='text' placeholder={roomData.RoomCode} disabled
+                        style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em', height: '5.5vh', padding: '10px'}}>
+                        </input>
                     </div>
                     
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', margin: '10px', marginTop: '20px'}}>
-                        <button className='selectedOptions'><img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>Invertera valen</button>
+                        <button className='selectedOptions' onClick={()=>invertChoice()}><img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>Invertera valen</button>
                         <button className='selectedOptions'><img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>Visa rutt</button>
 
                     </div>
