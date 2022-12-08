@@ -228,8 +228,20 @@ Body {
 .singleSearchResult:nth-child(odd){
   background: #CCF0FA; 
 }
-
-.selectedRoom{
+#showMenu{
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  padding: -1em;
+}
+#showMenu img{
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#selectedRoom{
   background: #C7E9F2;
   padding: 1em;
 }
@@ -314,6 +326,14 @@ Body {
   border: #0f1010 solid 1px;
   border-radius: 25px;
   background-color: #FFFFFF;
+}
+.selectedOptions{
+  background-color: #3DD2DC;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  align-items: center;
+  display: flex;
 }
 /*
 #mapFloorSelection{
