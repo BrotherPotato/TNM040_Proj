@@ -10,7 +10,7 @@ function getRoomData(roomCode){
 }
 
 const SelectedRoom = () => {
-    const [currString, setCurrString] = useState('')
+    const [CurrString, setCurrString] = useState('')
     const roomCode = useParams().RoomCode;
     const roomData = getRoomData(roomCode);
     //console.log(roomData.RoomName != '');    
@@ -31,7 +31,8 @@ const SelectedRoom = () => {
 
     function invertChoice(currString){
         let curr = document.getElementById('dest').placeholder
-        document.getElementById('dest').placeholder = currString
+        document.getElementById('dest').placeholder = CurrString
+        console.log(CurrString)
     }
     /*
     <Link to='/'>
