@@ -29,10 +29,10 @@ const SelectedRoom = () => {
         setCurrString(e.target.value)
     }
 
-    function invertChoice(currString){
+    function invertChoice(){
         let curr = document.getElementById('dest').placeholder
         document.getElementById('dest').placeholder = CurrString
-        console.log(CurrString)
+        document.getElementById('curr').value = curr
     }
     /*
     <Link to='/'>
@@ -82,8 +82,14 @@ const SelectedRoom = () => {
                     </div>
                     
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', margin: '10px', marginTop: '20px'}}>
-                        <button className='selectedOptions' onClick={()=>invertChoice()}><img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>Invertera valen</button>
-                        <button className='selectedOptions'><img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>Visa rutt</button>
+                        <button className='selectedOptions' onClick={()=>invertChoice()}>
+                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
+                            Invertera valen
+                        </button>
+                        <button className='selectedOptions' onClick={()=>setMenuVisible()}>
+                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
+                            Visa rutt
+                        </button>
 
                     </div>
 
