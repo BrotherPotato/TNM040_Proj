@@ -22,12 +22,14 @@ function Map(){
             document.getElementById('grayMapOverlay').style.display = 'block'
             document.getElementById('mapFloorSelection').style.display = 'flex'
             document.getElementById('bluePart').style.display = 'flex'
+            document.getElementById('realNrDiv').style.display = 'block'
             availableFloors(House)
             changeBluePart(Floor)
         } else {
             document.getElementById('grayMapOverlay').style.display = 'none'
             document.getElementById('mapFloorSelection').style.display = 'none'
             document.getElementById('bluePart').style.display = 'none'
+            document.getElementById('realNrDiv').style.display = 'none'
         }
         
     }
@@ -45,12 +47,16 @@ function Map(){
         let bound1 = targetNumber.getBoundingClientRect()
         let whiteDiv = document.getElementById('mapFloorSelection');
         let bound2 = whiteDiv.getBoundingClientRect()
+        let current = document.getElementById('realNrFloor');
+        let currentBound = current.getBoundingClientRect()
         //console.log(bound1.top)
         //console.log(bound2.right)
         //console.log( (window.screen.width - bound2.right) )
         document.getElementById('bluePart').style.top = bound1.top + 'px'
         document.getElementById('bluePart').style.right = (window.screen.width - bound2.right) + 'px'
         document.getElementById('realNrFloor').innerText = currentFloor
+        document.getElementById('realNrDiv').style.top = bound1.top + 'px'
+        document.getElementById('realNrDiv').style.right = (window.screen.width - bound1.right) + 'px'
     }
 
     return(
@@ -189,8 +195,12 @@ function Map(){
             <div id='bluePart' style={{display: 'none'}}>
                 <h2 style={{margin: '0px', marginRight: '1em'}}>Våning: </h2>
                 <h2 id='nrFloor' style={{margin: '0px', color: '#00B3E7'}}> 1</h2>
-                <h2 id='realNrFloor'>1</h2>
+                
             </div>
+            <div id='realNrDiv' style={{display: 'none'}}>
+                <h2 id='realNrFloor' >1</h2>
+            </div>
+            
         </div>
     )
 }

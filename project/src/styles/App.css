@@ -463,3 +463,12 @@ Body {
   text-decoration: none;
   color:black;
 }
+#realNrFloor{
+  margin: 0px;
+  
+}
+#realNrDiv{
+  position: absolute;
+  font-size: 1.5em;
+  transform: translate(0%, -10%);
+}
