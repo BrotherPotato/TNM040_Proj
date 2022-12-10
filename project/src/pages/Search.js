@@ -9,7 +9,6 @@ function Search(){
     const [filterHouse, setFilterHouse] = useState('all')
     const [filterFloor, setFilterFloor] = useState('all')
     const [filterBookable, setFilterBookable] = useState('')
-    const [filterRestricted, setFilterRestricted] = useState('all')
     const [filterPurpose, setFilterPurpose] = useState('all')
     
 
@@ -44,7 +43,6 @@ function Search(){
         setFilterFloor(document.getElementById("selectFloor").value) // Klar
         setFilterPurpose(document.getElementById("selectPurpose").value)// Klar
         setFilterBookable(e.target.checked) //Klar
-        //setFilterRestricted(document.getElementById("selectRestricted").value)
     }
     function filteredResults(){
        return  filteredSalar.filter(function (filteredSalar){
