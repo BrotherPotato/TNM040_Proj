@@ -24,40 +24,13 @@ const SelectedRoom = () => {
         //setBoxState(!BoxState)
         if(BoxState === "Up"){
             setBoxState("Down");
+            document.getElementById('arrow').style.transform = 'rotate(180deg)';
         } else {
             setBoxState("Up");
+            document.getElementById('arrow').style.transform = 'rotate(0deg)';
         }
     }
-    /*
-    function setMenuVisible(){
-        let menu = document.getElementById('selectedRoom');
-        /** 
-        if(menu.style.display === "none"){
-            menu.style.display = "block"
-            //document.getElementById('showMenu').style.display = "none"
-            menu.setAttribute('id', 'selectedRoomTransition')
-            document.getElementById('RoomImg').style.height = "40vh"
-        }else{
-            //menu.style.display = "none"
-            //document.getElementById('showMenu').style.display = "block"
-            document.getElementById('RoomImg').style.height = "82vh"
-        }
-        
-       //document.getElementById('img').className = 'classname';
-        if(menu.classList.contains("selectedRoomTransitionUp")){
-            
-            menu.classList.remove("selectedRoomTransitionUp");
-            //menu.classList.add("selectedRoomTransitionDown");
-            menu.className = 'selectedRoomTransitionDown';
-            //menu.style.animationDirection = "reverse";
-        }else{
-            //menu.style.animationDirection = "normal";
-            menu.classList.remove("selectedRoomTransitionUp");
-            //menu.classList.remove("selectedRoomTransitionDown");
-            menu.className = 'selectedRoomTransitionUp';
-        }
-    }
-    */
+
     const inputString = (e) => {
         setCurrString(e.target.value)
     }
@@ -83,20 +56,12 @@ const SelectedRoom = () => {
             <div style={{display: 'flex', justifyContent:'center'}}>
                 <img style={{width: '85%', height:"40vh", border: '5px solid #3DD2DC', borderRadius: '2px', marginTop: '-5%'}} id='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
             </div>
-            {/* 
-            <div id='showMenu'style={{backgroundColor: '#FFFFFF', display: 'none'}}> 
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
-                    <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
-                    <p style={{marginLeft:"-4em"}}>Välj rutt</p>
-                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} alt="Visa meny" src={require('../images/TempArrow.png')} onClick={() => setMenuVisible()}/>
-                </div>
-            </div>
-            */}
+
             <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                     <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
                     <p style={{marginLeft:"-4em"}}>Anpassa rutt</p>
-                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
+                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
                 </div>
 
                 <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
