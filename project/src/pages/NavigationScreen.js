@@ -13,6 +13,7 @@ function NavigationScreen(){
     const RoomCode = useParams().RoomCode;
     const [CurrString, setCurrString] = useState('')
     const [BoxState, setBoxState] = useState('Up');
+    const[ArrowState, setArrowState] = useState('Up')
     const roomData = getRoomData(RoomCode);
     const navigate = useNavigate();
 
@@ -20,10 +21,10 @@ function NavigationScreen(){
         //setBoxState(!BoxState)
         if(BoxState === "Up"){
             setBoxState("Down");
-            document.getElementById('arrow').style.transform = 'rotate(180deg)';
+            setArrowState('Down')
         } else {
             setBoxState("Up");
-            document.getElementById('arrow').style.transform = 'rotate(0deg)';
+            setArrowState('Up')
         }
     }
 
@@ -51,7 +52,7 @@ function NavigationScreen(){
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                     <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
                     <p style={{marginLeft:"-4em"}}>Anpassa rutt</p>
-                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
+                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' className={'arrowTransition' + ArrowState} alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
                 </div>
 
                 <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
