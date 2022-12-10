@@ -21,8 +21,9 @@ function NavigationScreen(){
             <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
         </div>
 
-        <h1>NavigationScreen</h1>
-        <h2>{RoomCode}</h2>
+        <div>
+            
+        </div>
 
     </div>)
 }
