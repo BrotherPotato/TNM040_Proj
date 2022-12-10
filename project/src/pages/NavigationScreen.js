@@ -12,19 +12,21 @@ function getRoomData(roomCode){
 function NavigationScreen(){
     const RoomCode = useParams().RoomCode;
     const [CurrString, setCurrString] = useState('')
-
+    const [BoxState, setBoxState] = useState('Up');
     const roomData = getRoomData(RoomCode);
     const navigate = useNavigate();
 
-    function setMenuVisible(){
-        if(document.getElementById('selectedRoom').style.display === "none"){
-            document.getElementById('selectedRoom').style.display = "block"
-            document.getElementById('showMenu').style.display = "none"
-        }else{
-            document.getElementById('selectedRoom').style.display = "none"
-            document.getElementById('showMenu').style.display = "block"
+    const toggleBox = () => {
+        //setBoxState(!BoxState)
+        if(BoxState === "Up"){
+            setBoxState("Down");
+            document.getElementById('arrow').style.transform = 'rotate(180deg)';
+        } else {
+            setBoxState("Up");
+            document.getElementById('arrow').style.transform = 'rotate(0deg)';
         }
     }
+
     const inputString = (e) => {
         setCurrString(e.target.value)
     }
@@ -45,18 +47,11 @@ function NavigationScreen(){
         <div>
             {/*Karta*/}
         </div>
-        <div id='showMenu'style={{backgroundColor: '#FFFFFF', display: 'block'}}> 
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
-                    <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
-                    <p style={{marginLeft:"-4em"}}>Välj rutt</p>
-                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} alt="Visa meny" src={require('../images/TempArrow.png')} onClick={() => setMenuVisible()}/>
-                </div>
-            </div>
-            <div id='selectedRoom' style={{backgroundColor: '#FFFFFF', display: 'none'}}>
+            <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                     <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
                     <p style={{marginLeft:"-4em"}}>Anpassa rutt</p>
-                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrow.png')} onClick={() => setMenuVisible()}/>
+                    <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
                 </div>
 
                 <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
@@ -82,7 +77,7 @@ function NavigationScreen(){
                             Invertera valen
                         </button>
                         <Link className='resultLink' to={'/NavigationScreen/'+ RoomCode}>
-                            <button className='selectedOptions' onClick={()=>setMenuVisible()}>
+                            <button className='selectedOptions'>
                                 <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
                                 Visa rutt
                             </button>
