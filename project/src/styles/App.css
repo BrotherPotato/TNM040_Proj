@@ -278,14 +278,6 @@ Body {
   padding: -0.5em;
   width: 100%;
 }
-#showMenu img{
-  -webkit-transform:rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-right: 1em;
-}
 #searchResultsArrow{
   -webkit-transform:rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -500,6 +492,16 @@ Body {
   animation-timing-function: cubic-bezier(.42,0,.58,1);
 }
 
+.arrowTransitionUp {
+  animation: RotateUp .4s forwards;
+  animation-timing-function: cubic-bezier(.42,0,.58,1); 
+}
+
+.arrowTransitionDown {
+  animation: RotateDown .4s forwards;
+  animation-timing-function: cubic-bezier(.42,0,.58,1);
+}
+
 @keyframes slideUp {
   0% {
     transform: translate(0%, 83%);
@@ -516,4 +518,22 @@ Body {
   100% {
     transform: translate(0%, 83%);
   }
+}
+
+@keyframes RotateUp{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(-180deg);
+    }
+}
+
+@keyframes RotateDown{
+   0%{
+    transform: rotate(-180deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
 }
