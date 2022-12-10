@@ -43,7 +43,7 @@ function NavigationScreen(){
         </div>
 
         <div>
-            
+            {/*Karta*/}
         </div>
         <div id='showMenu'style={{backgroundColor: '#FFFFFF', display: 'block'}}> 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
