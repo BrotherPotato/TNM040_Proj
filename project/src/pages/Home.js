@@ -12,7 +12,7 @@ function Home(){
                 <Link className='HouseLink' to={'/FloorSelection/Kåkenhus'}>
                     <h2>Kåkenhus</h2>
                     <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Kåkenhus'/>
-                    <img className='mapImg' src={require('../images/TempButton.jpg')} alt='Image Button'/>
+                    <img className='mapImg' src={require('../images/TempButton.jpg')} alt='Map Button'/>
                 </Link>
             </div>
              
@@ -20,11 +20,11 @@ function Home(){
                 <Link className='HouseLink' to={'/FloorSelection/Täppan'}>
                     <h2>Täppan</h2>
                     <img className='houseImg' src={require('../images/TempHouse.jpg')} alt='Täppan'/>
-                    <img className='mapImg' src={require('../images/TempButton.jpg')} alt='Image Button'/>
+                    <img className='mapImg' src={require('../images/TempButton.jpg')} alt='Map Button'/>
                 </Link>
             </div> 
         </div>
-        <div className='SearchBar'>
+        <div className='SearchBar' style={{display: 'flex', justifyContent: 'center'}}>
             <Link className='SearchLink' to={'/Search'}>
                 <input
                     id='homeInput'

@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 
 const SearchComponent = ({data}) =>{
     return(
-        <div>
-            <li className='singleSearchResult' style={{display: 'flex', justifyContent: 'space-between'}}>
-                <div>
-                    <Link className='resultLink' to={'/Search/'+ data.RoomCode}>
+        <div style={{borderBottom: '1px solid #39bde3'}}>
+            <Link className='resultLink' to={'/Search/'+ data.RoomCode}>
+                <li className='singleSearchResult' style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div>
                         <h3 style={{marginLeft:'10px'}}>{data.RoomCode} {data.RoomName} </h3>
-                    </Link>
-                    <p style={{marginLeft:'10px'}}>{data.House} våning {data.Floor}</p>
-                </div>
-                <img id='searchResultsArrow' style={{marginRight:'10px', width: '5vw', height: '5vw', alignSelf: 'center'}} alt="högerpil" src={require('../images/TempArrow.png')}/>
-            </li>
+                        <p style={{marginLeft:'10px'}}>{data.House} våning {data.Floor}</p>
+                    </div>
+                    <img id='searchResultsArrow' style={{marginRight:'16px', width: '6vw', alignSelf: 'center'}} alt="högerpil" src={require('../images/TempArrow.png')}/>
+                </li>
+            </Link>
         </div>
         
     )

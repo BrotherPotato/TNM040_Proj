@@ -32,13 +32,11 @@ p{
 
 input{
   font-family: liu-light;
-  margin-left: 15%;
   border-radius: 15px;
   border: 2px solid gray;
 }
 
 input[type=text] {
-  width: 70%;
   padding: 12px 40px;
   box-sizing: border-box;
 }
@@ -265,9 +263,11 @@ Body {
   padding-left: 2vw;
 }
 
-.searchResults > div:nth-child(odd) > li {
-  background: #C7E9F2;
+/*
+.searchResults > div:nth-child(odd) > a > li {
+  background: #CCF0FA;
 }
+*/
 
 #showMenu{
   position: absolute;

@@ -64,7 +64,7 @@ function Search(){
            // Filter if bookable, if the slider is checked only rooms which are bookable to students will be rendered.
             .filter(function (filteredSalar){ 
             if(filteredSalar.Bokningsbar === 'y' && filterBookable){return true}
-            else if(!filterBookable){return true}})
+            else{return !filterBookable}})
 
     }
     
@@ -78,12 +78,12 @@ function Search(){
             <div>
                 <ul className='searchResults'>
                     {
-                       filteredResults() .map((s) => (
+                       filteredResults().map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
                 </ul>
             </div>
-            <div className='SearchBar' style={{paddingTop: '1em', borderTop: '3px solid #3DD2DC'}}>
+            <div className='SearchBar' style={{display:'flex', paddingTop: '1em', borderTop: '3px solid #3DD2DC', justifyContent: 'space-evenly'}}>
                 <input
                     autoFocus
                     id='homeInput'
