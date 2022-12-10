@@ -91,7 +91,7 @@ function Search(){
                     id='homeInput'
                     type='text'
                     label='Sök efter lokal: '
-                    placeholder='Sök efter lokal...'
+                    placeholder='Sök efter lokal med salskod...'
                     onInput={inputSearchString}
                 />
                 <img className='filterButton' alt="filterButton" src={require('../images/TempFilter.png')} onClick={() => setFilterVisible()}/>
