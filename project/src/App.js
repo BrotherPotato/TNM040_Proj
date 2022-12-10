@@ -6,6 +6,7 @@ import Search from './pages/Search.js'
 import SelectedRoom from './pages/SelectedRoom.js'
 import FloorSelection from './pages/FloorSelection.js'
 import Map from './pages/Map.js'
+import NavigationScreen from './pages/NavigationScreen'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='Search/:RoomCode' element={<SelectedRoom />} />
           <Route path='FloorSelection/:House' element={<FloorSelection />} />
           <Route path='Map/:House/:Floor' element={<Map />} />
+          <Route path='NavigationScreen/:RoomCode' element={<NavigationScreen />} />  
         </Route>
       </Routes>
     </BrowserRouter>
