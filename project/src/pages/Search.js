@@ -97,48 +97,54 @@ function Search(){
             <div id="grayOverlay" style={{display: 'none'}} onClick={() => setFilterVisible()}></div>
             <div id='filterSettings' style={{display: 'none'}}>
                 <h3>Filterinställningar</h3>
-                <div className='filterSettingsContent'>
-                    <div className='filterSettingsRow'>
-                        <p>Hus: </p>
-                        <select id='selectHouse' onChange={updateFilter}>
-                            <option value="all">Alla</option>
-                            <option value="Kåkenhus">Kåkenhus</option>
-                            <option value="Täppan">Täppan</option>
-                            <option value="Spetsen">Spetsen</option>
-                            <option value="Kopparhammaren">Kopparhammaren</option>
-                        </select>
-                    </div>
-                    <div className='filterSettingsRow'> 
-                    {// TODO: Fixa så att det är dynamiskt
-                    }
-                        <p>Våning: </p>
-                        <select id='selectFloor' onChange={updateFilter}> 
-                            <option value="all">Alla</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div className='filterSettingsRow'>
-                        <p>Användning: </p>
-                        <select id='selectPurpose' onChange={updateFilter}> 
-                            <option value="all">Alla</option>
-                            <option value="Föreläsningssal">Föreläsningssal</option>
-                            <option value="Lärosal">Lärosal</option>
-                            <option value="Grupprum">Grupprum</option>
-                            <option value="Datorsal">Datorsal</option>
-                            <option value="Other">Övriga</option>
-                        </select>
-                    </div>
-                    <div className='filterSettingsRow'>
-                        <p>Bokningsbar: </p>
-                        <label className="switch">
-                            <input id='selectBookable' type='checkbox' onChange={updateFilter}/>
-                        <span className="slider round"></span>
-                        </label>
-                    </div>
-                </div>
+                <table className='filterSettingsContent' style={{width: '100%'}}>
+                    <tbody>
+                        <tr>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Hus: </p></td>
+                            <td>
+                                <select id='selectHouse' className='selectInput' onChange={updateFilter}>
+                                    <option value="all">Alla</option>
+                                    <option value="Kåkenhus">Kåkenhus</option>
+                                    <option value="Täppan">Täppan</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Våning: </p></td>
+                            <td>
+                                <select id='selectFloor' className='selectInput' onChange={updateFilter}> 
+                                    <option value="all">Alla</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td><p style={{display: 'inline', margin:'1em'}}>Användning: </p></td>
+                            <td>
+                                <select id='selectPurpose' className='selectInput' onChange={updateFilter}> 
+                                    <option value="all">Alla</option>
+                                    <option value="Föreläsningssal">Föreläsningssal</option>
+                                    <option value="Lärosal">Lärosal</option>
+                                    <option value="Grupprum">Grupprum</option>
+                                    <option value="Datorsal">Datorsal</option>
+                                    <option value="Other">Övriga</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p style={{display: 'inline', margin:'1em'}}>Bokningsbar: </p></td>
+                            <td>
+                                <label className="switch">
+                                    <input id='selectBookable' type='checkbox' onChange={updateFilter}/>
+                                <span className="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     )
