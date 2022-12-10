@@ -87,11 +87,12 @@ const SelectedRoom = () => {
                             <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
                             Invertera valen
                         </button>
-                        <button className='selectedOptions' onClick={()=>setMenuVisible()}>
-                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
-                            Visa rutt
-                        </button>
-
+                        <Link className='resultLink' to={'/NavigationScreen/'+ roomCode}>
+                            <button className='selectedOptions' onClick={()=>setMenuVisible()}>
+                                <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
+                                Visa rutt
+                            </button>
+                        </Link>
                     </div>
                     <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
                         <h2>{roomData.RoomCode}</h2>
