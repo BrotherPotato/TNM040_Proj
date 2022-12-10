@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import Salar from '../components/Salar.json'
 
@@ -19,7 +19,32 @@ const SelectedRoom = () => {
     const roomData = getRoomData(roomCode);
     //console.log(roomData.RoomName != '');    
     const navigate = useNavigate();
+    //const location = useLocation().state.to;
     
+
+    //const [currentPlace, setcurrentPlace] = useState('');
+    const { state } = useLocation();
+    
+    let currentPlace
+
+    //console.log(currentPlace)
+    uppdateCurrentInput(state)
+    function uppdateCurrentInput(state){
+        console.log(state)
+        if(state === undefined || state === null){
+            return null
+        }
+        console.log("state")
+
+        if(state.to === undefined || state.to === null){
+            return null
+        }
+
+        currentPlace = state.to
+        console.log(currentPlace)
+            
+    }
+
     const toggleBox = () => {
         //setBoxState(!BoxState)
         if(BoxState === "Up"){
@@ -32,13 +57,6 @@ const SelectedRoom = () => {
     }
 
 
-    function invertChoice(){
-        let curr = document.getElementById('dest').value
-        let dest = document.getElementById('curr').value
-        document.getElementById('dest').value = dest
-        document.getElementById('curr').value = curr
-    }
-
     function findRoom(roomCode){
         let result = Salar.filter(s => s.RoomCode === roomCode)
         if(result.length > 0){
@@ -49,17 +67,26 @@ const SelectedRoom = () => {
     }
 
     function moveToRoute(){
-        let curr = document.getElementById('curr').value.toUpperCase().trim();
+        let curr1 = document.getElementById('curr').value.toUpperCase().trim();
+        let dest1 = document.getElementById('dest').value.toUpperCase().trim();
 
-        if(findRoom(curr)){
-            navigate('../Search/' + curr)
-        } else if(curr === ''){
+        if(findRoom(curr1)){
+            console.log(dest1)
+            navigate('../Search/' + curr1,{state:{to: dest1}})
+        } else if(curr1 === ''){
+            
             alert('Du måste ange en sal')
         } else {
-            alert(curr + ' är en ogiltig salskod')
+            alert(curr1 + ' är en ogiltig salskod')
         }
     }
 
+    function onInputChange(value){
+        this.setState({
+            name: value
+       });
+    }
+    //onload={() => {document.getElementById('curr').setAttribute('value',currentPlace);}}
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -83,14 +110,14 @@ const SelectedRoom = () => {
                     <p style={{fontSize: '1.1em', marginLeft: '12vw', fontWeight: 700}}>Nuvarande position:</p>
                     <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px', marginTop: '10px'}}>
                         <img style={{width: '8vw', height: 'auto', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
-                        <input id='curr' type='text' placeholder='Skriv in närmaste lokal...' 
+                        <input id='curr' type='text' placeholder='Skriv in närmaste lokal...' defaultValue={currentPlace} 
                         style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em', height: '5.5vh', padding: '10px'}}>
                         </input>
                     </div>
                     <p style={{fontSize: '1.1em', marginLeft: '12vw', fontWeight: 700}}>Destination:</p>
                     <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px',marginTop: '10px'}}>
                         <img style={{width: '8vw', height: 'auto', alignSelf:'center'}} alt='Center map icon' src={require('../images/TempLocation.png')}/>
-                        <input id='dest' type='text' placeholder={roomData.RoomCode} disabled
+                        <input id='dest' type='text' placeholder={roomData.RoomCode} value={roomData.RoomCode} disabled
                         style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em', height: '5.5vh', padding: '10px'}}>
                         </input>
                     </div>
