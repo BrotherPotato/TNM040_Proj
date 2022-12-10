@@ -489,3 +489,35 @@ Body {
   font-size: 1.5em;
   transform: translate(1px, -2px);
 }
+
+.selectedRoomTransitionUp {
+  animation: slideUp .2s forwards;
+  background-color: rgb(186, 31, 194);
+  animation-timing-function: cubic-bezier(.79,-0.08,.37,1.47); 
+}
+
+.selectedRoomTransitionDown {
+  animation: slideDown .2s forwards;
+  background-color: rgb(122, 0, 0);
+  animation-timing-function: cubic-bezier(.79,-0.08,.37,1.47);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translate(0%, 50%);
+  }
+  100% {
+    transform: translate(0%, -50%);
+    background-color: blueviolet;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  100% {
+    transform: translate(0%, 50%);
+    background-color: blueviolet;
+  }
+}
