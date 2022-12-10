@@ -86,7 +86,7 @@ function Map(){
             <div id="grayOverlay" style={{display: 'none'}} onClick={() => setMapFilterVisible()}></div>
             <div id='mapFilterOptions' style={{display: 'none'}}>
                 <h3>Visa:</h3>
-                <table>
+                <table style={{width: '100%'}}>
                     <tbody>
                         <tr>
                             <td><img className='optionImage' src={require('../images/TempCafe.png')} alt='Cafée bild'/></td>

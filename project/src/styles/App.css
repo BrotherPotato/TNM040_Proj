@@ -337,15 +337,13 @@ Body {
   background-color: gray;
   opacity: 0.5;
 }
-.filterSettingsRow select{
+.selectInput{
+  width: 100%;
   padding: 0.8em;
-  border-radius: 10px 10px 0px 0px ;
+  border-radius: 10px;
 }
-.filterSettingsRow input{
-  width: 2em;
-  height: 2em;
-  vertical-align: middle;
-  margin-left: 50%;
+.filterSettingsContent{
+  border-spacing: 1em 0.5em;
 }
 
 .optionImage{
@@ -368,6 +366,8 @@ Body {
 .map{
   position: fixed;
   bottom: 0%;
+  left: 0%;
+  right: 0%;
   width: 100%;
 }
 .mapButtonCol1{
