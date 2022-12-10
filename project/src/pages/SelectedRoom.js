@@ -20,9 +20,11 @@ const SelectedRoom = () => {
         if(document.getElementById('selectedRoom').style.display === "none"){
             document.getElementById('selectedRoom').style.display = "block"
             document.getElementById('showMenu').style.display = "none"
+            document.getElementById('RoomImg').style.height = "40vh"
         }else{
             document.getElementById('selectedRoom').style.display = "none"
             document.getElementById('showMenu').style.display = "block"
+            document.getElementById('RoomImg').style.height = "82vh"
         }
     }
     const inputString = (e) => {
@@ -47,9 +49,8 @@ const SelectedRoom = () => {
                 <p style={{color: '#FFFFFF', display: 'inline-block'}}>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
-                <h3 style={{color: '#FFFFFF', display: 'flex', justifyContent:'center', marginTop:''}}>{(roomData.RoomName !== '') && roomData.RoomName}</h3>
-            <div>
-                <img style={{width: '85%', margin: '5%', border: '5px solid #3DD2DC', borderRadius: '2px'}} className='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
+            <div style={{display: 'flex', justifyContent:'center'}}>
+                <img style={{width: '85%', height:"40vh", border: '5px solid #3DD2DC', borderRadius: '2px', marginTop: '-5%'}} id='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
             </div>
             <div id='showMenu'style={{backgroundColor: '#FFFFFF', display: 'none'}}> 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
@@ -100,8 +101,8 @@ const SelectedRoom = () => {
                         <p>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
                         <p>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
                     </div>
+                </div>
             </div>
-        </div>
     )
 }
 

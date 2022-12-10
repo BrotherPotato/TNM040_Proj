@@ -313,6 +313,7 @@ Body {
   background-color: #CCF0FA;
   padding: 0.3em;
   border-radius: 0.5em;
+  filter: drop-shadow(1px 2px 3px black);
 }
 #filterSettings{
   position: absolute;
