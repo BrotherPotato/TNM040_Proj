@@ -6,10 +6,10 @@ const SearchComponent = ({data}) =>{
         <div>
             <li className='singleSearchResult'>
                 <Link className='resultLink' to={'/Search/'+ data.RoomCode}>
-                    <h3>{data.RoomCode} {data.RoomName} </h3>
+                    <h3 style={{marginLeft:'10px'}}>{data.RoomCode} {data.RoomName} </h3>
                 </Link>
 
-                <p>{data.House} våning: {data.Floor}</p>
+                <p style={{marginLeft:'10px'}}>{data.House} våning: {data.Floor}</p>
             </li>
         </div>
         
