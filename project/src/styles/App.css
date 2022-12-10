@@ -260,13 +260,13 @@ Body {
 }
 .singleSearchResult{
   list-style-type: none;
-  background: #C7E9F2;
+  background: #CCF0FA;
   padding: 0.5em;
   padding-left: 2vw;
 }
 
 .searchResults > div:nth-child(odd) > li {
-  background: #a7e0e4;
+  background: #C7E9F2;
 }
 
 #showMenu{
@@ -284,6 +284,13 @@ Body {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
   margin-right: 1em;
+}
+#searchResultsArrow{
+  -webkit-transform:rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 #selectedRoom{
   background: #C7E9F2;
