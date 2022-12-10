@@ -9,6 +9,8 @@ import Map from './pages/Map.js'
 import NavigationScreen from './pages/NavigationScreen'
 import { motion } from "framer-motion";
 
+const PageLayout = ({ children }) => children;
+
 const pageVariants = {
   initial: {
     opacity: 0
@@ -24,13 +26,13 @@ const pageVariants = {
 const pageTransition = {
   type: "tween",
   ease: "linear",
-  duration: 0.5
+  duration: 0.2
 };
 
 const AnimationLayout = () => {
   const { pathname } = useLocation();
   return (
-    <Layout>
+    <PageLayout>
       <motion.div
         key={pathname}
         initial="initial"
@@ -40,7 +42,7 @@ const AnimationLayout = () => {
       >
         <Outlet />
       </motion.div>
-    </Layout>
+    </PageLayout>
   );
 };
 
