@@ -150,35 +150,8 @@ function Map(){
                 </table>
             </div>
             <div id='grayMapOverlay' style={{display: 'none'}} onClick={() => setMapFloorVisible()}></div>
-            {/* 
-            <div id='mapFloorSelection' style={{display: 'none'}}> 
-                <h3>Välj våning:</h3>
-                <Link to={'/Map/'+ House + '/1'}>
-                    <button className='mapButton' onClick={() => setMapFloorVisible()}>1</button>
-                </Link>
-                <Link to={'/Map/'+ House + '/2'}>
-                    <button className='mapButton' onClick={() => setMapFloorVisible()}>2</button>
-                </Link>
-                <Link to={'/Map/'+ House + '/3'}>
-                    <button className='mapButton' onClick={() => setMapFloorVisible()}>3</button>
-                </Link>
-                <Link to={'/Map/'+ House + '/4'}>
-                    <button className='mapButton' onClick={() => setMapFloorVisible()}>4</button>
-                </Link>
-                <Link to={'/Map/'+ House + '/5'}>
-                    <button className='mapButton' onClick={() => setMapFloorVisible()}>5</button>
-                </Link>
-                <Link to={'/Map/'+ House + '/6'}>
-                    <button className='mapButton' onClick={() => setMapFloorVisible()}>6</button>
-                </Link>
-            </div>
-            */}
-            <div id='mapFloorSelection' className='whitePart' style={{display: 'none'}}>
-                {/* 
-                <Link to={'/Map/'+ House + '/1'}>
-                    <div className='floorNumber' id='floor1' onClick={() => setMapFloorVisible()}>1</div>
-                </Link>
-                */}
+
+            <div id='mapFloorSelection' className='whitePart' style={{display: 'none'}}>      
                 <Link to={'/Map/'+ House + '/5'} className='linkCSS'>
                     <div className='floorNumber' id='floor5' onClick={() => setMapFloorVisible()}>5</div>
                 </Link>

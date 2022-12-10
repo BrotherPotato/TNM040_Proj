@@ -13,7 +13,6 @@ function getRoomData(roomCode){
 
 
 const SelectedRoom = () => {
-    const [CurrString, setCurrString] = useState('')
     const [BoxState, setBoxState] = useState('Up')
     const[ArrowState, setArrowState] = useState('Up')
     const roomCode = useParams().RoomCode;
@@ -32,21 +31,35 @@ const SelectedRoom = () => {
         }
     }
 
-    const inputString = (e) => {
-        setCurrString(e.target.value)
-    }
 
     function invertChoice(){
-        let curr = document.getElementById('dest').placeholder
-        document.getElementById('dest').placeholder = CurrString
+        let curr = document.getElementById('dest').value
+        let dest = document.getElementById('curr').value
+        document.getElementById('dest').value = dest
         document.getElementById('curr').value = curr
     }
-    /*
-    <Link to='/'>
-        <h3>Link to home page </h3>
-    </Link>
-    {(roomData.RoomName !== '') && roomData.RoomName}
-    */
+
+    function findRoom(roomCode){
+        let result = Salar.filter(s => s.RoomCode === roomCode)
+        if(result.length > 0){
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function moveToRoute(){
+        let curr = document.getElementById('curr').value.toUpperCase().trim();
+
+        if(findRoom(curr)){
+            navigate('../Search/' + curr)
+        } else if(curr === ''){
+            alert('Du måste ange en sal')
+        } else {
+            alert(curr + ' är en ogiltig salskod')
+        }
+    }
+
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -70,7 +83,7 @@ const SelectedRoom = () => {
                     <p style={{fontSize: '1.1em', marginLeft: '12vw', fontWeight: 700}}>Nuvarande position:</p>
                     <div style={{display: 'flex', flexDirection: 'row', marginBottom: '15px', marginTop: '10px'}}>
                         <img style={{width: '8vw', height: 'auto', alignSelf:'center', filter:'invert(1)'}} alt='Location icon' src={require('../images/TempCenterMap.png')}/>
-                        <input id='curr' type='text' placeholder='Skriv in närmaste lokal...' onInput={inputString}
+                        <input id='curr' type='text' placeholder='Skriv in närmaste lokal...' 
                         style={{border: '1px solid black', borderRadius: '15px', width: '78vw', marginLeft: '1em', height: '5.5vh', padding: '10px'}}>
                         </input>
                     </div>
@@ -83,7 +96,7 @@ const SelectedRoom = () => {
                     </div>
                     
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', margin: '10px', marginTop: '20px'}}>
-                        <button className='selectedOptions' onClick={()=>invertChoice()}>
+                        <button className='selectedOptions' onClick={() => moveToRoute()}>
                             <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
                             Invertera valen
                         </button>
@@ -93,12 +106,6 @@ const SelectedRoom = () => {
                                 Visa rutt
                             </button>
                         </Link>
-                    </div>
-                    <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
-                        <h2>{roomData.RoomCode}</h2>
-                        <h3>{roomData.Purpose}</h3>
-                        <p>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
-                        <p>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
                     </div>
                 </div>
             </div>

@@ -504,7 +504,7 @@ Body {
 
 @keyframes slideUp {
   0% {
-    transform: translate(0%, 83%);
+    transform: translate(0%, 80%);
   }
   100% {
     transform: translate(0%, 0%);
@@ -516,7 +516,7 @@ Body {
     transform: translate(0%, 0%);
   }
   100% {
-    transform: translate(0%, 83%);
+    transform: translate(0%, 80%);
   }
 }
 
