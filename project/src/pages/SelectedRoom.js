@@ -38,15 +38,16 @@ const SelectedRoom = () => {
     <Link to='/'>
         <h3>Link to home page </h3>
     </Link>
+    {(roomData.RoomName !== '') && roomData.RoomName}
     */
     return(
         <div className='parent'>
             <div className='topBar'>
-                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName}</h1>
+                <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{roomData.RoomCode}</h1>
                 <p style={{color: '#FFFFFF', display: 'inline-block'}}>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
-                
             </div>
+                <h3 style={{color: '#FFFFFF', display: 'flex', justifyContent:'center', marginTop:''}}>{(roomData.RoomName !== '') && roomData.RoomName}</h3>
             <div>
                 <img style={{width: '85%', margin: '5%', border: '5px solid #3DD2DC', borderRadius: '2px'}} className='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
             </div>
@@ -92,14 +93,12 @@ const SelectedRoom = () => {
                         </button>
 
                     </div>
-
                     <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
-                        <h2>{roomData.RoomCode} {(roomData.RoomName !== '') && roomData.RoomName} </h2>
+                        <h2>{roomData.RoomCode}</h2>
                         <h3>{roomData.Purpose}</h3>
                         <p>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
                         <p>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
                     </div>
-                
             </div>
         </div>
     )

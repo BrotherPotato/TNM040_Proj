@@ -10,7 +10,7 @@ const SearchComponent = ({data}) =>{
                         <h3 style={{marginLeft:'10px'}}>{data.RoomCode} {data.RoomName} </h3>
                         <p style={{marginLeft:'10px'}}>{data.House} våning {data.Floor}</p>
                     </div>
-                    <img id='searchResultsArrow' style={{marginRight:'16px', width: '6vw', alignSelf: 'center'}} alt="högerpil" src={require('../images/TempArrow.png')}/>
+                    <img id='searchResultsArrow'alt="högerpil" src={require('../images/TempArrow.png')}/>
                 </li>
             </Link>
         </div>
