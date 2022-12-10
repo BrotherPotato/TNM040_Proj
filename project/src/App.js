@@ -1,5 +1,5 @@
 import './styles/App.css'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, Outlet } from 'react-router-dom'
 import Layout from "./pages/Layout.js"
 import Home from './pages/Home.js'
 import Search from './pages/Search.js'
@@ -7,8 +7,8 @@ import SelectedRoom from './pages/SelectedRoom.js'
 import FloorSelection from './pages/FloorSelection.js'
 import Map from './pages/Map.js'
 import NavigationScreen from './pages/NavigationScreen'
-//import { motion } from "framer-motion";
-/*
+import { motion } from "framer-motion";
+
 const pageVariants = {
   initial: {
     opacity: 0
@@ -43,12 +43,12 @@ const AnimationLayout = () => {
     </Layout>
   );
 };
-*/
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout/>}>
+        <Route path='/' element={<AnimationLayout/>}>
           <Route index element={<Home />} />
           <Route path='Search' element={<Search />} />
           <Route path='Search/:RoomCode' element={<SelectedRoom />} />
