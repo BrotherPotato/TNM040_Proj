@@ -51,14 +51,14 @@ const SelectedRoom = () => {
             <div>
                 <img style={{width: '85%', margin: '5%', border: '5px solid #3DD2DC', borderRadius: '2px'}} className='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
             </div>
-            <div id='showMenu'style={{backgroundColor: '#FFFFFF', display: 'block'}}> 
+            <div id='showMenu'style={{backgroundColor: '#FFFFFF', display: 'none'}}> 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
                     <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
-                    <p style={{marginLeft:"-4em"}}>Anpassa rutt</p>
+                    <p style={{marginLeft:"-4em"}}>Välj rutt</p>
                     <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} alt="Visa meny" src={require('../images/TempArrow.png')} onClick={() => setMenuVisible()}/>
                 </div>
             </div>
-            <div id='selectedRoom' style={{backgroundColor: '#FFFFFF', display: 'none'}}>
+            <div id='selectedRoom' style={{backgroundColor: '#FFFFFF', display: 'block'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                     <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
                     <p style={{marginLeft:"-4em"}}>Anpassa rutt</p>
