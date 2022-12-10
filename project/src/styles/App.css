@@ -273,6 +273,7 @@ Body {
   position: absolute;
   bottom: 0%;
   left: 0%;
+  right: 0%;
   background: #C7E9F2;
   padding: -0.5em;
   width: 100%;
@@ -291,8 +292,16 @@ Body {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  margin-right: 16px;
+  align-self: center;
+  width: 6vw;
+  filter: invert(0.5);
 }
 #selectedRoom{
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
   background: #C7E9F2;
   padding: 1em;
 }
