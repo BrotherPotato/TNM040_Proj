@@ -81,6 +81,9 @@ function Search(){
                        filteredResults().map((s) => (
                         <SearchComponent data={s} key={s.RoomCode}/>
                     ))}
+                    {filteredResults().length === 0 && 
+                    <p style={{textAlign: 'center', color: '#FFFFFF', fontSize: '1.5em'}}>Inga lokaler matchar din sökning</p>
+                    }
                 </ul>
             </div>
             <div className='SearchBar' style={{display:'flex', paddingTop: '1em', borderTop: '3px solid #3DD2DC', justifyContent: 'space-evenly'}}>
