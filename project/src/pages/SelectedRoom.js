@@ -87,10 +87,14 @@ const SelectedRoom = () => {
                 <p style={{color: '#FFFFFF', display: 'inline-block'}}>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
+            {/* 
             <div style={{display: 'flex', justifyContent:'center'}}>
                 <img style={{width: '85%', height:"40vh", border: '5px solid #3DD2DC', borderRadius: '2px', marginTop: '-5%'}} id='RoomImg' className={'mapTransition' + MapState}alt="Room Image" src={require('../images/TempPrinter.png')}/>
             </div>
-
+            */}
+            <div style={{display: 'flex', justifyContent:'center'}}>
+                <iframe src='https://liu.ericedelo.com/' style={{width: '85%', height:"40vh", border: '5px solid #3DD2DC', borderRadius: '2px', marginTop: '-5%'}} id='RoomImg' className={'mapTransition' + MapState}></iframe>
+            </div>
             <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
                     <div style={{display: 'flex', flexDirection: 'row'}}>
