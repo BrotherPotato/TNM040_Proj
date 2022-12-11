@@ -66,7 +66,7 @@ function Map(){
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate('../')}/>
             </div>
             <div className='mapContainer' style={{position: 'absolute', left: '0px', overflow: 'hidden', width: '100vw'}}>
-                <iframe src='https://liu.ericedelo.com/' style={{width: '100vw', height: '90vh'}}></iframe>
+                <iframe src='https://liu.ericedelo.com/' style={{width: '150vw', height: '90vh'}}></iframe>
             </div>
 
             <div className='map'>   

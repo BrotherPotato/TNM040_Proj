@@ -17,7 +17,7 @@ const pageVariants = {
 const pageTransition = {
   type: "tween",
   ease: "linear",
-  duration: 0.2
+  duration: 0.3
 };
 
 const AnimationLayout = () => {
