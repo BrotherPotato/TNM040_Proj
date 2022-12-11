@@ -218,7 +218,6 @@ class BuildingsManager {
     }
 }
 
-// 
 class SVGView {
     constructor(rootElement, manager) {
         this.rootElement = rootElement;
@@ -228,15 +227,19 @@ class SVGView {
         this.posY = 0;
         this.zoom = CONFIG.defaultZoom;
         this.multitouch = false;
+        this.ready = false;
 
         this.activeHighlight = null;
         this.#bindEvents();
     }
 
-    display_floor(buildingName, floorNumber) {
-        console.info(`Displaying ${CONFIG.names[buildingName]} ${floorNumber}`);
+    displayFloor(buildingName, floorNumber, viewFilter) {
 
+
+        console.info(`Displaying ${CONFIG.names[buildingName]} ${floorNumber}`);
         const floor = this.manager.getFloor(buildingName, floorNumber);
+
+  
         if (this.activeFloor != null) {
             this.activeFloor.svg.remove();
         }
@@ -387,7 +390,7 @@ class SVGView {
         if (!((room.floorNumber == this.activeFloor.floorNumber) &&
             (room.buildingName == this.activeFloor.buildingName))) {
 
-            view.display_floor(room.buildingName, room.floorNumber)
+            view.displayFloor(room.buildingName, room.floorNumber)
             // return;
         }
         const bbox = this.activeView.bbox();

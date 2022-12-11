@@ -6,6 +6,12 @@ function Map(){
     const House = useParams().House
     const Floor = useParams().Floor
     const navigate = useNavigate();
+    
+    const buildingName = House.toLowerCase().replace('å', 'a').replace('ä', 'a').replace('hus', '');
+    const floorNumber = parseInt(Floor);
+    if(window.svgView.ready) {
+        window.svgView.displayFloor(buildingName, floorNumber);
+    }
 
     function setMapFilterVisible(){
         if(document.getElementById("grayOverlay").style.display === "none"){
