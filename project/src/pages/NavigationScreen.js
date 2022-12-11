@@ -38,7 +38,7 @@ function NavigationScreen(){
         <div>
             {/*Karta*/}
         </div>
-        <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
+        <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block', height: '40vh'}}>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
                 <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {roomData.RoomCode}</p>
@@ -48,36 +48,38 @@ function NavigationScreen(){
 
             <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
             {/*Steg */}
-            <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px'}}>
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '30vh'}}>
+                <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px', marginTop: '15px'}}>
+                    <div className='stepDiv'>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
+                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                    </div>
+                    
+                    <div className='arrowDiv' >
+                        <img style={{width: '5vw', alignSelf: 'center', transform: 'rotate(-180deg)'}} className='' alt='' src={require('../images/TempArrow.png')}/>
+                    </div>
+                </div>
+                <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
                 <div className='stepDiv'>
-                    <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
-                    <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                    <div className='stepDiv'>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempStairs.png')}/>
+                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                    </div>
+                    
+                    <div className='arrowDiv' style={{backgroundColor: '#00B3E7', width: '8vw', height: '8vw'}}>
+                        <img style={{width: '12vw', alignSelf: 'center', marginTop: '4px'}} className='' alt='' src={require('../images/TempCheck.png')}/>
+                    </div>
                 </div>
-                
-                <div className='arrowDiv' >
-                    <img style={{width: '5vw', alignSelf: 'center', transform: 'rotate(-180deg)'}} className='' alt='' src={require('../images/TempArrow.png')}/>
-                </div>
-            </div>
-            <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
-            <div className='stepDiv'>
-                <div className='stepDiv'>
-                    <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempStairs.png')}/>
-                    <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
-                </div>
-                
-                <div className='arrowDiv' style={{backgroundColor: '#00B3E7', width: '8vw', height: '8vw'}}>
-                    <img style={{width: '12vw', alignSelf: 'center', marginTop: '4px'}} className='' alt='' src={require('../images/TempCheck.png')}/>
-                </div>
-            </div>
-            <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
-            <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px'}}>
-                <div className='stepDiv'>
-                    <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
-                    <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
-                </div>
-                
-                <div className='arrowDiv' >
-                    <img style={{width: '5vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrow.png')}/>
+                <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
+                <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px'}}>
+                    <div className='stepDiv'>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
+                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                    </div>
+                    
+                    <div className='arrowDiv' >
+                        <img style={{width: '5vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrow.png')}/>
+                    </div>
                 </div>
             </div>
         </div>
