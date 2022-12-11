@@ -116,7 +116,7 @@ const SelectedRoom = () => {
                     
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', margin: '10px', marginTop: '20px'}}>
                         <button className='selectedOptions' onClick={() => moveToRoute()}>
-                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
+                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempSwitchArrows.png')}></img>
                             Invertera valen
                         </button>
                         <Link className='resultLink' to={'/NavigationScreen/'+ roomCode}>
