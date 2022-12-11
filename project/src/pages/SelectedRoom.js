@@ -28,18 +28,18 @@ const SelectedRoom = () => {
     //console.log(currentPlace)
     uppdateCurrentInput(state)
     function uppdateCurrentInput(state){
-        console.log(state)
+        /*console.log(state)*/
         if(state === undefined || state === null){
             return null
         }
-        console.log("state")
+        /*console.log("state")*/
 
         if(state.to === undefined || state.to === null){
             return null
         }
 
         currentPlace = state.to
-        console.log(currentPlace)
+        /*console.log(currentPlace)*/
             
     }
 
@@ -82,7 +82,7 @@ const SelectedRoom = () => {
             <div className='topBar'>
                 <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{roomData.RoomCode}</h1>
                 <p style={{color: '#FFFFFF', display: 'inline-block'}}>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
-                <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate('../Search/')}/>
+                <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
             </div>
             <div style={{display: 'flex', justifyContent:'center'}}>
                 <img style={{width: '85%', height:"40vh", border: '5px solid #3DD2DC', borderRadius: '2px', marginTop: '-5%'}} id='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
