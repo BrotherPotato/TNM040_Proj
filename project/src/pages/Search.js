@@ -10,9 +10,6 @@ function Search(){
     const [filterFloor, setFilterFloor] = useState('all')
     const [filterBookable, setFilterBookable] = useState('')
     const [filterPurpose, setFilterPurpose] = useState('all')
-    
-
-
 
     const matchSearch = sName => {
         const lowerCaseName = sName.RoomCode.toLowerCase()
