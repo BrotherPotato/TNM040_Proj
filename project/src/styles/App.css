@@ -311,6 +311,7 @@ Body {
   right: 0%;
   background: #C7E9F2;
   padding: 1em;
+  border-radius: 10px 10px 0px 0px;
 }
 .filterButton{
   width: 2em; 
