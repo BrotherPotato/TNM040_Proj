@@ -84,12 +84,6 @@ function NavigationScreen(){
                             </button>
                         </Link>
                     </div>
-                    <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
-                        <h2>{roomData.RoomCode}</h2>
-                        <h3>{roomData.Purpose}</h3>
-                        <p>{(roomData.Bokningsbar === 'y') && roomData.RoomCode + ' är bokningsbar'}</p>
-                        <p>{(roomData.Bokningsbar === 'n') && roomData.RoomCode + ' är inte bokningsbar'}</p>
-                    </div>
                 </div>
             </div>
     )

@@ -17,12 +17,10 @@ const SelectedRoom = () => {
     const[ArrowState, setArrowState] = useState('Up')
     const roomCode = useParams().RoomCode;
     const roomData = getRoomData(roomCode);
-    //console.log(roomData.RoomName != '');    
+        
     const navigate = useNavigate();
-    //const location = useLocation().state.to;
     
-
-    //const [currentPlace, setcurrentPlace] = useState('');
+    
     const { state } = useLocation();
     
     let currentPlace
@@ -46,7 +44,6 @@ const SelectedRoom = () => {
     }
 
     const toggleBox = () => {
-        //setBoxState(!BoxState)
         if(BoxState === "Up"){
             setBoxState("Down")
             setArrowState('Down')
@@ -55,7 +52,6 @@ const SelectedRoom = () => {
             setArrowState('Up')
         }
     }
-
 
     function findRoom(roomCode){
         let result = Salar.filter(s => s.RoomCode === roomCode)
@@ -81,18 +77,12 @@ const SelectedRoom = () => {
         }
     }
 
-    function onInputChange(value){
-        this.setState({
-            name: value
-       });
-    }
-    //onload={() => {document.getElementById('curr').setAttribute('value',currentPlace);}}
     return(
         <div className='parent'>
             <div className='topBar'>
                 <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{roomData.RoomCode}</h1>
                 <p style={{color: '#FFFFFF', display: 'inline-block'}}>{(roomData.House !== '') && roomData.House} {(roomData.Floor !== '') && 'våning: ' + roomData.Floor}</p>
-                <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate(-1)}/>
+                <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate('../Search/')}/>
             </div>
             <div style={{display: 'flex', justifyContent:'center'}}>
                 <img style={{width: '85%', height:"40vh", border: '5px solid #3DD2DC', borderRadius: '2px', marginTop: '-5%'}} id='RoomImg' alt="Room Image" src={require('../images/TempPrinter.png')}/>
@@ -100,8 +90,10 @@ const SelectedRoom = () => {
 
             <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                    <img style={{width: '10vw', height: '10vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempSlider.png')}/>
-                    <p style={{marginLeft:"-4em"}}>Anpassa rutt</p>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
+                        <p style={{marginLeft:"2em", fontSize:'1em'}}>Anpassa rutt</p>
+                    </div>
                     <img style={{marginLeft: '40vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' className={'arrowTransition' + ArrowState} alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
                 </div>
 
