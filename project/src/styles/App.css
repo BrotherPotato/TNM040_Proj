@@ -367,6 +367,7 @@ Body {
   vertical-align: middle;
 }
 .mapButton{
+  background-color: #00B3E7;
   border-radius: 100px;
   padding: 1em;
   margin: 1em;
