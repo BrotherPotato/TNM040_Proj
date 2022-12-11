@@ -89,7 +89,7 @@ const SelectedRoom = () => {
             </div>
 
             <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
                     <div style={{display: 'flex', flexDirection: 'row'}}>
                         <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
                         <p style={{marginLeft:"2em", fontSize:'1em'}}>Anpassa rutt</p>
