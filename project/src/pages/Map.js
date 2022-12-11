@@ -65,6 +65,10 @@ function Map(){
                 <h1 style={{color: '#FFFFFF', display: 'inline-block'}}>{House} våning {Floor}</h1>
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate('../')}/>
             </div>
+            <div className='mapContainer' style={{position: 'absolute', left: '0px'}}>
+                <iframe src='https://liu.ericedelo.com/' style={{width: '100vw', height: '90vh'}}></iframe>
+            </div>
+
             <div className='map'>   
             <div className='mapButtonCol1'>
                 <div className='mapButton' onClick={() => navigate(-1)}> 
