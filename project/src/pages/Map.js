@@ -176,8 +176,7 @@ function Map(){
             </div>
             <div id='realNrDiv' style={{display: 'none'}}>
                 <h2 id='realNrFloor' >1</h2>
-            </div>
-            
+            </div>  
         </div>
     )
 }
