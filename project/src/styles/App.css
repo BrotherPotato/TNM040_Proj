@@ -513,10 +513,6 @@ Body {
   justify-content: center;
 }
 
-#RoomImg{
-
-}
-
 .selectedRoomTransitionUp {
   animation: slideUp .4s forwards;
   animation-timing-function: cubic-bezier(.42,0,.58,1); 
