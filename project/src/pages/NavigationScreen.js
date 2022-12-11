@@ -39,28 +39,46 @@ function NavigationScreen(){
             {/*Karta*/}
         </div>
         <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <img style={{width: '8vw', height: '8vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
+                <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {roomData.RoomCode}</p>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
                 <img style={{marginLeft: '20vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' className={'arrowTransition' + ArrowState} alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
             </div>
 
             <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
-
+            {/*Steg */}
             <div className='stepDiv'>
-                <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {roomData.RoomCode}</p>
-                <p style={{fontSize: '1.1em', marginRight: '12vw', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
+                <div className='stepDiv'>
+                    <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
+                    <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                </div>
+                
+                <div className='arrowDiv'>
+                    <img style={{width: '5vw', height: '5vw', alignSelf: 'center', transform: 'rotate(-180deg)'}} className='' alt='' src={require('../images/TempArrow.png')}/>
+                </div>
             </div>
             <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
             <div className='stepDiv'>
-                <p style={{fontSize: '1.1em', marginLeft: '12vw', fontWeight: 700}}>Startposition: {roomData.RoomCode}</p>
-                <p style={{fontSize: '1.1em', marginRight: '12vw', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
+                <div className='stepDiv'>
+                    <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
+                    <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                </div>
+                
+                <div className='arrowDiv'>
+                    <img style={{width: '5vw', height: '5vw', alignSelf: 'center', transform: 'rotate(-180deg)'}} className='' alt='' src={require('../images/TempArrow.png')}/>
+                </div>
             </div>
             <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
             <div className='stepDiv'>
-                <p style={{fontSize: '1.1em', marginLeft: '12vw', fontWeight: 700}}>Startposition: {roomData.RoomCode}</p>
-                <p style={{fontSize: '1.1em', marginRight: '12vw', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
+                <div className='stepDiv'>
+                    <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
+                    <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                </div>
+                
+                <div className='arrowDiv'>
+                    <img style={{width: '5vw', height: '5vw', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrow.png')}/>
+                </div>
             </div>
         </div>
     </div>

@@ -501,6 +501,15 @@ Body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+.arrowDiv{
+  background: lightgrey;
+  display: flex;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 56px;
+  justify-content: center;
 }
 
 .selectedRoomTransitionUp {
