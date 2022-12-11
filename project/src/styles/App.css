@@ -386,7 +386,7 @@ Body {
 .mapButtonCol2{
   float: right;
 }
-#mapFilterOptions{
+#FilterOptions{
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -543,6 +543,7 @@ Body {
   animation-timing-function: cubic-bezier(.42,0,.58,1);
 }
 
+
 @keyframes slideUp {
   0% {
     transform: translate(0%, 80%);
@@ -595,4 +596,28 @@ Body {
   100%{
     height: 45vh;
   }
+}
+
+
+/* ============ SVG VIEW ============ */
+#svg-view {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#svg-view > svg {
+  width: 100%;
+  height: 100%;
+  background-color: #e3f9ff;
+  user-select: none;
+}
+
+.map {
+  pointer-events: none;
+}
+
+.map > * {
+  pointer-events: all;
 }

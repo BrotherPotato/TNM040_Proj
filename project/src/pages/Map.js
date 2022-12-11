@@ -58,7 +58,7 @@ function Map(){
         document.getElementById('realNrDiv').style.top = bound1.top + 'px'
         document.getElementById('realNrDiv').style.right = (window.screen.width - bound1.right) + 'px'
     }
-
+    
     return(
         <div className='parent'>
             <div className='topBar'>
@@ -66,7 +66,11 @@ function Map(){
                 <img className='CloseImg' alt="Close Button" src={require('../images/TempKryss.png')} onClick={() => navigate('../')}/>
             </div>
             <div className='mapContainer' style={{position: 'absolute', left: '0px', overflow: 'hidden', width: '100vw'}}>
-                <iframe src='https://liu.ericedelo.com/' style={{width: '150vw', height: '90vh'}}></iframe>
+                
+
+                {/* <div id="svg-view"></div> */}
+
+
             </div>
 
             <div className='map'>   
@@ -180,5 +184,4 @@ function Map(){
         </div>
     )
 }
-
 export default Map;
