@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link, useNavigate} from 'react-router-dom'
+import { Link, useNavigate, useLocation} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import Salar from '../components/Salar.json'
 
@@ -11,11 +11,13 @@ function getRoomData(roomCode){
 
 function NavigationScreen(){
     const RoomCode = useParams().RoomCode;
-    const [CurrString, setCurrString] = useState('')
-    const [BoxState, setBoxState] = useState('Up')
-    const[ArrowState, setArrowState] = useState('Up')
+    const [BoxState, setBoxState] = useState('Down')
+    const[ArrowState, setArrowState] = useState('Down')
     const roomData = getRoomData(RoomCode);
     const navigate = useNavigate();
+    const { state } = useLocation();
+    //state.current
+    console.log(state.current)
 
     const toggleBox = () => {
         //setBoxState(!BoxState)
@@ -41,13 +43,17 @@ function NavigationScreen(){
         <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block', height: '40vh'}}>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
                 <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
-                <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {roomData.RoomCode}</p>
+                <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {state.current}</p>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
+                {/* 
                 <img style={{marginLeft: '10vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' className={'arrowTransition' + ArrowState} alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
+                */}
             </div>
-
+            {/*
             <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
+            */}
             {/*Steg */}
+            {/*
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '30vh'}}>
                 <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px', marginTop: '15px'}}>
                     <div className='stepDiv'>
@@ -82,6 +88,7 @@ function NavigationScreen(){
                     </div>
                 </div>
             </div>
+            */}
         </div>
     </div>
     )

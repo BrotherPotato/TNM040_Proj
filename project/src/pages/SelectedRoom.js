@@ -40,8 +40,7 @@ const SelectedRoom = () => {
         }
 
         currentPlace = state.to
-        /*console.log(currentPlace)*/
-            
+        /*console.log(currentPlace)*/     
     }
 
     const toggleBox = () => {
@@ -75,6 +74,20 @@ const SelectedRoom = () => {
         } else if(curr1 === ''){
             
             alert('Du måste ange en sal')
+        } else {
+            alert(curr1 + ' är en ogiltig salskod')
+        }
+    }
+
+    function moveToNavigation(){
+        let curr1 = document.getElementById('curr').value.toUpperCase().trim();
+        let dest1 = document.getElementById('dest').value.toUpperCase().trim();
+
+        if(curr1 === '' || dest1 === ''){
+            alert('Du måste ange en sal')
+        } else if(findRoom(curr1) && findRoom(dest1)){
+            console.log(dest1)
+            navigate('/NavigationScreen/'+ dest1, {state:{current: curr1}})
         } else {
             alert(curr1 + ' är en ogiltig salskod')
         }
@@ -126,12 +139,10 @@ const SelectedRoom = () => {
                             <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempSwitchArrows.png')}></img>
                             Invertera valen
                         </button>
-                        <Link className='resultLink' to={'/NavigationScreen/'+ roomCode}>
-                            <button className='selectedOptions'>
-                                <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
-                                Visa rutt
-                            </button>
-                        </Link>
+                         <button className='selectedOptions' onClick={() => moveToNavigation()}>
+                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
+                            Visa rutt
+                        </button>
                     </div>
                 </div>
             </div>
