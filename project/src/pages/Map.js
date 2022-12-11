@@ -7,11 +7,13 @@ function Map(){
     const Floor = useParams().Floor
     const navigate = useNavigate();
     
+    /* === SVG VIEW === */
     const buildingName = House.toLowerCase().replace('å', 'a').replace('ä', 'a').replace('hus', '');
     const floorNumber = parseInt(Floor);
     if(window.svgView.ready) {
         window.svgView.displayFloor(buildingName, floorNumber);
     }
+    /* === SVG VIEW === */
 
     function setMapFilterVisible(){
         if(document.getElementById("grayOverlay").style.display === "none"){
@@ -73,10 +75,8 @@ function Map(){
             </div>
             <div className='mapContainer' style={{position: 'absolute', left: '0px', overflow: 'hidden', width: '100vw'}}>
                 
-
-                {/* <div id="svg-view"></div> */}
-
-
+                <div className="svg-view"></div>
+            
             </div>
 
             <div className='map'>   

@@ -9,9 +9,6 @@ function getRoomData(roomCode){
     return roomData;
 }
 
-
-
-
 const SelectedRoom = () => {
     const [BoxState, setBoxState] = useState('Up')
     const[ArrowState, setArrowState] = useState('Up')
@@ -57,6 +54,7 @@ const SelectedRoom = () => {
 
     function findRoom(roomCode){
         let result = Salar.filter(s => s.RoomCode === roomCode)
+        
         if(result.length > 0){
             return true
         } else {
@@ -69,10 +67,8 @@ const SelectedRoom = () => {
         let dest1 = document.getElementById('dest').value.toUpperCase().trim();
 
         if(findRoom(curr1)){
-            console.log(dest1)
             navigate('../Search/' + curr1,{state:{to: dest1}})
         } else if(curr1 === ''){
-            
             alert('Du måste ange en sal')
         } else {
             alert(curr1 + ' är en ogiltig salskod')
@@ -87,6 +83,7 @@ const SelectedRoom = () => {
             alert('Du måste ange en sal')
         } else if(findRoom(curr1) && findRoom(dest1)){
             console.log(dest1)
+            
             navigate('/NavigationScreen/'+ dest1, {state:{current: curr1}})
         } else {
             alert(curr1 + ' är en ogiltig salskod')
@@ -106,7 +103,9 @@ const SelectedRoom = () => {
             </div>
             */}
             <div style={{display: 'flex', justifyContent:'center'}}>
-                <iframe src='https://liu.ericedelo.com/' style={{width: '85%', height:"40vh", border: '5px solid #3DD2DC', borderRadius: '2px', marginTop: '-5%'}} id='RoomImg' className={'mapTransition' + MapState}></iframe>
+
+            <div className="svg-view"></div>
+                
             </div>
             <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>

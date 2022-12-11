@@ -38,7 +38,9 @@ function NavigationScreen(){
         </div>
 
         <div className='mapContainer' style={{position: 'absolute', left: '0px'}}>
-            <iframe src='https://liu.ericedelo.com/' style={{width: '100vw', height: '90vh'}}></iframe>
+            
+            <div className="svg-view"></div>
+
         </div>
         <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block', height: '40vh'}}>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
