@@ -85,7 +85,7 @@ function Map(){
                     <img className='centerMapImg' alt="Center Map" src={require('../images/TempCenterMap.png')}/>
                 </div>
                 <div className='mapButton' onClick={() => setMapFilterVisible()}>
-                    <img className='mapOptions' alt="Map Filter" src={require('../images/TempEye.png')}/>
+                    <img className='mapOptions' alt="Map Filter" src={require('../images/TempTratt.png')}/>
                 </div>
             </div>
             <div className='mapButtonCol2'>
