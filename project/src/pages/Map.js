@@ -12,6 +12,7 @@ function Map(){
     const floorNumber = parseInt(Floor);
     if(window.svgView.ready) {
         window.svgView.displayFloor(buildingName, floorNumber);
+        window.svgView.resetMap();
     }
     document.getElementById('svg-root').style.display = 'block';
     /* === SVG VIEW === */
@@ -50,7 +51,9 @@ function Map(){
             // show all floors
         }
     }
-
+    function centerMap(){
+        window.svgView.resetMap();
+    }
     function changeBluePart(currentFloor){
         let targetNumber = document.getElementById('floor' + currentFloor)
         let bound1 = targetNumber.getBoundingClientRect()
@@ -82,7 +85,7 @@ function Map(){
 
             <div className='map'>   
             <div className='mapButtonCol1'>
-                <div className='mapButton' onClick={() => navigate(-1)}> 
+                <div className='mapButton' onClick={() => centerMap()}> 
                     <img className='centerMapImg' alt="Center Map" src={require('../images/TempCenterMap.png')}/>
                 </div>
                 <div className='mapButton' onClick={() => setMapFilterVisible()}>

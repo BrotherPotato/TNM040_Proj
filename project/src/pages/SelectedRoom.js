@@ -28,6 +28,7 @@ const SelectedRoom = () => {
     const floorNumber = parseInt(roomData.Floor);
     if(window.svgView.ready) {
         window.svgView.displayFloor(buildingName, floorNumber);
+        window.svgView.goToRoom(roomCode.toLowerCase());
     }
     document.getElementById('svg-root').style.display = 'block';
     /* === SVG VIEW === */

@@ -28,7 +28,6 @@ function NavigationScreen(){
     if(window.svgView.ready) {
         window.svgView.displayFloor(buildingName, floorNumber);
     }
-
     document.getElementById('svg-root').style.display = 'block';
     /* === SVG VIEW === */
 
