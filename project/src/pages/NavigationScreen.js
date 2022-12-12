@@ -69,7 +69,7 @@ function NavigationScreen(){
         }
     
         if(currentHouse != destinationHouse){
-            imgPath = require('../images/TempHouse.jpg')
+            imgPath = require('../images/TempHouseSwitch.png')
         }
         
     }
@@ -98,7 +98,7 @@ function NavigationScreen(){
         </div>
         <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block', height: '40vh'}}>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
-                <img style={{width: '8vw', height: 'auto', alignSelf: 'center', filter: 'brightness(0%)'}} className='' alt='' src={imgPath}/>
+                <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={imgPath}/>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {state.current}</p>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
                 
@@ -124,7 +124,7 @@ function NavigationScreen(){
                 <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
                 <div className='stepDiv'>
                     <div className='stepDiv'>
-                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center', filter: 'grayscale(1)'}} className='' alt='' src={imgPath}/>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={imgPath}/>
                         <p id='midText' style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>{midString}</p>
                     </div>
                     
