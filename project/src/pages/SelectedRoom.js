@@ -135,12 +135,12 @@ const SelectedRoom = () => {
                     
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', margin: '10px', marginTop: '20px'}}>
                         <button className='selectedOptions' onClick={() => moveToRoute()}>
-                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempSwitchArrows.png')}></img>
-                            Invertera valen
+                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em', filter: 'invert(1)'}} src={require('../images/TempSwitchArrows.png')}></img>
+                            <h1 style={{filter: 'invert(1)', fontSize:'14px'}}>Invertera valen</h1>
                         </button>
                          <button className='selectedOptions' onClick={() => moveToNavigation()}>
-                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em'}} src={require('../images/TempLocation.png')}></img>
-                            Visa rutt
+                            <img style={{width: '5vw', height: 'auto', marginRight: '0.5em', filter: 'invert(1)'}} src={require('../images/TempLocation.png')}></img>
+                            <h1 style={{filter: 'invert(1)', fontSize:'14px'}}>Visa rutt</h1>
                         </button>
                     </div>
                 </div>
