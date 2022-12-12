@@ -19,6 +19,39 @@ function NavigationScreen(){
     //state.current
     console.log(state.current)
 
+    let midString = ''
+
+    uppdateCurrentPathText()
+    function uppdateCurrentPathText(){
+        let currentRoomInfo = getRoomData(state.current)
+        let destinationRoomInfo = getRoomData(roomData.RoomCode)
+
+        let currentHouse = currentRoomInfo.House
+        let destinationHouse = destinationRoomInfo.House
+
+        let currentFloor = currentRoomInfo.Floor
+        let destinationFloor = destinationRoomInfo.Floor
+
+        //let midString = ''
+
+        if(currentHouse != destinationHouse){
+            console.log('Husen är olika ' + currentHouse + ' ' + destinationHouse)
+            midString = 'Gå till ' + destinationHouse +  ' och gå sedan '
+        } else {
+            console.log('Husen är samma')
+            midString = 'Gå  '
+        }
+        midString = midString + '' 
+        if(currentFloor == destinationFloor){
+            console.log('Våningarna är samma')
+            midString = midString + 'till ' + destinationRoomInfo.RoomCode
+        } else if(currentFloor > destinationFloor){
+            console.log('Våningarna är samma')
+            midString = midString + 'ned ' + (currentFloor - destinationFloor) + ' våningar och gå sedan till ' + destinationRoomInfo.RoomCode
+        }
+        
+    }
+
     const toggleBox = () => {
         //setBoxState(!BoxState)
         if(BoxState === "Up"){
@@ -60,7 +93,7 @@ function NavigationScreen(){
                 <div className='stepDiv' style={{filter: 'opacity(0.8)', marginRight: '2px', marginTop: '15px'}}>
                     <div className='stepDiv'>
                         <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
-                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {state.current}</p>
                     </div>
                     
                     <div className='arrowDiv' >
@@ -71,7 +104,7 @@ function NavigationScreen(){
                 <div className='stepDiv'>
                     <div className='stepDiv'>
                         <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempStairs.png')}/>
-                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                        <p id='midText' style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>{midString}</p>
                     </div>
                     
                     <div className='arrowDiv' style={{backgroundColor: '#00B3E7', width: '8vw', height: '8vw'}}>
@@ -82,7 +115,7 @@ function NavigationScreen(){
                 <div className='stepDiv' style={{filter: 'opacity(0.8)', marginRight: '2px'}}>
                     <div className='stepDiv'>
                         <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
-                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
+                        <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Slutposition: {roomData.RoomCode}</p>
                     </div>
                     
                     <div className='arrowDiv' >
