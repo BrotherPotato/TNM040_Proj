@@ -22,6 +22,14 @@ function NavigationScreen(){
     let midString = ''
     let imgPath = ''
 
+    /* === SVG VIEW === */
+    const buildingName = roomData.House.toLowerCase().replace('å', 'a').replace('ä', 'a').replace('hus', '');
+    const floorNumber = parseInt(roomData.Floor);
+    if(window.svgView.ready) {
+        window.svgView.displayFloor(buildingName, floorNumber);
+    }
+    /* === SVG VIEW === */
+
     uppdateCurrentPathTextAndInfo()
     function uppdateCurrentPathTextAndInfo(){
         let currentRoomInfo = getRoomData(state.current)
