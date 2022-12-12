@@ -28,6 +28,7 @@ function NavigationScreen(){
     if(window.svgView.ready) {
         window.svgView.displayFloor(buildingName, floorNumber);
     }
+    //document.getElementById('svg-root').style.display = 'block';
     /* === SVG VIEW === */
 
     uppdateCurrentPathTextAndInfo()
@@ -80,8 +81,6 @@ function NavigationScreen(){
         </div>
 
         <div className='mapContainer' style={{position: 'absolute', left: '0px'}}>
-            
-            <div className="svg-view"></div>
 
         </div>
         <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block', height: '40vh'}}>

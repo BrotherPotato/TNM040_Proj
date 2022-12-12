@@ -94,6 +94,7 @@ function Search(){
                 />
                 <img className='filterButton' alt="filterButton" src={require('../images/TempTratt.png')} onClick={() => setFilterVisible()}/>
             </div>
+            <div className="svg-view" style={{display: 'none'}}></div>
             <div id="grayOverlay" style={{display: 'none'}} onClick={() => setFilterVisible()}></div>
             <div id='filterSettings' style={{display: 'none'}}>
                 <h3>Filterinställningar</h3>
