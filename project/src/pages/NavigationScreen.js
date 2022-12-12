@@ -48,7 +48,7 @@ function NavigationScreen(){
         if(currentHouse != destinationHouse){
             console.log('Husen är olika ' + currentHouse + ' ' + destinationHouse)
             midString = 'Gå till ' + destinationHouse +  ' och gå sedan '
-            imgPath = require('../images/TempWalk.png')
+           
         } else {
             console.log('Husen är samma')
             midString = 'Gå  '
@@ -57,6 +57,7 @@ function NavigationScreen(){
         if(currentFloor == destinationFloor){
             console.log('Våningarna är samma')
             midString = midString + 'till ' + destinationRoomInfo.RoomCode
+            imgPath = require('../images/TempWalk.png')
         } else if(currentFloor > destinationFloor){
             console.log('Våningarna är olika')
             midString = midString + 'ned ' + (currentFloor - destinationFloor) + ' våningar och gå sedan till ' + destinationRoomInfo.RoomCode
