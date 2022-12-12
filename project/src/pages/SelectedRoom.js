@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import Salar from '../components/Salar.json'
 
@@ -14,6 +14,8 @@ const SelectedRoom = () => {
     const[ArrowState, setArrowState] = useState('Up')
     const[MapState,setMapState] = useState('Up')
     const roomCode = useParams().RoomCode;
+    const House = useParams().House
+    const Floor = useParams().Floor
     const roomData = getRoomData(roomCode);
         
     const navigate = useNavigate();
@@ -22,6 +24,14 @@ const SelectedRoom = () => {
     const { state } = useLocation();
     
     let currentPlace
+
+    /* === SVG VIEW === */
+    const buildingName = House.toLowerCase().replace('å', 'a').replace('ä', 'a').replace('hus', '');
+    const floorNumber = parseInt(Floor);
+    if(window.svgView.ready) {
+        window.svgView.displayFloor(buildingName, floorNumber);
+    }
+    /* === SVG VIEW === */
 
     //console.log(currentPlace)
     uppdateCurrentInput(state)
