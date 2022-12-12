@@ -20,9 +20,10 @@ function NavigationScreen(){
     console.log(state.current)
 
     let midString = ''
+    let imgPath = ''
 
-    uppdateCurrentPathText()
-    function uppdateCurrentPathText(){
+    uppdateCurrentPathTextAndInfo()
+    function uppdateCurrentPathTextAndInfo(){
         let currentRoomInfo = getRoomData(state.current)
         let destinationRoomInfo = getRoomData(roomData.RoomCode)
 
