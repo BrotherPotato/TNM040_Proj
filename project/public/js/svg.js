@@ -398,7 +398,6 @@ class SVGView {
         const dx = (bbox.w / 2 - room.position.x);
         const dy = (bbox.h / 2 - room.position.y);
         // this.#setPosition(dx, dy)
-        this.#setZoom(2.0)
         this.#setPositionSmooth(dx, dy)
     }
 
