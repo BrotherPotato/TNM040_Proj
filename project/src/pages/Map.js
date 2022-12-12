@@ -55,8 +55,8 @@ function Map(){
         let bound1 = targetNumber.getBoundingClientRect()
         let whiteDiv = document.getElementById('mapFloorSelection');
         let bound2 = whiteDiv.getBoundingClientRect()
-        let current = document.getElementById('realNrFloor');
-        let currentBound = current.getBoundingClientRect()
+        //let current = document.getElementById('realNrFloor');
+        //let currentBound = current.getBoundingClientRect()
         //console.log(bound1.top)
         //console.log(bound2.right)
         //console.log( (window.screen.width - bound2.right) )
