@@ -47,15 +47,15 @@ function NavigationScreen(){
                 <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {state.current}</p>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
-                {/* 
+                
                 <img style={{marginLeft: '10vw',marginTop: '0px', width: '5vw', height: '5vw', alignSelf: 'center'}} id='arrow' className={'arrowTransition' + ArrowState} alt='' src={require('../images/TempArrow.png')} onClick={() => toggleBox()}/>
-                */}
+                
             </div>
-            {/*
+            
             <div style={{width: '100%', height: '1px', backgroundColor: 'black', margin: 'auto'}}></div>
-            */}
+            
             {/*Steg */}
-            {/*
+            
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '30vh'}}>
                 <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px', marginTop: '15px'}}>
                     <div className='stepDiv'>
@@ -90,7 +90,7 @@ function NavigationScreen(){
                     </div>
                 </div>
             </div>
-            */}
+            
         </div>
     </div>
     )
