@@ -92,7 +92,7 @@ function NavigationScreen(){
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '30vh'}}>
                 <div className='stepDiv' style={{filter: 'opacity(0.8)', marginRight: '2px', marginTop: '15px'}}>
                     <div className='stepDiv'>
-                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center', filter:'invert(1)'}} className='' alt='' src={require('../images/TempCenterMap.png')}/>
                         <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {state.current}</p>
                     </div>
                     
@@ -114,7 +114,7 @@ function NavigationScreen(){
                 <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
                 <div className='stepDiv' style={{filter: 'opacity(0.8)', marginRight: '2px'}}>
                     <div className='stepDiv'>
-                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
                         <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Slutposition: {roomData.RoomCode}</p>
                     </div>
                     
