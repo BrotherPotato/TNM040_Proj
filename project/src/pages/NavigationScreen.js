@@ -11,8 +11,8 @@ function getRoomData(roomCode){
 
 function NavigationScreen(){
     const RoomCode = useParams().RoomCode;
-    const [BoxState, setBoxState] = useState('Up')
-    const[ArrowState, setArrowState] = useState('Up')
+    const [BoxState, setBoxState] = useState('Down')
+    const[ArrowState, setArrowState] = useState('Down')
     const roomData = getRoomData(RoomCode);
     const navigate = useNavigate();
     const { state } = useLocation();
@@ -20,7 +20,7 @@ function NavigationScreen(){
     console.log(state.current)
 
     let midString = ''
-    let imgPath = ''
+    let imgPath = require('../images/TempStairs.png')
 
     /* === SVG VIEW === */
     const buildingName = roomData.House.toLowerCase().replace('å', 'a').replace('ä', 'a').replace('hus', '');
@@ -47,6 +47,7 @@ function NavigationScreen(){
         if(currentHouse != destinationHouse){
             console.log('Husen är olika ' + currentHouse + ' ' + destinationHouse)
             midString = 'Gå till ' + destinationHouse +  ' och gå sedan '
+           
         } else {
             console.log('Husen är samma')
             midString = 'Gå  '
@@ -55,9 +56,19 @@ function NavigationScreen(){
         if(currentFloor == destinationFloor){
             console.log('Våningarna är samma')
             midString = midString + 'till ' + destinationRoomInfo.RoomCode
+            imgPath = require('../images/TempWalk.png')
         } else if(currentFloor > destinationFloor){
-            console.log('Våningarna är samma')
+            console.log('Våningarna är olika')
             midString = midString + 'ned ' + (currentFloor - destinationFloor) + ' våningar och gå sedan till ' + destinationRoomInfo.RoomCode
+            imgPath = require('../images/TempTrappaNer.png')
+        } else if(currentFloor < destinationFloor){
+            console.log('Våningarna är olika')
+            midString = midString + 'upp ' + (destinationFloor - currentFloor) + ' våningar och gå sedan till ' + destinationRoomInfo.RoomCode
+            imgPath = require('../images/TempTrappaUpp.png')
+        }
+    
+        if(currentHouse != destinationHouse){
+            imgPath = require('../images/TempHouseSwitch.png')
         }
         
     }
@@ -86,7 +97,7 @@ function NavigationScreen(){
         </div>
         <div id='selectedRoom' className={'selectedRoomTransition' + BoxState} style={{backgroundColor: '#FFFFFF', display: 'block', height: '40vh'}}>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: '4px'}}>
-                <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempLocation.png')}/>
+                <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={imgPath}/>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Startposition: {state.current}</p>
                 <p style={{fontSize: '1.1em', fontWeight: 700}}>Slutposition: {roomData.RoomCode}</p>
                 
@@ -112,7 +123,7 @@ function NavigationScreen(){
                 <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
                 <div className='stepDiv'>
                     <div className='stepDiv'>
-                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempStairs.png')}/>
+                        <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={imgPath}/>
                         <p id='midText' style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>{midString}</p>
                     </div>
                     
