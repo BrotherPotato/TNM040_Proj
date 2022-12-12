@@ -11,8 +11,8 @@ function getRoomData(roomCode){
 
 function NavigationScreen(){
     const RoomCode = useParams().RoomCode;
-    const [BoxState, setBoxState] = useState('Up')
-    const[ArrowState, setArrowState] = useState('Up')
+    const [BoxState, setBoxState] = useState('Down')
+    const[ArrowState, setArrowState] = useState('Down')
     const roomData = getRoomData(RoomCode);
     const navigate = useNavigate();
     const { state } = useLocation();
