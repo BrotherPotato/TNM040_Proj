@@ -14,8 +14,6 @@ const SelectedRoom = () => {
     const[ArrowState, setArrowState] = useState('Up')
     const[MapState,setMapState] = useState('Up')
     const roomCode = useParams().RoomCode;
-    const House = useParams().House
-    const Floor = useParams().Floor
     const roomData = getRoomData(roomCode);
         
     const navigate = useNavigate();
@@ -26,8 +24,8 @@ const SelectedRoom = () => {
     let currentPlace
 
     /* === SVG VIEW === */
-    const buildingName = House.toLowerCase().replace('å', 'a').replace('ä', 'a').replace('hus', '');
-    const floorNumber = parseInt(Floor);
+    const buildingName = roomData.House.toLowerCase().replace('å', 'a').replace('ä', 'a').replace('hus', '');
+    const floorNumber = parseInt(roomData.Floor);
     if(window.svgView.ready) {
         window.svgView.displayFloor(buildingName, floorNumber);
     }
