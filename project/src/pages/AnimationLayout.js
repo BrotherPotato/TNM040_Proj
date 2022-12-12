@@ -22,6 +22,7 @@ const pageTransition = {
 
 const AnimationLayout = () => {
   const { pathname } = useLocation();
+  document.getElementById('svg-root').style.display = 'none';
   return (
     <PageLayout>
       <motion.div
