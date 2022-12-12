@@ -11,8 +11,8 @@ function getRoomData(roomCode){
 
 function NavigationScreen(){
     const RoomCode = useParams().RoomCode;
-    const [BoxState, setBoxState] = useState('Down')
-    const[ArrowState, setArrowState] = useState('Down')
+    const [BoxState, setBoxState] = useState('Up')
+    const[ArrowState, setArrowState] = useState('Up')
     const roomData = getRoomData(RoomCode);
     const navigate = useNavigate();
     const { state } = useLocation();
@@ -57,7 +57,7 @@ function NavigationScreen(){
             {/*Steg */}
             
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '30vh'}}>
-                <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px', marginTop: '15px'}}>
+                <div className='stepDiv' style={{filter: 'opacity(0.8)', marginRight: '2px', marginTop: '15px'}}>
                     <div className='stepDiv'>
                         <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
                         <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
@@ -79,7 +79,7 @@ function NavigationScreen(){
                     </div>
                 </div>
                 <div style={{width: '90%', height: '1px', backgroundColor: 'grey', margin: 'auto'}}></div>
-                <div className='stepDiv' style={{filter: 'opacity(0.5)', marginRight: '2px'}}>
+                <div className='stepDiv' style={{filter: 'opacity(0.8)', marginRight: '2px'}}>
                     <div className='stepDiv'>
                         <img style={{width: '8vw', height: 'auto', alignSelf: 'center'}} className='' alt='' src={require('../images/TempArrowUp.png')}/>
                         <p style={{fontSize: '1.1em', fontWeight: 700, marginLeft: '5vw'}}>Startposition: {roomData.RoomCode}</p>
