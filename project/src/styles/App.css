@@ -418,6 +418,21 @@ Body {
   background-color: #FFFFFF;
 }
 */
+
+/*
+#mapFilterOptions {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 80%;
+    padding: 1em;
+    border: #0f1010 solid 1px;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+
+}
+*/
 #grayMapOverlay{
   display: none;
   position: absolute;
