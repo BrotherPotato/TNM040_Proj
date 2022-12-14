@@ -298,6 +298,8 @@ class SVGView {
             }
         };
         this.rootElement.ontouchmove = (event) => {
+            // console.log(event.touches[0])
+            // console.log(event.touches[1])
             event.preventDefault();
             if (!this.multitouch && event.touches.length == 1) {
                 let dx = event.touches[0].clientX - this.x;

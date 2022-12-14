@@ -64,7 +64,7 @@ var CONFIG = {
         }
     },
     'animation': {
-        'smoothPosition': {duration: 2000, ease:'<>', step: 10},
+        'smoothPosition': {duration: 1200, ease:'<>', step: 10},
         'roomHighlight': {duration: 1250, times: 9999, wait: 200, time: 5, ease:'<>'},
     }
 }
