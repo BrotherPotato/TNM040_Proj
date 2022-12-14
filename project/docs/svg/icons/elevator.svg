@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <rect id="elevator" x="-0" y="0" width="32" height="32" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="elevator1" serif:id="elevator" x="-0" y="0" width="32" height="32"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <circle cx="16" cy="16" r="16" style="fill:#26a69a;"/>
+        <path d="M16,0c8.831,0 16,7.169 16,16c-0,8.831 -7.169,16 -16,16c-8.831,0 -16,-7.169 -16,-16c-0,-8.831 7.169,-16 16,-16Zm-0,3c-7.175,0 -13,5.825 -13,13c0,7.175 5.825,13 13,13c7.175,0 13,-5.825 13,-13c-0,-7.175 -5.825,-13 -13,-13Z" style="fill-opacity:0.28;"/>
+        <g>
+            <path d="M23,9c0,-0.552 -0.448,-1 -1,-1l-12,0c-0.552,0 -1,0.448 -1,1l0,14c0,0.552 0.448,1 1,1l12,0c0.552,0 1,-0.448 1,-1l0,-14Z" style="fill:none;stroke:#fff;stroke-width:2px;"/>
+            <path d="M14,14l2,-2l2,2" style="fill:none;fill-rule:nonzero;stroke:#fff;stroke-width:2px;"/>
+            <path d="M14,18l2,2l2,-2" style="fill:none;fill-rule:nonzero;stroke:#fff;stroke-width:2px;"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="restroom" x="-0" y="0" width="32" height="32" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="restroom1" serif:id="restroom" x="-0" y="0" width="32" height="32"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <circle cx="16" cy="16" r="16" style="fill:#039be5;"/>
+        <path d="M16,0c8.831,0 16,7.169 16,16c0,8.831 -7.169,16 -16,16c-8.831,0 -16,-7.169 -16,-16c-0,-8.831 7.169,-16 16,-16Zm0,3c-7.175,0 -13,5.825 -13,13c-0,7.175 5.825,13 13,13c7.175,0 13,-5.825 13,-13c0,-7.175 -5.825,-13 -13,-13Z" style="fill-opacity:0.28;"/>
+        <g>
+            <circle cx="10.147" cy="8.174" r="1.521" style="fill:#fff;"/>
+            <path d="M9.936,19.337l0,5.289c-0.007,0.961 -1.438,0.961 -1.451,0l0,-5.289l-1.872,0l2.013,-7.067l-0.328,-0l-1.17,4.025c-0.296,0.89 -1.5,0.53 -1.217,-0.421l1.311,-4.353c0.15,-0.5 0.78,-1.383 1.872,-1.405l2.106,0c1.06,0.022 1.693,0.912 1.873,1.405l1.31,4.353c0.266,0.946 -0.928,1.335 -1.217,0.421l-1.17,-4.025l-0.374,-0l2.059,7.067l-1.919,0l-0,5.289c0.015,0.961 -1.41,0.957 -1.404,0l-0,-5.289l-0.422,0Z" style="fill:#fff;fill-rule:nonzero;"/>
+            <circle cx="22.598" cy="8.174" r="1.521" style="fill:#fff;"/>
+            <path d="M20.983,10.116c-1.17,0 -1.919,1.013 -1.919,2.013l-0,4.681c-0.011,0.914 1.306,0.914 1.31,-0l0,-4.306l0.328,-0l-0,11.888c-0.02,1.242 1.734,1.206 1.732,0l-0,-6.927l0.281,0l-0,6.927c0.023,1.206 1.786,1.242 1.778,0l0,-11.888l0.328,-0l-0,4.306c-0.015,0.921 1.295,0.921 1.311,-0l-0,-4.681c-0.019,-1 -0.797,-1.995 -1.966,-2.013l-3.183,0Z" style="fill:#fff;fill-rule:nonzero;"/>
+            <rect x="15.6" y="6.84" width="1.732" height="18.395" style="fill:#fff;"/>
+        </g>
+    </g>
+</svg>
