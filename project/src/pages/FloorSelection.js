@@ -5,13 +5,16 @@ import { useParams } from 'react-router-dom';
 function FloorSelection(){
     const House = useParams().House;
     const navigate = useNavigate();
+    let marTop;
 
     function availableFloors(currentHouse){
         if(currentHouse === 'Täppan'){
             document.getElementById('floor2').style.display = 'none';
+            document.getElementById('mapFloorSelection').style.marginTop = "24vh"
         }
-        else if(currentHouse === 'Kåkenhus'){
+        else{
             // show all floors :)
+            document.getElementById('mapFloorSelection').style.marginTop = "17vh"
         }
     }
     return(
@@ -37,7 +40,7 @@ function FloorSelection(){
                     </Link>
                 </div>
                 <div className='houseFloorFloorSelect'>
-                        <img style={{height:'auto', width:'50vw'}}src={require('../images/TempHouse.jpg')} alt='Täppan'/>
+                        <img style={{height:'50vh', width:'50vw'}}src={require('../images/TempHouse.jpg')} alt='Täppan'/>
                 </div>
             </div>
         </div>
