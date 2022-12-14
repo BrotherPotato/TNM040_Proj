@@ -7,7 +7,7 @@ var CONFIG = {
     kakenScale: 1.5, 
     tappanScale: 1.0,
     rootElementID: 'svg-view',
-    defaultZoom: 1.0,
+    defaultZoom: 4.0,
     zoomLevel: 4.0,
     touchZoomSensitvity: 800,
     touchPanSensitvity: 0.1,
