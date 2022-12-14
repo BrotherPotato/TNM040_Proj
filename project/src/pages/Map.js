@@ -111,7 +111,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Caféer &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox' checked/>
+                                        <input type='checkbox'/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -123,7 +123,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Studentkök &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox' checked/>
+                                        <input type='checkbox'/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -135,7 +135,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Skrivare &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox' checked/>
+                                        <input type='checkbox'/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -147,7 +147,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Trappor &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox' checked/>
+                                        <input type='checkbox'/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -159,7 +159,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Hissar &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox' checked/>
+                                        <input type='checkbox'/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
