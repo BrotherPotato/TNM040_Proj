@@ -1,0 +1,7 @@
+{
+    "name": "eduVilse",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }
