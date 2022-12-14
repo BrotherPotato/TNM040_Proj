@@ -6,10 +6,10 @@ import { useParams } from 'react-router-dom';
 function Map(){
     const House = useParams().House
     const Floor = useParams().Floor
-    const [CafeState, setCafeState] = useState('false')
-    const[KitchenState, setKitchenState] = useState('false')
-    const [StairState, setStairState] = useState('false')
-    const[ElevatorState, setElevatorState] = useState('false')
+    const [CafeState, setCafeState] = useState('true')
+    const[KitchenState, setKitchenState] = useState('true')
+    const [StairState, setStairState] = useState('true')
+    const[ElevatorState, setElevatorState] = useState('true')
     const navigate = useNavigate();
     
     /* === SVG VIEW === */
@@ -22,11 +22,16 @@ function Map(){
     document.getElementById('svg-root').style.display = 'block';
     /* === SVG VIEW === */
 
-    function applyFilter(){
-        window.svgView.manager.applyFilter[CafeState] =  !window.svgView.manager.applyFilter[CafeState];
-        window.svgView.manager.applyFilter[KitchenState] =  !window.svgView.manager.applyFilter[KitchenState];
-        window.svgView.manager.applyFilter[StairState] =  !window.svgView.manager.applyFilter[StairState];
-        window.svgView.manager.applyFilter[ElevatorState] =  !window.svgView.manager.applyFilter[ElevatorState];
+    function applyFilter(filter){
+        if(filter == 'cafe'){
+            window.svgView.manager.applyFilter[filter] =  CafeState
+        }else if(filter == 'kitchen'){
+            window.svgView.manager.applyFilter[filter] = KitchenState
+        }else if(filter == 'stairs'){
+            window.svgView.manager.applyFilter[filter] = StairState
+        }else if(filter =='elevator'){
+            window.svgView.manager.applyFilter[filter] = ElevatorState
+        }
     }
     function updateFilter(e, filter){
         console.log('Kommer in i filter funktionen')
@@ -36,14 +41,14 @@ function Map(){
         }else if(filter == 'kitchen'){
             setKitchenState(!e.target.checked)
             console.log('Kök: ' + KitchenState);
-        }else if(filter == 'stair'){
+        }else if(filter == 'stairs'){
             setStairState(!e.target.checked)
             console.log('Trappor: ' + StairState);
         }else if(filter == 'elevator'){
             setElevatorState(!e.target.checked)
             console.log('Hiss: ' + ElevatorState);
         }
-        applyFilter();
+        applyFilter(filter);
     }
     function setMapFilterVisible(){
         if(document.getElementById("grayOverlay").style.display === "none"){
@@ -139,7 +144,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Caféer &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox' onChange ={updateFilter('cafe')}/>
+                                        <input type='checkbox' onChange ={(e)=>updateFilter(e,'cafe')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -151,7 +156,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Studentkök &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox'onChange ={updateFilter('kitchen')}/>
+                                        <input type='checkbox'onChange ={(e) => updateFilter(e,'kitchen')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -163,7 +168,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Trappor &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox'onChange ={updateFilter('stair')}/>
+                                        <input type='checkbox'onChange ={(e) => updateFilter(e, 'stairs')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -175,7 +180,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Hissar &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox'onChange ={updateFilter('elevator')}/>
+                                        <input type='checkbox'onChange ={(e) => updateFilter(e, 'elevator')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
