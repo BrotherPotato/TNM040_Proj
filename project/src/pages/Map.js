@@ -1,10 +1,15 @@
 import React from 'react'
+import { useState } from 'react'
 import { Link, useNavigate} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 
 function Map(){
     const House = useParams().House
     const Floor = useParams().Floor
+    const [CafeState, setCafeState] = useState('false')
+    const[KitchenState, setKitchenState] = useState('false')
+    const [StairState, setStairState] = useState('false')
+    const[ElevatorState, setElevatorState] = useState('false')
     const navigate = useNavigate();
     
     /* === SVG VIEW === */
@@ -17,6 +22,29 @@ function Map(){
     document.getElementById('svg-root').style.display = 'block';
     /* === SVG VIEW === */
 
+    function applyFilter(){
+        window.svgView.manager.applyFilter[CafeState] =  !window.svgView.manager.applyFilter[CafeState];
+        window.svgView.manager.applyFilter[KitchenState] =  !window.svgView.manager.applyFilter[KitchenState];
+        window.svgView.manager.applyFilter[StairState] =  !window.svgView.manager.applyFilter[StairState];
+        window.svgView.manager.applyFilter[ElevatorState] =  !window.svgView.manager.applyFilter[ElevatorState];
+    }
+    function updateFilter(e, filter){
+        console.log('Kommer in i filter funktionen')
+        if(filter == 'cafe'){
+            setCafeState(!e.target.checked)
+            console.log('Cafe: ' + CafeState);
+        }else if(filter == 'kitchen'){
+            setKitchenState(!e.target.checked)
+            console.log('Kök: ' + KitchenState);
+        }else if(filter == 'stair'){
+            setStairState(!e.target.checked)
+            console.log('Trappor: ' + StairState);
+        }else if(filter == 'elevator'){
+            setElevatorState(!e.target.checked)
+            console.log('Hiss: ' + ElevatorState);
+        }
+        applyFilter();
+    }
     function setMapFilterVisible(){
         if(document.getElementById("grayOverlay").style.display === "none"){
             document.getElementById("grayOverlay").style.display = "block"
@@ -111,7 +139,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Caféer &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox'/>
+                                        <input type='checkbox' onChange ={updateFilter('cafe')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -123,19 +151,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Studentkök &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox'/>
-                                <span className="slider round"></span>
-                                </label>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td><img className='optionImage' src={require('../images/TempPrinter.png')} alt='Skrivare bild'/></td>
-                            <td><p style={{display: 'inline', margin:'1em'}}>Skrivare &emsp;</p></td>
-                            <td>
-                                <label className="switch">
-                                        <input type='checkbox'/>
+                                        <input type='checkbox'onChange ={updateFilter('kitchen')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -147,7 +163,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Trappor &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox'/>
+                                        <input type='checkbox'onChange ={updateFilter('stair')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
@@ -159,7 +175,7 @@ function Map(){
                             <td><p style={{display: 'inline', margin:'1em'}}>Hissar &emsp;</p></td>
                             <td>
                                 <label className="switch">
-                                        <input type='checkbox'/>
+                                        <input type='checkbox'onChange ={updateFilter('elevator')}/>
                                 <span className="slider round"></span>
                                 </label>
                             </td>
