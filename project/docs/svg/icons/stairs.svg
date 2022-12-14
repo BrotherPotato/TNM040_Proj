@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;">
+    <rect id="stairs" x="0" y="0" width="32" height="32" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="stairs1" serif:id="stairs" x="0" y="0" width="32" height="32"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <circle cx="16" cy="16" r="16" style="fill:#43a047;"/>
+        <path d="M16,0c8.831,0 16,7.169 16,16c-0,8.831 -7.169,16 -16,16c-8.831,0 -16,-7.169 -16,-16c-0,-8.831 7.169,-16 16,-16Zm0,3c-7.175,0 -13,5.825 -13,13c-0,7.175 5.825,13 13,13c7.175,0 13,-5.825 13,-13c-0,-7.175 -5.825,-13 -13,-13Z" style="fill-opacity:0.28;"/>
+        <path d="M8.473,22.621l4,0l-0,-4l4,0l-0,-4l4,0l-0,-4l4,0" style="fill:none;fill-rule:nonzero;stroke:#fff;stroke-width:2px;"/>
+    </g>
+</svg>
