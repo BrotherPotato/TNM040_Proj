@@ -16,6 +16,10 @@
   src: url(../fonts/KorolevLiU-Bold.woff);
 }
 
+:root {
+  color-scheme: only light;
+}
+
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 h1,h2{
