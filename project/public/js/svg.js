@@ -193,7 +193,7 @@ class BuildingsManager {
             const filename = this.#parsePath(file);
             const name = filename.name;
             const number = filename.number;
-
+            
             const response = await fetch(file);
             const svgContent = await response.text();
 
@@ -291,20 +291,15 @@ class SVGView {
         };
         this.rootElement.onmouseup = (event) => { click = false; };
         this.rootElement.onmouseleave = (event) => { click = false; };
-
-        const info = document.getElementById('info')
         
         this.rootElement.ontouchend = (event) => {
             if(event.touches.length == 0) {
                 this.multitouch = false;
-                info.innerHTML = this.multitouch
             }
         };
         this.rootElement.ontouchmove = (event) => {
-            info.innerHTML = this.multitouch
             event.preventDefault();
             if (!this.multitouch && event.touches.length == 1) {
-                // console.log(event.touches[0])
                 let dx = event.touches[0].clientX - this.x;
                 let dy = event.touches[0].clientY - this.y;
                 this.x = event.touches[0].clientX;
@@ -320,9 +315,8 @@ class SVGView {
                 const dist = Math.hypot(dx, dy);
                 this.zoom += (dist - this.dist) / CONFIG.touchZoomSensitvity;
                 this.zoom = Math.min(Math.max(0.75, this.zoom), 40);
-                this.#setZoom(this.zoom);
+                // this.#setZoom(this.zoom);
             }
-            // info.innerHTML = event.touches.length;
         };
 
 
