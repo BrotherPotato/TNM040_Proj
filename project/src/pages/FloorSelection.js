@@ -37,7 +37,7 @@ function FloorSelection(){
                     </Link>
                 </div>
                 <div className='houseFloorFloorSelect'>
-                        <img style={{height:'50vh', width:'50vw'}}src={require('../images/TempHouse.jpg')} alt='Täppan'/>
+                        <img style={{height:'auto', width:'50vw'}}src={require('../images/TempHouse.jpg')} alt='Täppan'/>
                 </div>
             </div>
         </div>
