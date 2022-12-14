@@ -1,3 +1,14 @@
+/*
+
+window.svgView.manager.applyFilter({
+    'stairs': true,
+    'elevator': true,
+    'kitchen': true,
+    'cafe': true,
+})
+
+*/
+
 const SVG_ICONS = {}
 
 // Stores floor number & handle to SVGJS data
@@ -60,11 +71,28 @@ class SVGFloor {
 
         // Icon overlays
         let icons = SVG().group().attr('id', 'icons');
-        this.#createIcons(trappor, icons, 'stairs', scale);
-        this.#createIcons(studentfik, icons, 'food', scale);
-        this.#createIcons(studentkok, icons, 'food', scale);
-        this.#createIcons(hissar, icons, 'elevator', scale);
+        let stairsIcons = SVG().group().attr('id', 'icons-stairs');
+        let elevatorIcons = SVG().group().attr('id', 'icons-elevator');
+        let kitchenIcons = SVG().group().attr('id', 'icons-kitchen');
+        let cafeIcons = SVG().group().attr('id', 'icons-cafe');
+
+        this.#createIcons(trappor, stairsIcons, 'stairs', scale);
+        this.#createIcons(cafeIcons, icons, 'food', scale);
+        this.#createIcons(kitchenIcons, icons, 'food', scale);
+        this.#createIcons(elevatorIcons, icons, 'elevator', scale);
         this.#createIcons(toaletter, icons, 'restroom', scale);
+
+        this.iconLayers = {
+            stairs: stairsIcons,
+            elevator: elevatorIcons,
+            kitchen: kitchenIcons,
+            cafe: cafeIcons,
+        };
+
+        stairsIcons.addTo(icons)
+        elevatorIcons.addTo(icons)
+        kitchenIcons.addTo(icons)
+        cafeIcons.addTo(icons)
 
 
         // Various room styles
@@ -98,7 +126,6 @@ class SVGFloor {
         this.#resetStyles(restricted);
         // restricted.css(CONFIG.styles.walls);
         restricted.css(CONFIG.styles.restricted);
-
 
         // Append groups to new root
         walls.addTo(container);
@@ -147,6 +174,31 @@ class BuildingsManager {
     constructor() {
         // Building objects
         this.buildings = {};
+    }
+    
+    applyFilter(filters = {
+        'stairs': true,
+        'elevator': true,
+        'kitchen': true,
+        'cafe': true,
+    }) {
+        for(const buildingKey in this.buildings) {
+            let building = this.buildings[buildingKey];
+            for( const floorKey in building ) {
+                let floor = building[floorKey];
+                let iconLayers = floor.iconLayers;
+                for(const f in filters) {
+                    if(iconLayers[f] !== undefined) {
+                        console.log(iconLayers[f])
+                        if(filters[f]) {
+                            iconLayers[f].css({'display': 'default'});
+                        } else {
+                            iconLayers[f].css({'display': 'none'});
+                        }
+                    }
+                }
+            }
+        }
     }
 
     getRoom(roomName) {

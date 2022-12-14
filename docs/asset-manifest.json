@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TNM040-Projekt-Grupp5/static/css/main.85b2e095.css",
-    "main.js": "/TNM040-Projekt-Grupp5/static/js/main.f4acc806.js",
+    "main.js": "/TNM040-Projekt-Grupp5/static/js/main.979df85d.js",
     "static/media/TempHouseSwitch.png": "/TNM040-Projekt-Grupp5/static/media/TempHouseSwitch.c068da46fd91184f2b90.png",
     "static/media/KorolevLiU-Bold.woff": "/TNM040-Projekt-Grupp5/static/media/KorolevLiU-Bold.c7a5131580a6d1375321.woff",
     "static/media/KorolevLiU-Light.woff": "/TNM040-Projekt-Grupp5/static/media/KorolevLiU-Light.451a43c48a8c7dad0e80.woff",
@@ -11,10 +11,10 @@
     "static/media/TempWalk.png": "/TNM040-Projekt-Grupp5/static/media/TempWalk.18a1d4a4a3cbb430259d.png",
     "index.html": "/TNM040-Projekt-Grupp5/index.html",
     "main.85b2e095.css.map": "/TNM040-Projekt-Grupp5/static/css/main.85b2e095.css.map",
-    "main.f4acc806.js.map": "/TNM040-Projekt-Grupp5/static/js/main.f4acc806.js.map"
+    "main.979df85d.js.map": "/TNM040-Projekt-Grupp5/static/js/main.979df85d.js.map"
   },
   "entrypoints": [
     "static/css/main.85b2e095.css",
-    "static/js/main.f4acc806.js"
+    "static/js/main.979df85d.js"
   ]
 }
