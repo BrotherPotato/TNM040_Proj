@@ -6,10 +6,10 @@ import { useParams } from 'react-router-dom';
 function Map(){
     const House = useParams().House
     const Floor = useParams().Floor
-    const [CafeState, setCafeState] = useState('true')
-    const[KitchenState, setKitchenState] = useState('true')
-    const [StairState, setStairState] = useState('true')
-    const[ElevatorState, setElevatorState] = useState('true')
+    const [CafeState, setCafeState] = useState('')
+    const[KitchenState, setKitchenState] = useState('')
+    const [StairState, setStairState] = useState('')
+    const[ElevatorState, setElevatorState] = useState('')
     const navigate = useNavigate();
     
     /* === SVG VIEW === */
@@ -22,18 +22,16 @@ function Map(){
     document.getElementById('svg-root').style.display = 'block';
     /* === SVG VIEW === */
 
-    function applyFilter(filter){
-        if(filter == 'cafe'){
-            window.svgView.manager.applyFilter[filter] =  CafeState
-        }else if(filter == 'kitchen'){
-            window.svgView.manager.applyFilter[filter] = KitchenState
-        }else if(filter == 'stairs'){
-            window.svgView.manager.applyFilter[filter] = StairState
-        }else if(filter =='elevator'){
-            window.svgView.manager.applyFilter[filter] = ElevatorState
-        }
+    function applyFilter(){
+        window.svgView.manager.applyFilter({
+            'stairs': StairState,
+            'elevator': ElevatorState,
+            'kitchen': KitchenState,
+            'cafe': CafeState,
+        })
     }
     function updateFilter(e, filter){
+        /*
         console.log('Kommer in i filter funktionen')
         if(filter == 'cafe'){
             setCafeState(!e.target.checked)
@@ -48,7 +46,8 @@ function Map(){
             setElevatorState(!e.target.checked)
             console.log('Hiss: ' + ElevatorState);
         }
-        applyFilter(filter);
+        applyFilter();
+        */
     }
     function setMapFilterVisible(){
         if(document.getElementById("grayOverlay").style.display === "none"){
